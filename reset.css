@@ -1,0 +1,85 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: ".SF NS Display";
+  font-size: 90px;
+  font-weight: 400;
+  line-height: 98px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h2 {
+  font-family: ".SF NS Display Regular";
+  font-size: 66px;
+  font-weight: 400;
+  line-height: 64px;
+  text-transform: uppercase;
+  text-align: center;
+
+}
+
+h3 {
+  font-family: "Recoleta Regular DEMO";
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 38px;
+  text-align: center;
+}
+
+h4{
+  font-family: ".SF NS Display";
+  font-size: 26px;
+  line-height: 36px;
+  text-align: center;
+
+}
+
+p {
+  font-family: ".SF NS Display";
+  font-size: 16px;
+  line-height: 28px;
+  text-align: center;
+}
+
+.recola {
+  font-family: "Recoleta";
+}
+
+.small-header {
+  font-family: "Recoleta Regular DEMO";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.big-header {
+  color: #ffffff;
+  font-family: "Recoleta DEMO";
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.header {
+  color: #ffffff;
+  font-family: "Recoleta DEMO";
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 96px;
+  text-transform: uppercase;
+}
+
+.primary-color {
+  color: #ffffff;
+}
+
+.secondary-color {
+  color: #b38a58;
+}

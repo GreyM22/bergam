@@ -1,0 +1,465 @@
+.mask {
+  /* Style for "L3A8643" */
+  width: 100%;
+  height: 61.72vw;
+  background-image: url("https://drive.google.com/uc?id=19PCxVpK8QCUdJ4GE7RBZWsjfa-GEPwVQ");
+  background-color: #000000;
+  background-blend-mode: screen;
+}
+
+.radial-grad-img {
+  height: 61.72vw;
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+}
+
+.linear-grad-img {
+  height: 312px;
+  background-image: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.mask .row {
+  min-height: 33.33%;
+}
+
+/* The top bar */
+
+.row.head > [class*="col-"],
+.row.head .col,
+.row.head .col-fixed {
+  border: 1px solid rgb(255, 255, 255, 0.2);
+  border-top: none;
+  height: 6.17vw;
+}
+
+.col-8.justify-content-center {
+  height: 6.17vw;
+}
+
+.mask svg {
+  line-height: 28px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-family: "Recoleta";
+  line-height: 33px;
+  text-align: right;
+  padding-top: 2.16%;
+  padding-right: 20.18%;
+  flex-grow: 1;
+}
+
+.icons-top {
+  padding: 2.65vw 3.39vw;
+  width: 190px;
+  flex-grow: 0;
+}
+
+.icons-top a {
+  padding-right: 10px;
+}
+
+.rectangle {
+  box-sizing: border-box;
+  height: 22px;
+  width: 14px;
+  border: 1px solid #b38a58;
+  border-radius: 2px;
+  padding: 17.5px 4px 2.5px 2.5px;
+  margin: 0;
+}
+
+.path {
+  box-sizing: border-box;
+  height: 0px;
+  width: 7px;
+  border: 0.25px solid #b38a58;
+  border-radius: 2px;
+  background-color: #b38a58;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  align-items: center;
+}
+
+.phone-nr ul li {
+  display: inline;
+  line-height: 50px;
+}
+
+.number {
+  height: 18px;
+  width: 116px;
+  color: #ffffff;
+  font-family: "Recoleta";
+  font-size: 13px;
+  letter-spacing: 2.36px;
+  line-height: 18px;
+  position: absolute;
+  top: 2.8vw;
+  right: 2.46vw;
+}
+
+.phone-nr li a {
+  display: block;
+  height: 23px;
+  width: 15px;
+}
+
+.phone-nr {
+  padding: 2.53vw 2.46vw 2.28vw 2.22vw;
+  align-items: center;
+  position: relative;
+  width: 219px;
+  flex-grow: 0;
+}
+
+.icons-top.button {
+  padding-left: 2.39vw;
+  padding-right: 2.39vw;
+  text-align: center;
+}
+button {
+  background: none;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  align-items: center;
+  height: auto;
+  width: auto;
+  color: white;
+  font-family: "Recoleta";
+  font-size: 13px;
+  letter-spacing: 2.36px;
+  line-height: 22px;
+  cursor: pointer;
+}
+
+/* end of Top bar */
+
+.flex-container {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+}
+
+.flex-container > div {
+  border: 1px solid rgb(255, 255, 255, 0.2);
+  border-top: none;
+  height: 6.17vw;
+}
+
+.align-items-center p {
+  margin-top: 2.09vw;
+  margin-bottom: 0;
+}
+
+.align-items-end {
+  padding: 0 3.95vw;
+  padding-bottom: 2.45vw;
+  height: 16.69vw;
+  position: absolute;
+  bottom: 0;
+}
+
+.align-items-end li {
+  text-align: center;
+}
+
+.align-items-end li {
+  padding-bottom: 10px;
+}
+
+.align-items-end button {
+  position: relative;
+  height: 91px;
+  height: 91px;
+}
+
+button img {
+  position: absolute;
+  left: 30px;
+  top: 30px;
+}
+
+.raiting {
+  /* text-align: center; */
+  font-family: "Recoleta";
+  font-size: 12px;
+  letter-spacing: 2.18px;
+  line-height: 16px;
+  width: 94px;
+  float: left;
+}
+
+.line {
+  box-sizing: border-box;
+  height: 1px;
+  width: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 1px;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 0;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 3px;
+}
+
+.fill {
+  box-sizing: border-box;
+  height: 1px;
+  width: 20px;
+  border: 1px solid #b38a58;
+  background-color: #b38a58;
+  border-radius: 1px;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: -1;
+  left: -1;
+}
+
+.right-bottom {
+  padding-top: 4.53vw;
+  display: block;
+  position: absolute;
+  left: 85.24vw;
+}
+
+.align-items-end .col {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  position: relative;
+}
+.align-items-end button {
+  cursor: pointer;
+  position: absolute;
+  left: 42vw;
+}
+
+.descritption {
+  height: 497px;
+  padding-top: 124px;
+  text-align: center;
+}
+
+.descritption h3 {
+  margin-bottom: 40px;
+}
+
+.european-cuisine {
+  position: relative;
+}
+
+.col-lg-6.order-1.order-lg-2,
+.col-lg-6.order-1.order-lg-1 {
+  position: relative;
+  height: 500px;
+}
+
+.col-lg-6.text {
+  /* text-align: center; */
+  padding-left: 15%;
+  padding-right: auto;
+}
+
+.line-7 {
+  box-sizing: border-box;
+  height: 1px;
+  width: 400px;
+  /* border: 1px solid #b38a58; */
+  background-color: #b38a58;
+  position: absolute;
+  left: 0;
+}
+
+.european-cuisine h2,
+.european-cuisine p {
+  text-align: left;
+}
+
+.european-cuisine .pizza-margherita {
+  height: 580px;
+  width: 640px;
+  position: absolute;
+  top: -30px;
+  right: 0;
+}
+
+.rectangle-copy-5 {
+  height: 39.5vw;
+  width: 19.62vw;
+  background-color: #eae0d5;
+  position: absolute;
+  top: -10.24vw;
+  right: 0;
+}
+
+.pizza-prosciut {
+  height: 540px;
+  width: 460px;
+  position: absolute;
+  top: 260px;
+  left: 11.11vw;
+}
+
+.rectangle-copy-4 {
+  height: 820px;
+  width: 490px;
+  background-color: #eae0d5;
+  position: absolute;
+  left: 0;
+  top: 165px;
+}
+
+.col-lg-6.order-2.order-lg-2 {
+  padding: 25% 0%;
+  padding-right: 10%;
+  /* min-height: 820px; */
+  text-align: center;
+}
+
+.col.col-lg-6.order-1.order-lg-1 {
+  /* display: block; */
+  height: 820px;
+}
+
+.row.end {
+  height: 414px;
+  position: relative;
+}
+
+.pasta {
+  height: 394px;
+  width: 320px;
+  position: absolute;
+  left: 50vw;
+  top: -11.41vw;
+}
+
+.food {
+  opacity: 0.05;
+  color: #000000;
+  font-family: ".SF NS Display";
+  font-size: 300px;
+  line-height: 64px;
+  position: absolute;
+  top: 60px;
+  right: -50px;
+}
+
+
+.tables{
+  background-color: #121212;
+  background-image: url('https://drive.google.com/uc?id=15cGVKpKfjXmOFCkH_28R2uSOe-3r4QhV');
+  background-blend-mode: screen;
+  height: 54.32vw;
+  width: 100%;
+
+}
+
+@media only screen and (max-width: 1199px) {
+  .title,
+  .icons-top {
+    text-align: center;
+    padding: 1.85vw 0;
+  }
+
+  .icons-top.button {
+    padding: 2.55vw 0;
+  }
+  h1 {
+    font-size: 60px;
+    line-height: 68px;
+  }
+  .european-cuisine .pizza-margherita {
+    height: 480px;
+    width: 540px;
+  }
+}
+
+@media only screen and (max-width: 899px) {
+  h1 {
+    font-size: 40px;
+    line-height: 48px;
+  }
+  .new-line {
+    display: none;
+  }
+
+  .right-bottom {
+    left: 80.24vw;
+  }
+
+  .align-items-end button {
+    left: 40vw;
+  }
+
+  .title {
+    font-size: 15px;
+  }
+
+  .phone-nr {
+    padding: 0;
+    padding-left: 2.22vw;
+    padding-bottom: 1.28vw;
+    padding-top: 2.1vw;
+  }
+
+  .number {
+    top: 2.5vw;
+    right: 5.46vw;
+  }
+
+  .col-lg-6.order-2.order-lg-2 {
+    padding-top: 30%;
+    padding-left: 10%;
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  .icons-top,
+  .icons-top.button {
+    width: 100px;
+  }
+  .phone-nr {
+    width: 150px;
+    padding-left: 8px;
+  }
+  .number {
+    top: 2.8vw;
+    right: 1vw;
+  }
+
+  .title {
+    padding-bottom: 10px;
+  }
+
+  h1 {
+    font-size: 35px;
+    line-height: 28px;
+  }
+
+  .col-lg-6.order-2.order-lg-2 {
+    padding-top: 40%;
+    padding-left: 10%;
+  }
+
+  .food {
+    display: none;
+  }
+}
