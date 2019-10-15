@@ -501,7 +501,7 @@ button img {
   text-align: center;
   position: absolute;
   right:0;
-  bottom: -2.46vw;
+  /* bottom: -2.46vw; */
   /* z-index: 1; */
 }
 
