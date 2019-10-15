@@ -3,6 +3,7 @@
   width: 100%;
   height: 61.72vw;
   background-image: url("https://drive.google.com/uc?id=19PCxVpK8QCUdJ4GE7RBZWsjfa-GEPwVQ");
+  background-position: center 100%;
   background-color: #000000;
   background-blend-mode: screen;
 }
@@ -265,9 +266,9 @@ button img {
   position: relative;
 }
 
-.col-lg-6.order-1.order-lg-2,
+.european-cuisine .col-lg-6.order-1.order-lg-2,
 .col-lg-6.order-1.order-lg-1 {
-  position: relative;
+  /* position: relative; */
   height: 500px;
 }
 
@@ -288,7 +289,9 @@ button img {
 }
 
 .european-cuisine h2,
-.european-cuisine p {
+.european-cuisine p,
+.natural-wines h2,
+.natural-wines p {
   text-align: left;
 }
 
@@ -362,15 +365,223 @@ button img {
   right: -50px;
 }
 
-
-.tables{
-  background-color: #121212;
-  background-image: url('https://drive.google.com/uc?id=15cGVKpKfjXmOFCkH_28R2uSOe-3r4QhV');
-  background-blend-mode: screen;
-  height: 54.32vw;
+.tables {
+  background-image: url("https://drive.google.com/uc?id=15cGVKpKfjXmOFCkH_28R2uSOe-3r4QhV");
+  background-position: center top;
+  height: 880px;
   width: 100%;
+  opacity: 0.3;
+}
+
+.mask-table {
+  background-color: #121212;
+  position: relative;
+}
+
+.menu {
+  padding-top: 11.79vw;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.menu ul li {
+  display: inline;
+  line-height: 50px;
+}
+
+.menu button {
+  height: 60px;
+  width: 180px;
+  border: 1px solid white;
+  margin: 0 30px;
+}
+
+.notification {
+  font-family: "Recoleta";
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.natural-wines {
+  padding-top: 13.08vw;
+  background-color: #fbfaf9;
+  height: 61.72vw;
+  min-height: 700px;
+}
+
+.col-lg-6.img {
+  position: relative;
+}
+
+.rectangle-copy-3 {
+  height: 55.55vw;
+  width: 30.24vw;
+  background-color: #eae0d5;
+  position: absolute;
+  right: 0;
+  top: -13.08vw;
+}
+
+.col-lg-6.img img {
+  height: 35.92vw;
+  width: 28.39vw;
+  position: absolute;
+  top: 13.08vw;
+  right: 11.11vw;
+}
+
+.wines {
+  opacity: 0.05;
+  color: #000000;
+  font-family: ".SF NS Display";
+  font-size: 18.51vw;
+  line-height: 64px;
+  position: absolute;
+  left: -5;
+  top: -10;
+}
+
+.review-instagram {
+  position: relative;
+  height: 700.296px;
+  width: 100%;
+  background-color: #fbfaf9;
+}
+
+.instagram {
+  padding: 0;
+  padding-top: 5.8vw;
+  height: 48.14vw;
+  width: 50vw;
+  background-color: #3c3c3c;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  top: -2.46vw;
+}
+
+.insta-title {
+  font-family: "Recoleta";
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.review-instagram img {
+  height: 25.92vw;
+  width: 18.51vw;
+}
+
+.instagram ul{
+  margin-top: 1.85vw;
+}
+.instagram ul li {
+  display: inline;
+  padding-right: 9.72vw;
+}
+
+.insta-button {
+  margin-top: 2.46vw;
+  box-sizing: border-box;
+  height: 55px;
+  width: 170px;
+  border: 1px solid white;
+}
+
+.review {
+  box-sizing: border-box;
+  padding: 0;
+  padding-top: 5.8vw;
+  height: 48.14vw;
+  width: 50vw;
+  background-color: #ffffff;
+  text-align: center;
+  position: absolute;
+  right:0;
+  bottom: -2.46vw;
+  /* z-index: 1; */
+}
+
+.review .insta-title{
+  margin-bottom: 6.85vw;
+}
+
+.romb1{
+  opacity: 0.6;
+  z-index: 3;
+  width: 9px;
+  height: 9px;
+  border: solid 1px #b38a58;
+  transform: rotate(45deg);
+}
+
+.romb2{
+  z-index: 3;
+  width: 9px;
+  height: 9px;
+  background: #b38a58;
+  transform: rotate(45deg);
+}
+
+.romb3{
+  opacity: 0.6;
+  z-index: 3;
+  width: 9px;
+  height: 9px;
+  border: solid 1px #b38a58;
+  transform: rotate(45deg);
+}
+
+.review ul li {
+  display: inline;
+  padding-right: 14px;
+}
+
+.review ul{
+  padding-top: 3.08vw;
+}
+
+.footer{
+  width: 100%;
+  height: 790px;
+  background-color: #202020;
+  position: absolute;
+  top: 0px;
+  z-index: -1;
+}
+
+.pattern{
+  width: 100%;
+  height: 790px;
+  /* z-index: 4; */
+  background-image: url("../img/pattern.png");
+  background-repeat: no-repeat;
+  /* background-size: auto 0%; */
+  background-position: center center;
+  position: absolute;
+  right:0;
+  bottom: 0;
+  top:0;
+  z-index: -1;
+}
+
+.the-end{
+  position: relative;
+}
+
+@media only screen and (max-width: 1550px){
+  .instagram {
+    top: -1.46vw;
+  }
+  .review-instagram{
+    height: 48.14vw;
+  }
 
 }
+
 
 @media only screen and (max-width: 1199px) {
   .title,
@@ -386,10 +597,38 @@ button img {
     font-size: 60px;
     line-height: 68px;
   }
+
   .european-cuisine .pizza-margherita {
     height: 480px;
     width: 540px;
   }
+
+  .menu {
+    padding-top: 9.79vw;
+  }
+
+  .instagram {
+    top: -1.46vw;
+  }
+  .review-instagram{
+    height: 48.14vw;
+  }
+}
+
+@media only screen and (max-width: 999px){
+  .review{
+    bottom: -2.08vw;
+  }
+
+  .natural-wines .col-lg-6.img{
+    display: none;
+  }
+  .review-instagram h4{
+    font-size: 16px;
+    line-height: 26px;
+  
+  }
+
 }
 
 @media only screen and (max-width: 899px) {
@@ -429,6 +668,30 @@ button img {
     padding-top: 30%;
     padding-left: 10%;
   }
+
+  .review-instagram h4{
+    font-size: 16px;
+    line-height: 26px;
+  
+  }
+
+  .review .insta-title{
+    margin-bottom: 3.85vw;
+  }
+
+  .review ul{
+    padding-top: 2.08vw;
+    padding-bottom: 2.08vw;
+
+  }
+  .review{
+    bottom: -2.08vw;
+  }
+
+  .natural-wines .col-lg-6.img{
+    display: none;
+  }
+  
 }
 
 @media only screen and (max-width: 780px) {
@@ -462,4 +725,14 @@ button img {
   .food {
     display: none;
   }
+  .menu ul li {
+    display: block;
+    margin: 15px 0;
+  }
+
+  .natural-wines .col-lg-6.img{
+    display: none;
+  }
+
+  
 }
