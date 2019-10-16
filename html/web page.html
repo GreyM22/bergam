@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width , initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
@@ -17,20 +17,22 @@
                 <div class="container-fluid content">
                     <div class="row align-items-start head ">
                         <div class="flex-container">
-                            <div class="icons-top">
-                                <a> <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
+                            <div class="icons-top" style="border-left: 0px;">
+                                <a class="insta" style="cursor: pointer;" onmouseenter="hoverInsta()"
+                                    onmouseleave="notHoverInsta()"> <svg xmlns="http://www.w3.org/2000/svg" width="14"
+                                        height="14" viewBox="0 0 14 14">
                                         <g>
                                             <g>
                                                 <g>
-                                                    <path fill="#fff"
+                                                    <path fill="#fff" id="path1-insta"
                                                         d="M12.688 9.625a3.063 3.063 0 0 1-3.063 3.063h-5.25a3.063 3.063 0 0 1-3.063-3.063v-5.25a3.063 3.063 0 0 1 3.063-3.063h5.25a3.063 3.063 0 0 1 3.063 3.063zM9.624 0h-5.25A4.375 4.375 0 0 0 0 4.375v5.25A4.375 4.375 0 0 0 4.375 14h5.25A4.375 4.375 0 0 0 14 9.625v-5.25A4.375 4.375 0 0 0 9.625 0z" />
                                                 </g>
                                                 <g>
-                                                    <path fill="#fff"
+                                                    <path fill="#fff" id="path2-insta"
                                                         d="M7 9.188a2.188 2.188 0 1 1 0-4.376 2.188 2.188 0 0 1 0 4.375zM7 3.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7z" />
                                                 </g>
                                                 <g>
-                                                    <path fill="#fff"
+                                                    <path fill="#fff" id="path3-insta"
                                                         d="M10.766 3.703a.466.466 0 1 0 0-.933.466.466 0 0 0 0 .933z" />
                                                 </g>
                                             </g>
@@ -42,16 +44,16 @@
                                         <desc>Created with Lunacy</desc>
                                         <path
                                             d="M2.11563 4.69677L2.11563 3.39613C2.11563 1.51742 3.52605 0 5.27692 0L7.39256 0L7.39256 2.55312L5.27692 2.55312C5.03375 2.55312 4.76625 2.91441 4.76625 3.34796L4.76625 4.69677L7.39256 4.69677L7.39256 7.29806L4.74194 7.29806L4.74194 13.6327L2.11563 13.6327L2.11563 7.32215L0 7.32215L0 4.69677L2.11563 4.69677Z"
-                                            id="Shape" fill="#FFFFFF" stroke="none" />
+                                            id="Shape" fill="#FFFFFF" stroke="none" class="hover-svg" />
                                     </svg>
                                 </a>
 
                                 <a style="padding-right: 0;"><svg xmlns="http://www.w3.org/2000/svg" width="17"
-                                        height="13" viewBox="0 0 17 13">
+                                        height="13" viewBox="0 0 17 13" class="twitter-svg">
                                         <g>
                                             <g>
                                                 <g>
-                                                    <path fill="#fff"
+                                                    <path fill="#fff" class="hover-svg"
                                                         d="M16.272 1.492a7.218 7.218 0 0 1-1.922.502 3.203 3.203 0 0 0 1.468-1.76 6.88 6.88 0 0 1-2.116.771c-.936-.952-2.387-1.262-3.66-.782-1.272.48-2.108 1.654-2.11 2.96-.002.244.024.487.078.726-2.684-.125-5.186-1.336-6.877-3.33-.89 1.455-.44 3.318 1.025 4.255a3.416 3.416 0 0 1-1.507-.388v.035c.004 1.514 1.12 2.818 2.674 3.123-.286.073-.58.109-.876.106a3.063 3.063 0 0 1-.632-.054C2.26 8.95 3.508 9.84 4.935 9.874a6.909 6.909 0 0 1-4.137 1.36A6.537 6.537 0 0 1 0 11.188a9.725 9.725 0 0 0 5.118 1.429c2.523.016 4.948-.933 6.732-2.636 1.784-1.703 2.78-4.017 2.762-6.426 0-.14-.005-.276-.012-.411a6.51 6.51 0 0 0 1.672-1.654z" />
                                                 </g>
                                             </g>
@@ -62,19 +64,32 @@
                             <div class="phone-nr">
                                 <ul>
                                     <li>
-                                        <div class="rectangle">
-                                            <div class="path">
+                                        <?xml version="1.0" encoding="UTF-8"?>
+                                        <svg width="14px" height="22px" viewBox="0 0 14 22" version="1.1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+                                            <title>Untitled 6</title>
+                                            <desc>Created with Sketch.</desc>
+                                            <g id="Page-1" stroke="none" stroke-width="1" fill="none"
+                                                fill-rule="evenodd">
+                                                <g id="Group-4" stroke="#B38A58">
+                                                    <polyline id="Path" stroke-linecap="round" stroke-linejoin="round"
+                                                        points="10 18.5 7 18.5 4 18.5"></polyline>
+                                                    <rect id="Rectangle" x="0.5" y="0.5" width="13" height="21" rx="2">
+                                                    </rect>
+                                                </g>
+                                            </g>
+                                        </svg>
 
-                                            </div>
-                                        </div>
                                     </li>
-                                    <li>
-                                        <p class="number">206-555-7890</p>
+                                    <li class="number">
+                                        206-555-7890
                                     </li>
                                 </ul>
                             </div>
                             <div class="icons-top button">
-                                <button type="button">BOOK NOW</button>
+                                <button type="button"> BOOK NOW</button>
                             </div>
 
                         </div>
@@ -107,20 +122,21 @@
                             <div>
                                 <ul>
                                     <li>
-                                        <a> <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
-                                                viewBox="0 0 14 14">
+                                        <a onmouseenter="hoverInstaButtom()" onmouseleave="notHoverInstaButtom()"
+                                            style="cursor: pointer;"> <svg xmlns="http://www.w3.org/2000/svg" width="14"
+                                                height="14" viewBox="0 0 14 14">
                                                 <g>
                                                     <g>
                                                         <g>
-                                                            <path fill="#fff"
+                                                            <path fill="#fff" id="path1-insta-buttom"
                                                                 d="M12.688 9.625a3.063 3.063 0 0 1-3.063 3.063h-5.25a3.063 3.063 0 0 1-3.063-3.063v-5.25a3.063 3.063 0 0 1 3.063-3.063h5.25a3.063 3.063 0 0 1 3.063 3.063zM9.624 0h-5.25A4.375 4.375 0 0 0 0 4.375v5.25A4.375 4.375 0 0 0 4.375 14h5.25A4.375 4.375 0 0 0 14 9.625v-5.25A4.375 4.375 0 0 0 9.625 0z" />
                                                         </g>
                                                         <g>
-                                                            <path fill="#fff"
+                                                            <path fill="#fff" id="path2-insta-buttom"
                                                                 d="M7 9.188a2.188 2.188 0 1 1 0-4.376 2.188 2.188 0 0 1 0 4.375zM7 3.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7z" />
                                                         </g>
                                                         <g>
-                                                            <path fill="#fff"
+                                                            <path fill="#fff" id="path3-insta-buttom"
                                                                 d="M10.766 3.703a.466.466 0 1 0 0-.933.466.466 0 0 0 0 .933z" />
                                                         </g>
                                                     </g>
@@ -135,7 +151,7 @@
                                                 <desc>Created with Lunacy</desc>
                                                 <path
                                                     d="M2.11563 4.69677L2.11563 3.39613C2.11563 1.51742 3.52605 0 5.27692 0L7.39256 0L7.39256 2.55312L5.27692 2.55312C5.03375 2.55312 4.76625 2.91441 4.76625 3.34796L4.76625 4.69677L7.39256 4.69677L7.39256 7.29806L4.74194 7.29806L4.74194 13.6327L2.11563 13.6327L2.11563 7.32215L0 7.32215L0 4.69677L2.11563 4.69677Z"
-                                                    id="Shape" fill="#FFFFFF" stroke="none" />
+                                                    id="Shape" fill="#FFFFFF" stroke="none" class="hover-svg" />
                                             </svg>
                                         </a>
                                     </li>
@@ -145,7 +161,7 @@
                                                 <g>
                                                     <g>
                                                         <g>
-                                                            <path fill="#fff"
+                                                            <path fill="#fff" class="hover-svg"
                                                                 d="M16.272 1.492a7.218 7.218 0 0 1-1.922.502 3.203 3.203 0 0 0 1.468-1.76 6.88 6.88 0 0 1-2.116.771c-.936-.952-2.387-1.262-3.66-.782-1.272.48-2.108 1.654-2.11 2.96-.002.244.024.487.078.726-2.684-.125-5.186-1.336-6.877-3.33-.89 1.455-.44 3.318 1.025 4.255a3.416 3.416 0 0 1-1.507-.388v.035c.004 1.514 1.12 2.818 2.674 3.123-.286.073-.58.109-.876.106a3.063 3.063 0 0 1-.632-.054C2.26 8.95 3.508 9.84 4.935 9.874a6.909 6.909 0 0 1-4.137 1.36A6.537 6.537 0 0 1 0 11.188a9.725 9.725 0 0 0 5.118 1.429c2.523.016 4.948-.933 6.732-2.636 1.784-1.703 2.78-4.017 2.762-6.426 0-.14-.005-.276-.012-.411a6.51 6.51 0 0 0 1.672-1.654z" />
                                                         </g>
                                                     </g>
@@ -156,7 +172,7 @@
                                 </ul>
                             </div>
                             <div>
-                                <button>
+                                <button onmouseover="hoverArrowButton()" onmouseout="notHoverArrowButton()">
                                     <?xml version="1.0" encoding="utf-8"?>
                                     <svg width="91px" height="91px" viewBox="0 0 91 91" version="1.1"
                                         xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
@@ -171,7 +187,7 @@
                                         </defs>
                                         <g id="Rectangle">
                                             <g clip-path="url(#clip_1)">
-                                                <use xlink:href="#path_1" fill="none" stroke="#B38A58"
+                                                <use xlink:href="#path_1" id="arrow-down" fill="none" stroke="#B38A58"
                                                     stroke-width="2" />
                                             </g>
                                         </g>
@@ -226,13 +242,11 @@
 
 
                     <h2>
-                        European <br> Cuisine
+                        European Cuisine
                     </h2>
-                    <div class="line-7">
-
-                    </div>
-                    <br>
-                    <p>
+                    <br style="line-height: 10px;">
+                    <p class="content">
+                        <br>
                         Lorem ipsum dolor sit amet, consectetur adipiscing <br> elit. Fusce sapien elit, facilisis quis
                         augue in, feugiat <br> tincidunt odio. Cras in urna convallis, volutpat mi in, <br> aliquam
                         magna. <br><br>
@@ -241,21 +255,19 @@
                         nulla <br> blandit condimentum.
                     </p>
                 </div>
-                <div class="col-lg-6 order-1 order-lg-2">
+                <div class="col-xl-6 order-1 order-lg-2">
                     <div class="rectangle-copy-5">
 
                     </div>
 
-                    <img class="pizza-margherita"
-                        src="https://drive.google.com/uc?id=1IHjmPGOBqobcuC_5Kg23dwRQQdUbeEGl">
+                    <img class="food-right" src="https://drive.google.com/uc?id=1IHjmPGOBqobcuC_5Kg23dwRQQdUbeEGl">
                 </div>
             </div>
             <div class="row" style="position: relative;">
-                <div class=" col col-lg-6 order-1 order-lg-1">
-                    <div class="rectangle-copy-4">
-
+                <div class=" col col-xl-6 order-1 order-lg-1">
+                    <div class="food-left">
+                        <img src="https://drive.google.com/uc?id=1y3eaxDzH8lnVHwdyRHBg1YwqgP3VZFab">
                     </div>
-                    <img class="pizza-prosciut" src="https://drive.google.com/uc?id=1y3eaxDzH8lnVHwdyRHBg1YwqgP3VZFab">
                 </div>
                 <div style="overflow: hidden;" class=" col-lg-6 order-2 order-lg-2">
                     <h4>
@@ -280,7 +292,7 @@
             </div>
             <div class="row end">
                 <div class="col">
-                    <img class="pasta" src="https://drive.google.com/uc?id=1U-nw9Rfze7vMuPG7EQbB5pZBTUo0JZFK">
+                    <img class="food-middle" src="https://drive.google.com/uc?id=1U-nw9Rfze7vMuPG7EQbB5pZBTUo0JZFK">
                 </div>
             </div>
 
@@ -341,11 +353,9 @@
                         natural
                         <br> wines
                     </h2>
-                    <div class="line-7">
-
-                    </div>
-                    <br>
-                    <p>
+                    <br style="line-height: 10px;">
+                    <p class="content">
+                        <br>
                         Lorem ipsum dolor sit amet, consectetur adipiscing <br> elit. Fusce sapien elit, facilisis quis
                         augue in, feugiat <br> tincidunt odio. Cras in urna convallis, volutpat mi in, <br> aliquam
                         magna.
@@ -370,33 +380,37 @@
                     INSTAGRAM
                 </div>
                 <ul>
-                    <li> <button>
+                    <li> <button onmouseenter="hoverSideArrowButton('left')"
+                            onmouseleave="notHoverSideArrowButton('left')">
                             <div class="path1">
                                 <?xml version="1.0" encoding="utf-8"?>
                                 <svg width="11px" height="26px" viewBox="0 0 11 26" version="1.1"
                                     xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
                                     <desc>Created with Lunacy</desc>
                                     <path d="M0 10L12.5 0L12.5 0L25 10"
-                                        transform="matrix(4.371139E-08 1 1 -4.371139E-08 0.5 0.5)" id="Path" fill="none"
-                                        stroke="#FFFFFF" stroke-width="1" />
+                                        transform="matrix(4.371139E-08 1 1 -4.371139E-08 0.5 0.5)" id="Path-left"
+                                        fill="none" stroke="#FFFFFF" stroke-width="1" />
                                 </svg>
                             </div>
                         </button></li>
                     <li> <img src="https://drive.google.com/uc?id=1QWMgdG9gDnueDfRFe8RYessmWGVpYu-0" alt=""></li>
-                    <li style="padding-right: 0;"> <button>
+                    <li style="padding-right: 0;"> <button onmouseenter="hoverSideArrowButton('right')"
+                            onmouseleave="notHoverSideArrowButton('right')">
                             <div class="path2">
                                 <?xml version="1.0" encoding="utf-8"?>
                                 <svg width="11px" height="26px" viewBox="0 0 11 26" version="1.1"
                                     xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
                                     <desc>Created with Lunacy</desc>
                                     <path d="M0 10L12.5 0L12.5 0L25 10"
-                                        transform="matrix(-4.371139E-08 1 -1 -4.371139E-08 10.5 0.5)" id="Path"
+                                        transform="matrix(-4.371139E-08 1 -1 -4.371139E-08 10.5 0.5)" id="Path-right"
                                         fill="none" stroke="#FFFFFF" stroke-width="1" />
                                 </svg>
                             </div>
-                        </button></li>
+                        </button>
+                    </li>
                 </ul>
-                <button class="insta-button">
+                <button class="insta-button" onmouseenter="hoverInstaFollowButton()"
+                    onmouseleave="notHoverInstaFollowButton()">
                     <?xml version="1.0" encoding="utf-8"?>
                     <svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1"
                         xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
@@ -404,14 +418,14 @@
                         <g id="instagram">
                             <path
                                 d="M3.75 0L8.25 0C10.3211 0 12 1.67893 12 3.75L12 8.25C12 10.3211 10.3211 12 8.25 12L3.75 12C1.67893 12 0 10.3211 0 8.25L0 3.75C0 1.67893 1.67893 0 3.75 0ZM8.25 10.875C9.69975 10.875 10.875 9.69975 10.875 8.25L10.875 3.75C10.875 2.30025 9.69975 1.125 8.25 1.125L3.75 1.125C2.30025 1.125 1.125 2.30025 1.125 3.75L1.125 8.25C1.125 9.69975 2.30025 10.875 3.75 10.875L8.25 10.875Z"
-                                id="Shape" fill="#FFFFFF" fill-rule="evenodd" stroke="none" />
+                                id="insta-follow-button1" fill="#FFFFFF" stroke="none" />
                             <path
                                 d="M0 3C0 1.34315 1.34315 0 3 0C3.79565 0 4.55871 0.316071 5.12132 0.87868C5.68393 1.44129 6 2.20435 6 3C6 4.65685 4.65685 6 3 6C1.34315 6 0 4.65685 0 3ZM1.125 3C1.125 4.03553 1.96447 4.875 3 4.875C3.49728 4.875 3.97419 4.67746 4.32583 4.32583C4.67746 3.97419 4.875 3.49728 4.875 3C4.875 1.96447 4.03553 1.125 3 1.125C1.96447 1.125 1.125 1.96447 1.125 3Z"
-                                transform="translate(3 3)" id="Shape" fill="#FFFFFF" fill-rule="evenodd"
-                                stroke="none" />
+                                transform="translate(3 3)" id="insta-follow-button2" fill="#FFFFFF" stroke="none" />
                             <path
                                 d="M0.39975 0.7995C0.620526 0.7995 0.7995 0.620526 0.7995 0.39975C0.7995 0.178974 0.620526 0 0.39975 0C0.178974 0 0 0.178974 0 0.39975C0 0.620526 0.178974 0.7995 0.39975 0.7995Z"
-                                transform="translate(8.824219 2.375488)" id="Oval" fill="#FFFFFF" stroke="none" />
+                                transform="translate(8.824219 2.375488)" id="insta-follow-button3" fill="#FFFFFF"
+                                stroke="none" />
                         </g>
                     </svg>
                     FOLLOW US</button>
@@ -458,21 +472,21 @@
                 </div>
                 <ul>
                     <li>
-                        <button>
+                        <button onclick="clickRomb(1)">
                             <div class="romb1">
 
                             </div>
                         </button>
                     </li>
                     <li>
-                        <button>
+                        <button onclick="clickRomb(2)">
                             <div class="romb2">
 
                             </div>
                         </button>
                     </li>
                     <li>
-                        <button>
+                        <button onclick="clickRomb(3)">
                             <div class="romb3">
 
                             </div>
@@ -490,11 +504,82 @@
         </div>
         <div class="pattern">
         </div>
-        <div class="content">
+        <div class="primary-color content" style="text-align: center; padding-top: 228px;">
+            <div class="big-header">
+                benellis
+            </div>
+            <br>
+            <br>
 
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-4 order-lg-1 order-2">
+                        <span class="header">Hours</span>
+                        <p class="side-content">
+                            Monday - Friday <br>
+                            10am - 11pm<br>
+                            Saturday - Sunday<br>
+                            11am - 9pm<br>
+                        </p>
+
+                    </div>
+                    <div class="col-lg-4 order-lg-2 order-1">
+                        <span class="header">newsletter sign up</span>
+                        <form action="">
+                            <input type="email" placeholder="Your email" required class="email">
+                            <br> <br>
+                            <button type="submit" class="submit-email">SUBMIT
+                                <?xml version="1.0" encoding="utf-8"?>
+                                <svg style="position:absolute; right:10px;" width="7px" height="22px"
+                                    viewBox="0 0 11 26" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <desc>Created with Lunacy</desc>
+                                    <path d="M0 10L12.5 0L12.5 0L25 10"
+                                        transform="matrix(-4.371139E-08 1 -1 -4.371139E-08 10.5 0.5)" id="Path-right"
+                                        fill="none" stroke="#FFFFFF" stroke-width="2" />
+                                </svg>
+                            </button>
+                        </form>
+                        <br>
+                        <div class="sms-form">
+                            *We won't share your e-mail address. Promise.
+                        </div>
+                    </div>
+                    <div class="col-lg-4 right-side order-lg-3 order-3">
+                        <span class="header"> Contact us</span>
+                        <p class="side-content">
+                            123 King St. <br>
+                            123.456.7890 <br>
+                            <span class="email-decorator"> info@banditorestaurant.com </span> <br>
+                        </p>
+                    </div>
+                </div>
+                <div class="row social-icons-footer">
+                    <div class="col ">
+                        <ul>
+                            <li>
+                                <div class="circular-div">
+
+                                </div>
+                            </li>
+                            <li>
+                                <div class="circular-div">
+
+                                </div>
+                            </li>
+                            <li>
+                                <div class="circular-div">
+
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </div>
+    <script src="../js/script.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>

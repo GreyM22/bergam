@@ -51,6 +51,7 @@ h6 {
   text-align: center;
 }
 
+
 p {
   font-family: ".SF NS Display";
   font-size: 16px;
@@ -77,10 +78,10 @@ p {
   font-weight: 400;
   letter-spacing: 3px;
   text-transform: uppercase;
+  line-height: 33px;
 }
 
 .header {
-  color: #ffffff;
   font-family: "Recoleta DEMO";
   font-size: 15px;
   font-weight: 400;
