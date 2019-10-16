@@ -601,20 +601,24 @@ button img {
   width: 100%;
   height: inherit;
   background-color: #202020;
+  background-image: url("https://drive.google.com/uc?id=1AcmLT6DwoEiJTjdIvNEogDd6JaE18Pin");
+  background-repeat: repeat;
+  background-size: 100% inherit;
+  background-position: center center;
   position: absolute;
   bottom: 0px;
   z-index: -1;
+  margin: 0;
+  padding: 0;
 }
 
 .pattern {
-  width: 100%;
-  height: inherit;
-  /* background-color: white; */
-  background-image: url("../../img/pattern.png");
-  background-blend-mode: screen;
+  width: 100vw;
+  height: 800px;
+  background-image: url("https://drive.google.com/uc?id=1OLSdVH169woSY9obvP7veGUssIm17V4P");
   background-repeat: no-repeat;
-  background-position: center center;
   background-size: cover;
+  background-position: center center;
   position: absolute;
   right: 0;
   bottom: 0;
@@ -674,28 +678,60 @@ button img {
   right: 0;
 }
 
-.col-lg-4.right-side::after{
+.col-lg-4.right-side::after {
   display: none;
 }
 
 .circular-div {
+  display: inline-block;
   box-sizing: border-box;
   height: 45px;
   width: 45px;
-  border: 1px solid #ffffff;
-  opacity: 0.3;
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 50%;
+  text-align: center;
+  padding-top: 15px;
 }
 
-.social-icons-footer{
+.social-icons-footer {
   /* text-align: center; */
 }
 
-.social-icons-footer ul li{
+.the-end ul li {
   display: inline;
-  margin: 15px 0;
+  margin: 5px;
+  /* margin: 15px 0; */
 }
 
+.term-privacy {
+  font-family: "Recoleta";
+  font-size: 11px;
+  letter-spacing: 2px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.term-privacy {
+  position: absolute;
+  bottom: 30px;
+  right: 42.5vw;
+  left: 42.5vw;
+
+}
+
+.the-end ul::after {
+  position: absolute;
+  bottom:90px;
+  left:35.93vw;
+  right:35.93vw;
+  content:'';
+  box-sizing: border-box;
+  height: 0.5px;
+  width: 28.39vw;
+  background-color: #979797;
+  border: 0.5px solid #979797;
+  opacity: 0.4;
+}
 
 @media only screen and (min-width: 1621px) {
   .icons-top,
@@ -775,6 +811,16 @@ button img {
   .review-instagram h4 {
     font-size: 16px;
     line-height: 26px;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .the-end {
+    height: 1400px;
+  }
+
+  .pattern {
+    display: none;
   }
 }
 
