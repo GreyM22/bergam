@@ -2,7 +2,7 @@
   /* Style for "L3A8643" */
   width: 100%;
   height: 61.72vw;
-  background-image: url("https://drive.google.com/uc?id=19PCxVpK8QCUdJ4GE7RBZWsjfa-GEPwVQ");
+  background-image: url("../img/L3A8643.png");
   background-repeat: no-repeat;
   background-size: auto 100%;
   background-position: center 100%;
@@ -409,7 +409,7 @@ button img {
 }
 
 .tables {
-  background-image: url("https://drive.google.com/uc?id=15cGVKpKfjXmOFCkH_28R2uSOe-3r4QhV");
+  background-image: url("../img/tables.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -611,7 +611,7 @@ button img {
   width: 100%;
   height: inherit;
   background-color: #202020;
-  background-image: url("https://drive.google.com/uc?id=1AcmLT6DwoEiJTjdIvNEogDd6JaE18Pin");
+  background-image: url("../img/pattern2.png");
   background-repeat: repeat;
   background-size: 100% inherit;
   background-position: center center;
