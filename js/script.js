@@ -63,4 +63,16 @@ function notHoverSideArrowButton(side){
     document.getElementById('Path-' + side).style.stroke = '#ffff';
 }
 
+function hoverArrowUpButton() {
+    document.getElementById("arrow-up").style.stroke = '#b38a58';
+    document.getElementById("arrow-up1").style.stroke = '#b38a58';
+
+}
+
+function notHoverArrowUpButton(){
+    document.getElementById("arrow-up").style.stroke = '#ffff';
+    document.getElementById("arrow-up1").style.stroke = '#ffff';
+
+}
+
 

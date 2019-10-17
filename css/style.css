@@ -47,6 +47,12 @@
   height: 6.17vw;
 }
 
+/* .menu-button{
+  position: absolute;
+  bottom: -5;
+  right:-70;
+} */
+
 .col-8.justify-content-center {
   height: 6.17vw;
 }
@@ -70,6 +76,7 @@
 
 .icons-top {
   padding: 2.65vw 3.39vw;
+  padding-top: 2.5vw;
   width: 190px;
   flex-grow: 0;
 }
@@ -358,6 +365,9 @@ button img {
   top: 165px;
 }
 
+.phone-icon {
+  display: none;
+}
 .col-lg-6.order-2.order-lg-2 {
   padding: 0;
   padding-top: 25%;
@@ -495,7 +505,7 @@ button img {
 
 .review-instagram {
   position: relative;
-  height: 700.296px;
+  height: 45.17vw;
   width: 100%;
   background-color: #fbfaf9;
 }
@@ -645,12 +655,22 @@ button img {
   text-align: center;
 }
 
-.submit-email {
+.submit-email,
+.header-button {
   box-sizing: border-box;
   height: 56px;
   width: 300px;
   border: 1px solid #b38a58;
   position: relative;
+}
+
+.header-button {
+  display: none;
+}
+
+.submit-email:hover,
+.header-button:hover {
+  background-color: #b38a58;
 }
 
 .sms-form {
@@ -662,6 +682,7 @@ button img {
 .email-decorator {
   text-decoration: underline;
   text-decoration-color: #b38a58;
+  cursor: pointer;
 }
 
 .col-lg-4::after {
@@ -691,6 +712,11 @@ button img {
   border-radius: 50%;
   text-align: center;
   padding-top: 15px;
+  cursor: pointer;
+}
+
+.circular-div:hover {
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .social-icons-footer {
@@ -716,21 +742,41 @@ button img {
   bottom: 30px;
   right: 42.5vw;
   left: 42.5vw;
-
 }
 
 .the-end ul::after {
   position: absolute;
-  bottom:90px;
-  left:35.93vw;
-  right:35.93vw;
-  content:'';
+  bottom: 90px;
+  left: 35.93vw;
+  right: 35.93vw;
+  content: "";
   box-sizing: border-box;
   height: 0.5px;
   width: 28.39vw;
   background-color: #979797;
   border: 0.5px solid #979797;
   opacity: 0.4;
+}
+
+.arrow-up {
+  box-sizing: border-box;
+  padding: 40px;
+  display: block;
+  height: 101px;
+  width: 100px;
+  background-color: #181818;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+.arrow-up:hover {
+  background-color: white;
+}
+
+.new-line-mobile {
+  display: none;
 }
 
 @media only screen and (min-width: 1621px) {
@@ -766,6 +812,10 @@ button img {
     font-size: 35px;
     padding-top: 2.88%;
   }
+
+  .review-instagram {
+    height: 45.17vw;
+  }
 }
 
 @media only screen and (max-width: 1199px) {
@@ -773,6 +823,10 @@ button img {
   .icons-top {
     text-align: center;
     padding: 1.85vw 0;
+  }
+
+  .icons-top {
+    padding-top: 2.5vw;
   }
 
   .icons-top.button {
@@ -796,7 +850,7 @@ button img {
     top: -1.46vw;
   }
   .review-instagram {
-    height: 48.14vw;
+    height: 37.03vw;
   }
 }
 
@@ -822,12 +876,58 @@ button img {
   .pattern {
     display: none;
   }
+
+  .col-lg-4::after {
+    display: none;
+  }
+
+  .left-side::before {
+    content: "";
+    opacity: 0.3;
+    z-index: 6;
+    width: 0.5px;
+    height: 300px;
+    border: dashed 0.5px #ffffff;
+    transform: rotate(-90.00001deg);
+    position: absolute;
+    top: 70;
+    left: 50vw;
+  }
+
+  .review-instagram {
+    height: auto;
+  }
+
+  .review-instagram .row {
+    width: 100vw;
+    margin: 0;
+  }
+
+  .instagram,
+  .review {
+    position: static;
+    height: 600px;
+    width: 100vw;
+  }
+
+  .review-instagram img {
+    height: 357px;
+    width: 255px;
+  }
+  .food-left img {
+    height: 398px;
+    width: 339px;
+  }
+  .food-left::before{
+    height: 520px;
+    width: 276px;
+  }
 }
 
 @media only screen and (max-width: 899px) {
   h1 {
-    font-size: 40px;
-    line-height: 48px;
+    font-size: 50px;
+    line-height: 54px;
   }
   .new-line {
     display: none;
@@ -852,11 +952,6 @@ button img {
     padding-top: 2.1vw;
   }
 
-  /* .number {
-    top: 2.5vw;
-    right: 5.46vw;
-  } */
-
   .col-lg-6.order-2.order-lg-2 {
     padding-top: 30%;
     padding-left: 10%;
@@ -868,12 +963,11 @@ button img {
   }
 
   .review .insta-title {
-    margin-bottom: 3.85vw;
+    margin-bottom: 57px;
   }
 
   .review ul {
-    padding-top: 2.08vw;
-    padding-bottom: 2.08vw;
+    padding-top: 84px;
   }
   .review {
     bottom: -2.08vw;
@@ -881,6 +975,29 @@ button img {
 
   .natural-wines .col-lg-6.img {
     display: none;
+  }
+
+  .menu-button,
+  .icons-top.button,
+  .header-paragraph {
+    display: none;
+  }
+
+  .new-line-mobile {
+    display: block;
+  }
+
+  .header-button {
+    display: inline-block;
+  }
+
+  .radial-grad-img,
+  .mask {
+    height: 72.72vw;
+  }
+
+  .mask .row {
+    min-height: 28.33%;
   }
 }
 
@@ -893,19 +1010,15 @@ button img {
     width: 150px;
     padding-left: 8px;
   }
-  /* .number {
-    top: 2.8vw;
-    right: 1vw;
-  } */
 
   .title {
     padding-bottom: 10px;
   }
 
-  h1 {
+  /* h1 {
     font-size: 35px;
     line-height: 28px;
-  }
+  } */
 
   .col-lg-6.order-2.order-lg-2 {
     padding-top: 40%;
@@ -922,5 +1035,57 @@ button img {
 
   .natural-wines .col-lg-6.img {
     display: none;
+  }
+
+  .phone-nr-ul {
+    display: none;
+  }
+
+  .phone-nr {
+    width: 100px;
+    padding-left: 40px;
+  }
+  .phone-icon {
+    display: inline-block;
+  }
+
+  .food-middle {
+    left: auto;
+    right: 34px;
+  }
+
+  .flex-container > div {
+    height: 81px;
+  }
+
+  .icons-top button,
+  .phone-nr button {
+    height: 50px;
+  }
+
+  .title {
+    line-height: 4;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .radial-grad-img,
+  .mask {
+    height: 772px;
+  }
+
+  .right-bottom,
+  .social-net {
+    display: none;
+  }
+
+  .align-items-end button {
+    position: relative;
+  }
+
+  .align-items-end {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
