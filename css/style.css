@@ -523,6 +523,13 @@ button img {
   top: -13.08vw;
 }
 
+.first-body-section h3::after{
+  content: url(../svg/curly-line.svg);
+  position: absolute;
+  bottom: 0;
+  left:47.6%;
+}
+
 .col-lg-6.img img {
   height: 35.92vw;
   width: 28.39vw;
