@@ -4,8 +4,8 @@
   height: 61.72vw;
   background-image: url("../img/L3A8643.png");
   background-repeat: no-repeat;
-  background-size: auto 100%;
-  background-position: center 100%;
+  background-size: auto;
+  background-position: 50% 30%;
   background-color: #000000;
   background-blend-mode: screen;
 }
@@ -17,6 +17,7 @@
     rgba(0, 0, 0, 0) 0%,
     rgba(0, 0, 0, 0.6) 100%
   );
+  position: relative;
 }
 
 .linear-grad-img {
@@ -143,7 +144,25 @@ ul {
   padding-left: 2.39vw;
   padding-right: 2.39vw;
   text-align: center;
+  border-right: 0;
 }
+
+.left-nav-side {
+  border-left: 0px;
+}
+
+.left-nav-side button {
+  position: relative;
+}
+
+.left-nav-side .menu-button {
+  padding-left: 0;
+}
+
+.left-nav-side svg {
+  margin-top: 3px;
+}
+
 button {
   background: none;
   border: 0;
@@ -209,6 +228,10 @@ button:focus {
   height: 91px;
 }
 
+.align-items-center .col {
+  text-align: center;
+}
+
 button img {
   position: absolute;
   left: 30px;
@@ -271,21 +294,21 @@ button img {
   left: 42vw;
 }
 
-.descritption {
+.first-body-section {
   height: 497px;
   padding-top: 124px;
   text-align: center;
 }
 
-.descritption h3 {
+.first-body-section h3 {
   margin-bottom: 40px;
 }
 
-.european-cuisine {
+.second-body-section {
   position: relative;
 }
 
-.european-cuisine .col-xl-6.order-1.order-lg-2,
+.second-body-section .col-xl-6.order-1.order-lg-2,
 .col-lg-6.order-1.order-lg-1 {
   /* position: relative; */
   height: 500px;
@@ -297,8 +320,8 @@ button img {
   padding-right: auto;
 }
 
-.european-cuisine p.content::before,
-.natural-wines p.content::before {
+.second-body-section .content p::before,
+.third-body-section .content p::before {
   content: "";
   box-sizing: border-box;
   height: 1px;
@@ -319,19 +342,34 @@ button img {
   left: 0;
 }
 
-.european-cuisine h2,
-.european-cuisine p,
-.natural-wines h2,
-.natural-wines p {
+.second-body-section h2,
+.second-body-section p,
+.third-body-section h2,
+.third-body-section p {
   text-align: left;
 }
 
-.european-cuisine .food-right {
+.second-body-section .food-right {
   height: 580px;
   width: 640px;
+  background: url("../img/bitmap.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
   position: absolute;
   top: -30px;
   right: 0;
+}
+
+.second-body-section .food-right::after{
+  content:"";
+  height: 39.5vw;
+  width: 19.62vw;
+  background-color: #eae0d5;
+  position: absolute;
+  top: -10.24vw;
+  right: 0;
+  z-index: -1;
 }
 
 .rectangle-copy-5 {
@@ -372,8 +410,8 @@ button img {
   padding: 0;
   padding-top: 25%;
   padding-right: 10%;
-  /* min-height: 820px; */
   text-align: center;
+  overflow: hidden;
 }
 
 .col.col-xl-6.order-1.order-lg-1 {
@@ -408,7 +446,7 @@ button img {
   right: -50px;
 }
 
-.tables {
+.img-mask {
   background-image: url("../img/tables.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -451,7 +489,7 @@ button img {
   font-weight: 600;
 }
 
-.instagram .insta-button:hover {
+.social-network .insta-button:hover {
   background-color: white;
   color: #000000;
   /* font-weight: 600; */
@@ -464,11 +502,12 @@ button img {
   text-align: center;
 }
 
-.natural-wines {
+.third-body-section {
   padding-top: 13.08vw;
   background-color: #fbfaf9;
   height: 61.72vw;
   min-height: 700px;
+  position: relative;
 }
 
 .col-lg-6.img {
@@ -492,7 +531,7 @@ button img {
   right: 11.11vw;
 }
 
-.wines {
+.placeholder {
   opacity: 0.05;
   color: #000000;
   font-family: ".SF NS Display";
@@ -503,14 +542,14 @@ button img {
   top: -10;
 }
 
-.review-instagram {
+.review-social-network {
   position: relative;
   height: 45.17vw;
   width: 100%;
   background-color: #fbfaf9;
 }
 
-.instagram {
+.social-network {
   padding: 0;
   padding-top: 5.8vw;
   height: 48.14vw;
@@ -522,21 +561,21 @@ button img {
   top: -2.46vw;
 }
 
-.insta-title {
+.social-net-title {
   font-family: "Recoleta";
   font-size: 15px;
   line-height: 24px;
 }
 
-.review-instagram img {
+.review-social-network img {
   height: 25.92vw;
   width: 18.51vw;
 }
 
-.instagram ul {
+.social-network ul {
   margin-top: 1.85vw;
 }
-.instagram ul li {
+.social-network ul li {
   display: inline;
   padding-right: 9.72vw;
 }
@@ -561,7 +600,7 @@ button img {
   right: 0;
 }
 
-.review .insta-title {
+.review .social-net-title {
   margin-bottom: 6.85vw;
 }
 
@@ -601,13 +640,13 @@ button img {
   padding-top: 3.08vw;
 }
 
-.the-end {
+footer {
   position: relative;
   height: 800px;
   width: 100%;
 }
 
-.footer {
+.background-footer {
   width: 100%;
   height: inherit;
   background-color: #202020;
@@ -634,12 +673,14 @@ button img {
   bottom: 0;
 }
 
-.side-content {
+
+.side-content p {
   font-family: "Recoleta";
   font-size: 16px;
   line-height: 26px;
   font-weight: 400;
 }
+
 
 .email {
   height: 56px;
@@ -671,6 +712,11 @@ button img {
 .submit-email:hover,
 .header-button:hover {
   background-color: #b38a58;
+}
+
+.header-button svg {
+  position: absolute;
+  right: 10px;
 }
 
 .sms-form {
@@ -723,7 +769,7 @@ button img {
   /* text-align: center; */
 }
 
-.the-end ul li {
+footer ul li {
   display: inline;
   margin: 5px;
   /* margin: 15px 0; */
@@ -744,7 +790,7 @@ button img {
   left: 42.5vw;
 }
 
-.the-end ul::after {
+footer ul::after {
   position: absolute;
   bottom: 90px;
   left: 35.93vw;
@@ -778,6 +824,63 @@ button img {
 .new-line-mobile {
   display: none;
 }
+
+.social-net a {
+  cursor: pointer;
+}
+
+.social-net .last-icon {
+  padding-bottom: 0;
+}
+
+.half-br {
+  line-height: 10px;
+}
+
+.second-section {
+  position: relative;
+}
+
+.social-network .arrow-right {
+  padding-right: 0;
+}
+
+footer .content {
+  text-align: center;
+  padding-top: 200px;
+}
+
+.email-form svg {
+  position: absolute;
+  right: 10px;
+}
+
+footer h6 {
+  font-family: "Recoleta DEMO";
+  font-size: 24px;
+  line-height: 34px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 33px;
+}
+
+h6.header{
+  font-family: "Recoleta DEMO";
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 96px;
+  text-transform: uppercase;
+}
+
+/* .descritption h3::after{
+  content: url(../svg/curly-line.svg);
+  /* text-align: center;
+  position: absolute;
+
+  bottom: 0;
+  left:47.10%;
+} */
 
 @media only screen and (min-width: 1621px) {
   .icons-top,
@@ -813,7 +916,7 @@ button img {
     padding-top: 2.88%;
   }
 
-  .review-instagram {
+  .review-social-network {
     height: 45.17vw;
   }
 }
@@ -837,7 +940,7 @@ button img {
     line-height: 68px;
   }
 
-  .european-cuisine .food-right {
+  .second-body-section .food-right {
     height: 480px;
     width: 540px;
   }
@@ -846,10 +949,10 @@ button img {
     padding-top: 9.79vw;
   }
 
-  .instagram {
+  .social-network {
     top: -1.46vw;
   }
-  .review-instagram {
+  .review-social-network {
     height: 37.03vw;
   }
 }
@@ -859,17 +962,17 @@ button img {
     bottom: -2.08vw;
   }
 
-  .natural-wines .col-lg-6.img {
+  .third-body-section .col-lg-6.img {
     display: none;
   }
-  .review-instagram h4 {
+  .review-social-network h4 {
     font-size: 16px;
     line-height: 26px;
   }
 }
 
 @media only screen and (max-width: 960px) {
-  .the-end {
+  footer {
     height: 1400px;
   }
 
@@ -894,23 +997,23 @@ button img {
     left: 50vw;
   }
 
-  .review-instagram {
+  .review-social-network {
     height: auto;
   }
 
-  .review-instagram .row {
+  .review-social-network .row {
     width: 100vw;
     margin: 0;
   }
 
-  .instagram,
+  .social-network,
   .review {
     position: static;
     height: 600px;
     width: 100vw;
   }
 
-  .review-instagram img {
+  .review-social-network img {
     height: 357px;
     width: 255px;
   }
@@ -918,7 +1021,7 @@ button img {
     height: 398px;
     width: 339px;
   }
-  .food-left::before{
+  .food-left::before {
     height: 520px;
     width: 276px;
   }
@@ -957,12 +1060,12 @@ button img {
     padding-left: 10%;
   }
 
-  .review-instagram h4 {
+  .review-social-network h4 {
     font-size: 16px;
     line-height: 26px;
   }
 
-  .review .insta-title {
+  .review .social-net-title {
     margin-bottom: 57px;
   }
 
@@ -973,7 +1076,7 @@ button img {
     bottom: -2.08vw;
   }
 
-  .natural-wines .col-lg-6.img {
+  .third-body-section .col-lg-6.img {
     display: none;
   }
 
@@ -1033,7 +1136,7 @@ button img {
     margin: 15px 0;
   }
 
-  .natural-wines .col-lg-6.img {
+  .third-body-section .col-lg-6.img {
     display: none;
   }
 
