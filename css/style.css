@@ -1,3 +1,5 @@
+
+
 .mask {
   /* Style for "L3A8643" */
   width: 100%;
@@ -11,8 +13,20 @@
   width: 100vw;
   height: 100vh;
   display: none;
-  position: relative;
   z-index: 10;
+  margin-top: 7.48vw;
+}
+
+#navbarResponsive h1{
+  color:#4C4C4C;
+}
+
+#navbarResponsive h1:hover{
+  color: white;
+}
+
+.dark-bg{
+  background-color: #202020;
 }
 
 .overflow-hidden{

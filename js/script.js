@@ -119,8 +119,9 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-  $('.the-button').click(function () {
-    $('.navbar').toggleClass('bg-dark');
+  $('.the-button, #navbarResponsive a').click(function () {
+    $('.the-button svg').toggleClass('d-none')
+    $('.navbar').toggleClass('dark-bg');
     $('#navbarResponsive').fadeToggle('slow')
     $('body').toggleClass('overflow-hidden');
   });
