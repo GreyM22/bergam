@@ -962,23 +962,18 @@ footer ul li {
   text-align: center;
 }
 
-.term-privacy {
-  position: relative;
-  bottom: -100;
-}
 
 footer .term-privacy::before {
   box-sizing: border-box;
   height: 0.5px;
-  width: 460px;
+  width: 320px;
   background-color: #979797;
   border: 0.5px solid #979797;
   opacity: 0.4;
-  margin-left: -230px;
-  position: absolute;
-  bottom: 50px;
-  left: 50vw;
   content: "";
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 10;
 }
 
 .arrow-up {
@@ -1029,6 +1024,7 @@ footer .term-privacy::before {
 footer .content {
   text-align: center;
   padding-top: 200px;
+  height: inherit;
 }
 
 .email-form svg {
@@ -1174,7 +1170,7 @@ h6.header {
 
 @media only screen and (max-width: 991px) {
   footer {
-    height: 1420px;
+    height: 1250px;
   }
 
   .pattern {
@@ -1226,10 +1222,10 @@ h6.header {
     height: 520px;
     width: 276px;
   }
-  .term-privacy {
+  /* .term-privacy {
     position: relative;
     bottom: -280;
-  }
+  } */
 }
 
 @media only screen and (max-width: 899px) {
@@ -1427,9 +1423,7 @@ h6.header {
   }
 
   footer .term-privacy::before {
-    margin-left: -152.5;
     width: 305px;
-    bottom: 60;
   }
 
   footer .left-side::before {
