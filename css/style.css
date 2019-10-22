@@ -438,9 +438,9 @@ h4{
 .second-body-section .food-right img {
   height: 580px;
   width: 640px;
-  position: absolute;
-  top: -30px;
-  right: 0;
+  display: block;
+  margin-right: 0;
+  margin-left: auto;
 }
 
 .second-body-section .food-right::after {
@@ -506,16 +506,21 @@ h4{
 }
 
 .row.end {
-  height: 550px;
+  height: auto;
   position: relative;
 }
 
 .food-middle {
   height: 394px;
   width: 320px;
-  position: absolute;
+  /* position: absolute;
   left: 50vw;
-  top: 5vw;
+  top: 5vw; */
+  display: block;
+  margin-left: 50%;
+  margin-right: auto;
+  margin-top: 5vw;
+  margin-bottom: 10.80vw;
 }
 
 .second-body-section .placeholder {
@@ -654,11 +659,9 @@ footer ul {
   min-height: 700px;
   position: relative;
   overflow: hidden;
+  z-index: -1;
 }
 
-.col-lg-6.img {
-  position: relative;
-}
 
 .first-body-section h3::after,
 h4::after {
@@ -700,9 +703,14 @@ h4::after {
 .col-lg-6.img img {
   height: 35.92vw;
   width: 28.39vw;
-  position: absolute;
+  /* position: absolute;
   top: -10;
-  right: 11.11vw;
+  right: 11.11vw; */
+  /* z-index: 5; */
+  display: block;
+  margin-right: 11.11vw;
+  margin-left: auto;
+  margin-top: -10;
   z-index: 5;
 }
 
@@ -715,7 +723,7 @@ h4::after {
   right: 0;
   /* top: -13.08vw; */
   top: 0;
-  z-index: 0;
+  z-index: -1;
 }
 
 .third-body-section .placeholder {
