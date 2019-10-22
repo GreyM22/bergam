@@ -31,14 +31,14 @@
 // }
 
 function clickRomb(nr) {
-    for (let i = 1; i <= 3; i++) {
-        if (i == nr) {
-            document.getElementsByClassName("romb" + i)[0].style.background = '#b38a58';
-        }
-        else {
-            document.getElementsByClassName("romb" + i)[0].style.background = '#ffff';
-        }
+  for (let i = 1; i <= 3; i++) {
+    if (i == nr) {
+      document.getElementsByClassName("romb" + i)[0].style.background = '#b38a58';
     }
+    else {
+      document.getElementsByClassName("romb" + i)[0].style.background = '#ffff';
+    }
+  }
 }
 
 // function hoverInstaFollowButton() {
@@ -76,45 +76,52 @@ function clickRomb(nr) {
 // }
 
 window.addEventListener('scroll', function () {
-    let scroll = window.scrollY;
-    let vw = document.documentElement.clientWidth;
-    let bgimg = document.querySelector('.mask');
+  let scroll = window.scrollY;
+  let vw = document.documentElement.clientWidth;
+  let bgimg = document.querySelector('.mask');
 
-    scroll = scroll / (0.6172 * vw);
-    scroll *= 100;
-    if (scroll < 80) {
-        bgimg.style.backgroundPosition = "50% " + (scroll + 20) + "%";
-    }
+  scroll = scroll / (0.6172 * vw);
+  scroll *= 100;
+  if (scroll < 80) {
+    bgimg.style.backgroundPosition = "50% " + (scroll + 20) + "%";
+  }
 
 });
 
-function moveToFirsBodySection(){
-    document.querySelector('.first-body-section').scrollIntoView({ 
-        behavior: 'smooth' 
-      });
+function moveToFirsBodySection() {
+  document.querySelector('.first-body-section').scrollIntoView({
+    behavior: 'smooth'
+  });
 }
 
-$(document).ready(function(){
-    // Add smooth scrolling to all links
-    $("a").on('click', function(event) {
-  
-      // Make sure this.hash has a value before overriding default behavior
-      if (this.hash !== "") {
-        // Prevent default anchor click behavior
-        event.preventDefault();
-  
-        // Store hash
-        var hash = this.hash;
-  
-        // Using jQuery's animate() method to add smooth page scroll
-        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-        $('html, body').animate({
-          scrollTop: $(hash).offset().top
-        }, 800, function(){
-     
-          // Add hash (#) to URL when done scrolling (default click behavior)
-          window.location.hash = hash;
-        });
-      } // End if
-    });
+$(document).ready(function () {
+  // Add smooth scrolling to all links
+  $("a").on('click', function (event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {        // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function () {
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
   });
+});
+
+$(document).ready(function () {
+  $('.the-button').click(function () {
+    $('.navbar').toggleClass('bg-dark');
+    $('#navbarResponsive').slideToggle('slow')
+    $('body').toggleClass('overflow-hidden');
+  });
+});
