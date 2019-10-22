@@ -121,7 +121,7 @@ $(document).ready(function () {
 $(document).ready(function () {
   $('.the-button').click(function () {
     $('.navbar').toggleClass('bg-dark');
-    $('#navbarResponsive').slideToggle('slow')
+    $('#navbarResponsive').fadeToggle('slow')
     $('body').toggleClass('overflow-hidden');
   });
 });
