@@ -867,13 +867,10 @@ footer ul {
 
 footer {
   position: relative;
-  height: 820px;
+  height: auto;
   width: 100%;
-  background-color: #202020;
-  background-image: url("../img/pattern2.png");
-  background-repeat: repeat;
+  background: #202020 url("../img/pattern2.png") repeat center center;
   background-size: 100% inherit;
-  background-position: center center;
   z-index: 0;
 }
 
@@ -1194,7 +1191,7 @@ h6.header {
 
 @media only screen and (max-width: 991px) {
   footer {
-    height: 1250px;
+    height: auto;
   }
 
   .pattern {
