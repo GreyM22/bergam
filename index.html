@@ -9,22 +9,55 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <!-- <style>
+        #test .row>div {
+            padding: 20px 0;
+            font-size: 14px;
+            line-height: 14px;
+            border-bottom: solid 1px #ddd;
+                border-right: solid 1px #ddd;
+        }
+        #test .row>div>div {
+            text-align: center;
+        }
+        .main-title div {margin-left: 30%;}
+        </style> -->
 </head>
 
 <body>
-    <header class="mask primary-color" id="header">
+    <header class="mask primary-color " id="header">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item  embed-responsive-item  active">
+                        <div class="bg-img1">
+
+                        </div>
+                </div>
+                <div class="carousel-item embed-responsive-item  ">
+                        <div class="bg-img2">
+
+                        </div>
+                </div>
+                <div class="carousel-item embed-responsive-item  ">
+                        <div class="bg-img3">
+
+                        </div>
+                </div>
+            </div>
+
+        </div>
         <div class=" linear-grad-img">
             <div class="radial-grad-img">
                 <div class="container-fluid content">
-                    <div class="row  align-items-start head ">
+                    <div class="row  align-items-start head main " id="test">
                         <nav class="navbar w-100 p-0 m-0" id="mainNav">
                             <div class="flex-container">
                                 <div class="icons-top left-nav-side text-center">
                                     <a href="#">
-                                        <button class="the-button" type="button">
+                                        <button class="the-button ">
                                             <div class="row">
                                                 <div class="col-6">
-                                                    <?xml version="1.0" encoding="utf-8"?>
+                                                    <!-- <?xml version="1.0" encoding="utf-8"?>
                                                     <svg width="22px" height="13px" viewBox="0 0 22 13" version="1.1"
                                                         xmlns:xlink="http://www.w3.org/1999/xlink"
                                                         xmlns="http://www.w3.org/2000/svg">
@@ -51,7 +84,10 @@
                                                             transform="matrix(-0.7071067 0.7071068 0.7071068 0.7071067 15.55859 1.414307)"
                                                             id="Line-5" fill="none" stroke="#B38A58" stroke-width="2"
                                                             stroke-linecap="square" />
-                                                    </svg>
+                                                    </svg> -->
+                                                    <span class="navbar-toggler-bar top-bar "></span>
+                                                    <span class="navbar-toggler-bar middle-bar"></span>
+                                                    <span class="navbar-toggler-bar bottom-bar "></span>
                                                 </div>
                                                 <div class="col-6 menu-button">
                                                     MENU
@@ -60,15 +96,15 @@
                                         </button>
                                     </a>
                                 </div>
+
                                 <div class="title"><a href="#">Benelli’s</a> </div>
-                                <div class="phone-nr">
-                                    <ul class="phone-nr-ul">
+                                <div class="phone-nr pl-md-4 ">
+                                    <!-- <ul class="phone-nr-ul">
                                         <li>
                                             <?xml version="1.0" encoding="UTF-8"?>
                                             <svg width="14px" height="22px" viewBox="0 0 14 22" version="1.1"
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 xmlns:xlink="http://www.w3.org/1999/xlink">
-                                                <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
                                                 <title>Untitled 6</title>
                                                 <desc>Created with Sketch.</desc>
                                                 <g id="Page-1" stroke="none" stroke-width="1" fill="none"
@@ -87,13 +123,21 @@
                                         <li class="number">
                                             <span class="span-numb">206-555-7890</span>
                                         </li>
-                                    </ul>
+                                    </ul> -->
+
+                                    <div class="row phone-nr-ul">
+                                        <div class="col-1  ">
+                                            <span class="phone-svg"></span>
+                                        </div>
+                                        <div class=" col p-0 pl-2 number">
+                                            <span class="span-numb">206-555-7890</span>
+                                        </div>
+                                    </div>
                                     <a href="#" class=" phone-icon">
                                         <?xml version="1.0" encoding="UTF-8"?>
                                         <svg width="14px" height="22px" viewBox="0 0 14 22" version="1.1"
                                             xmlns="http://www.w3.org/2000/svg"
                                             xmlns:xlink="http://www.w3.org/1999/xlink">
-                                            <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
                                             <title>Untitled 6</title>
                                             <desc>Created with Sketch.</desc>
                                             <g id="Page-1" stroke="none" stroke-width="1" fill="none"
@@ -115,6 +159,11 @@
                                     </a>
                                 </div>
                             </div>
+                            <!-- <div class='col-1 pt-5 pr-4 text-right'><div>Menu</div></div>
+                            <div class='col main-title pt-5'><div>Title</div></div>
+                            <div class='col-md-2 pt-5 '><div>Menu</div></div>
+                            <div class='col-md-2 pt-5'><div>Menu</div></div> -->
+
                             <div class="navbar-collapse" id="navbarResponsive">
                                 <ul class=" text-center">
                                     <li>
@@ -142,7 +191,7 @@
                         </nav>
                     </div>
 
-                    <div class="row align-items-center ">
+                    <div class="row align-items-center main ">
                         <div class="col ">
                             <h1>
                                 Seasonal &
@@ -169,7 +218,7 @@
 
                         </div>
                     </div>
-                    <div class="row align-items-end">
+                    <div class="row align-items-end main">
                         <div class="col">
                             <div class="social-net">
                                 <ul>

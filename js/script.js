@@ -31,11 +31,39 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('.the-button, #navbarResponsive a').click(function () {
-    $('.the-button svg').toggleClass('d-none')
+    // $('.the-button svg').toggleClass('d-none')
     $('.navbar').toggleClass('dark-bg');
-    $('#navbarResponsive').toggle('fast')
+    $('.the-button').toggleClass('rotate');
+    $('#navbarResponsive').toggle('fast');
     $('body').toggleClass('overflow-hidden');
   });
 });
 
+
+/* bacground slider */
+
+// var indexBackgroundImg = 0;
+// sliderBacgroundImg();
+
+// function sliderBacgroundImg(){
+//   var bacgroundImg = [
+//     'url("C:/Users/Grei/Desktop/work/Resturant/Web page/img/restaurant.jpg")',
+//     'url("C:/Users/Grei/Desktop/work/Resturant/Web page/img/restaurant2.jpg")',
+//     'url("C:/Users/Grei/Desktop/work/Resturant/Web page/img/restaurant3.jpg")'
+//   ];
+
+//   for( let i = 0; i < 3; i++){
+
+//     if(i == indexBackgroundImg){
+
+//       document.getElementById('header').style.backgroundImage = bacgroundImg[i];
+//       document.getElementById('header').classList.toggle("fade");
+//       indexBackgroundImg++;
+//       break;
+//     }
+//   }
+
+//   if(indexBackgroundImg >= 3) indexBackgroundImg = 0 ;
+//   setTimeout(sliderBacgroundImg, 2000);
+// }
 

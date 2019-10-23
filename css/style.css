@@ -1,22 +1,116 @@
 
+.phone-svg::before{
+content: url(../svg/cell-phone.svg);
+display: block;
+margin-top: 2px;
+}
+
+.phone-nr .row{
+  width: 100%;
+  margin:0;
+}
+
+.navbar-toggler-bar {
+  background: #B38A58;
+  display: block;
+  position: relative;
+  width: 22px;
+  height: 2px;
+  margin: 7px;
+  border-radius: 1px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.rotate .top-bar {
+  margin-top: 0;
+  transform: rotate(55deg);
+  transform-origin: 0;
+
+}
+.rotate .middle-bar{
+  opacity: 0; 
+  display: block;
+}
+.rotate .bottom-bar {
+  transform: rotate(-55deg);
+  transform-origin: 0;
+}
+
+.bottom-bar {
+  transform: rotate(0);
+
+}
+.top-bar {
+  transform: rotate(0);
+  margin-top: 3px;
+}
+
+.middle-bar{
+  display: none;
+}
 
 .mask {
   /* Style for "L3A8643" */
   width: 100%;
   height: 61.72vw;
-  /* background-color: #000000; */
-  /* background-position: 50% 30%; */
-  /* background-repeat: no-repeat; */
+  position: relative;
+  /* background-color: #000000;
+  background-position: 50% 30%;
+  background-repeat: no-repeat;
+  background-image: url("../img/restaurant.jpg");
   background: #000000 url("../img/restaurant.jpg") no-repeat 50% 30%;
   background-size: auto;
+  background-blend-mode: screen; */
+}
+
+.bg-img1{
+  background-color: #000000;
+  background-position: 50% 30%;
+  background-repeat: no-repeat;
+  background-image: url("../img/restaurant.jpg");
+  background-size: auto;
   background-blend-mode: screen;
+  display: block;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+.bg-img2{
+  background-color: #000000;
+  background-position: 50% 30%;
+  background-repeat: no-repeat;
+  background-image: url("../img/restaurant2.jpg");
+  /* background: #000000 url("../img/restaurant.jpg") no-repeat 50% 30%; */
+  background-size: auto;
+  background-blend-mode: screen;
+  display: block;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.bg-img3{
+  background-color: #000000;
+  background-position: 50% 30%;
+  background-repeat: no-repeat;
+  background-image: url("../img/restaurant3.jpg");
+  /* background: #000000 url("../img/restaurant.jpg") no-repeat 50% 30%; */
+  background-size: auto;
+  background-blend-mode: screen;
+  display: block;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+
 }
 
 #navbarResponsive{
   width: 100vw;
   height: 100vh;
   display: none;
-  z-index: 10;
+  z-index: 100;
   margin-top: 7.48vw;
 }
 
@@ -67,6 +161,10 @@
 }
 
 .linear-grad-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
   height: 312px;
   background-image: linear-gradient(
     180deg,
@@ -75,7 +173,7 @@
   );
 }
 
-.mask .row {
+.mask .row.main {
   min-height: 33.33%;
 }
 
@@ -91,7 +189,6 @@
 /* The top bar */
 
 .row.head > [class*="col-"],
-.row.head .col,
 .row.head .col-fixed {
   border: 1px solid rgb(255, 255, 255, 0.2);
   border-top: none;
@@ -201,13 +298,13 @@ ul {
 }
 
 .number {
-  height: 18px;
-  width: 116px;
+  /* height: 18px;
+  width: 116px; */
   color: #ffffff;
   font-family: "Recoleta";
   font-size: 13px;
   letter-spacing: 2.36px;
-  line-height: 18px;
+  line-height: 28.642px;
 }
 
 .phone-nr li a {
@@ -217,7 +314,8 @@ ul {
 }
 
 .phone-nr {
-  padding: 44px 40px 2.28vw 36px;
+  /* padding: 44px 40px 2.28vw 36px; */
+  padding-top: 44px;
   align-items: center;
   position: relative;
   width: 219px;
@@ -319,9 +417,9 @@ div.icons-top {
   text-align: center;
 }
 
-.icons-top.button button {
+/* .icons-top.button button {
   margin-top: 5px;
-}
+} */
 
 button img {
   position: absolute;
@@ -1134,39 +1232,6 @@ h6.header {
     padding-top: 2.5vw;
   }
 
-  .phone-nr{
-    padding-left: 2.39vw;
-    padding-right: auto;
-
-  }
-  /*
-  .icons-top,
-  .icons-top.button,
-  .phone-nr {
-    width: 350px;
-  }
-
-  .icons-top svg {
-    width: 25px;
-    height: 25px;
-  }
-
-  .phone-nr svg {
-    width: 40px;
-    height: 40px;
-  } */
-  /* .number {
-    font-size: 20px;
-  }
-
-  .icons-top.button button {
-    font-size: 20px;
-  } */
-  /* .title {
-    font-size: 28px;
-    padding-top: 2.88%;
-  } */
-
   .review-social-network {
     height: 45.17vw;
   }
@@ -1417,7 +1482,7 @@ h6.header {
 
   .phone-nr {
     width: 100px;
-    padding-left: 40px;
+    /* padding-left: 40px; */
   }
   .phone-icon {
     display: block;
