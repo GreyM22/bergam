@@ -123,7 +123,7 @@
   font-family: "Recoleta";
   line-height: 33px;
   text-align: right;
-  padding-top: 2.16%;
+  padding-top: 44px;
   padding-right: 20.18%;
   flex-grow: 1;
 }
@@ -142,7 +142,7 @@
 
 .icons-top {
   padding: 2.65vw 3.39vw;
-  padding-top: 2.5vw;
+  padding-top: 44px;
   width: 190px;
   flex-grow: 0;
 }
@@ -217,7 +217,7 @@ ul {
 }
 
 .phone-nr {
-  padding: 2.53vw 40px 2.28vw 36px;
+  padding: 44px 40px 2.28vw 36px;
   align-items: center;
   position: relative;
   width: 219px;
@@ -281,7 +281,7 @@ button:focus {
 .flex-container > div {
   border: 1px solid rgb(255, 255, 255, 0.2);
   border-top: none;
-  height: 6.17vw;
+  height: inherit;
 }
 
 div.icons-top {
@@ -1089,10 +1089,6 @@ footer .term-privacy::before {
   position: relative;
 }
 
-/* .social-network .arrow-right {
-  padding-right: 0;
-} */
-
 footer .content {
   text-align: center;
   padding-top: 200px;
@@ -1130,7 +1126,18 @@ h6.header {
   .icons-top,
   .icons-top.button,
   .phone-nr {
-    width: 300px;
+    width: 11.11vw;
+    padding-top: 2.5vw;
+  }
+
+  .title{
+    padding-top: 2.5vw;
+  }
+
+  .phone-nr{
+    padding-left: 2.39vw;
+    padding-right: auto;
+
   }
   /*
   .icons-top,
@@ -1170,19 +1177,19 @@ h6.header {
 }
 
 @media only screen and (max-width: 1199px) {
-  .title,
-  .icons-top {
-    text-align: center;
-    padding: 1.85vw 0;
-  }
 
-  .icons-top {
-    padding-top: 2.5vw;
+  .icons-top,.title, .phone-nr {
+    padding-top: 27px;
+  }
+  .title{
+    padding-right: 0;
+    text-align: center;
   }
 
   .icons-top.button {
-    padding: 2.55vw 0;
+    padding: 27px 0;
   }
+
   h1 {
     font-size: 60px;
     line-height: 68px;
@@ -1205,6 +1212,7 @@ h6.header {
   .review-social-network {
     height: 37.03vw;
   }
+
 
   .col-xl-6.order-2.order-lg-2 {
     padding: 0;
@@ -1291,10 +1299,6 @@ h6.header {
     height: 520px;
     width: 276px;
   }
-  /* .term-privacy {
-    position: relative;
-    bottom: -280;
-  } */
 }
 
 @media only screen and (max-width: 899px) {
@@ -1316,13 +1320,6 @@ h6.header {
 
   .title {
     font-size: 15px;
-  }
-
-  .phone-nr {
-    padding: 0;
-    padding-left: 2.22vw;
-    padding-bottom: 1.28vw;
-    padding-top: 2.1vw;
   }
 
   .review-social-network h4 {
@@ -1400,15 +1397,11 @@ h6.header {
   .icons-top.button {
     width: 100px;
   }
-  .phone-nr {
-    width: 150px;
-    padding-left: 8px;
-  }
 
-  .title {
+  /* .title {
     padding-bottom: 10px;
   }
-
+ */
   .second-body-section .placeholder {
     display: none;
   }
@@ -1427,7 +1420,8 @@ h6.header {
     padding-left: 40px;
   }
   .phone-icon {
-    display: inline-block;
+    display: block;
+    margin-top: 4;
   }
 
   .food-middle {
@@ -1435,18 +1429,10 @@ h6.header {
     right: 34px;
   }
 
-  .flex-container > div {
+  /* .flex-container > div {
     height: 81px;
-  }
+  } */
 
-  .icons-top button,
-  .phone-nr button {
-    height: 50px;
-  }
-
-  .title {
-    line-height: 4;
-  }
 }
 
 @media only screen and (max-width: 767px) {
