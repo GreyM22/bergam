@@ -4,7 +4,10 @@
   /* Style for "L3A8643" */
   width: 100%;
   height: 61.72vw;
-  background: #000000 url("../img/L3A8643.jpg") no-repeat 50% 30%;
+  /* background-color: #000000; */
+  /* background-position: 50% 30%; */
+  /* background-repeat: no-repeat; */
+  background: #000000 url("../img/restaurant.jpg") no-repeat 50% 30%;
   background-size: auto;
   background-blend-mode: screen;
 }
@@ -814,6 +817,7 @@ footer ul {
   line-height: 24px;
 }
 
+
 .social-network .social-net-title {
   margin-bottom: 50px;
 }
@@ -823,13 +827,13 @@ footer ul {
   width: 18.51vw;
 }
 
-.social-network ul {
+/* .social-network ul {
   margin-top: 1.85vw;
 }
 .social-network ul li {
   display: inline;
   padding-right: 9.72vw;
-}
+} */
 
 .insta-button {
   margin-top: 29px;
@@ -856,11 +860,11 @@ footer ul {
 }
 
 .romb1 {
-  opacity: 0.6;
+  /* opacity: 0.6; */
   z-index: 3;
   width: 9px;
   height: 9px;
-  border: solid 1px #b38a58;
+  border: solid 0.5px #b38a58;
   transform: rotate(45deg);
 }
 
@@ -868,26 +872,44 @@ footer ul {
   z-index: 3;
   width: 9px;
   height: 9px;
-  background: #b38a58;
-  border: solid 1px #b38a58;
+  /* background: #b38a58; */
+  border: solid 0.5px #b38a58;
   transform: rotate(45deg);
 }
 
 .romb3 {
-  opacity: 0.6;
+  /* opacity: 0.6; */
   z-index: 3;
   width: 9px;
   height: 9px;
-  border: solid 1px #b38a58;
+  border: solid 0.5px #b38a58;
   transform: rotate(45deg);
 }
 
-.review ul li {
+.active .romb1{
+  background: #b38a58;
+}
+
+.active .romb2{
+  background: #b38a58;
+}
+
+.active .romb3{
+  background: #b38a58;
+}
+
+.carousel-indicators{
+  position: static;
+  margin-left: 3.22%;
+  margin-right: auto;
+}
+
+.review ol li {
   display: inline;
   padding-right: 14px;
 }
 
-.review ul {
+.review ol {
   padding-top: 3.08vw;
 }
 
@@ -1067,9 +1089,9 @@ footer .term-privacy::before {
   position: relative;
 }
 
-.social-network .arrow-right {
+/* .social-network .arrow-right {
   padding-right: 0;
-}
+} */
 
 footer .content {
   text-align: center;
@@ -1312,7 +1334,7 @@ h6.header {
     margin-bottom: 57px;
   }
 
-  .review ul {
+  .review ol {
     padding-top: 84px;
   }
   .review {
