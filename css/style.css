@@ -3,6 +3,10 @@
   padding-right: ($spacer * 2) !important;
 } */
 
+h1{
+  font-size: 5.5vw;
+  line-height: 6.04vw;
+}
 .phone-svg::before{
 content: url(../svg/cell-phone.svg);
 display: block;
@@ -29,16 +33,17 @@ margin-top: 2px;
 
 .rotate .top-bar {
   margin-top: 0;
-  transform: rotate(55deg);
+  transform: rotate(45deg);
   transform-origin: 0;
-
+  width:25px ;
 }
 .rotate .middle-bar{
   opacity: 0; 
   display: block;
 }
 .rotate .bottom-bar {
-  transform: rotate(-55deg);
+  width: 25px;
+  transform: rotate(-45deg);
   transform-origin: 0;
 }
 
@@ -281,6 +286,7 @@ margin-top: 2px;
 }
 
 .rhombus {
+  margin-left: -32px;
   width: 64px;
   height: 64px;
   border: solid 1px #b38a58;
@@ -350,6 +356,10 @@ ul {
   padding-right: 2.39vw;
   text-align: center;
   border-right: 0;
+  font-family: "Recoleta";
+  font-size: 13px;
+  letter-spacing: 2.36px;
+  line-height: 24px;
 }
 
 .left-nav-side {
@@ -431,9 +441,11 @@ div.icons-top {
 }
 
 .align-items-end button {
-  position: relative;
+  margin-left: -32px;
+  position: absolute;
   height: 91px;
-  height: 91px;
+  cursor: pointer;
+  left: 49vw;
 }
 
 .align-items-center .col {
@@ -499,11 +511,6 @@ button img {
   justify-content: space-between;
   padding: 0;
   position: relative;
-}
-.align-items-end button {
-  cursor: pointer;
-  position: absolute;
-  left: 42vw;
 }
 
 .first-body-section {
@@ -1072,6 +1079,9 @@ footer {
   width: 300px;
   border: 1px solid #b38a58;
   position: relative;
+  font-family: 'Recoleta';	
+  font-size: 14px;
+  line-height: 56px;
 }
 
 .header-button {
@@ -1088,8 +1098,10 @@ footer {
 }
 
 .header-button svg {
+  margin-top: -11px;
   position: absolute;
   right: 10px;
+  top:50%;
 }
 
 .sms-form {
@@ -1288,8 +1300,8 @@ h6.header {
   }
 
   h1 {
-    font-size: 60px;
-    line-height: 68px;
+    font-size: 5.55vw;
+    line-height: 6.04vw;
     display: block;
     max-width: 577px;
   }
@@ -1399,6 +1411,10 @@ h6.header {
 }
 
 @media only screen and (max-width: 899px) {
+
+  .align-items-end button{
+    left:50vw;
+  }
   h1 {
     font-size: 50px;
     line-height: 54px;
@@ -1409,10 +1425,6 @@ h6.header {
 
   .right-bottom {
     left: 80.24vw;
-  }
-
-  .align-items-end button {
-    left: 40vw;
   }
 
   .title {
@@ -1480,6 +1492,11 @@ h6.header {
 
   .align-items-end button {
     position: relative;
+    margin-left: -32px;
+  }
+
+  .rhombus{
+    margin-left: 0;
   }
 
   .align-items-end {
