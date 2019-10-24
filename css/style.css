@@ -1,3 +1,7 @@
+/* .px-4 {
+  padding-left: ($spacer * 2) !important;
+  padding-right: ($spacer * 2) !important;
+} */
 
 .phone-svg::before{
 content: url(../svg/cell-phone.svg);
@@ -51,6 +55,22 @@ margin-top: 2px;
   display: none;
 }
 
+.navbar{
+  z-index: 10;
+}
+
+.navbar-collapse h1{
+  font-size: 9vh;
+  line-height: 9.8vh;
+}
+
+.navbar-collapse .social-net ul{
+  width: 22px;
+}
+
+.navbar-collapse .social-net{
+  padding-left: 48px;
+}
 .mask {
   /* Style for "L3A8643" */
   width: 100%;
@@ -111,7 +131,7 @@ margin-top: 2px;
   height: 100vh;
   display: none;
   z-index: 100;
-  margin-top: 7.48vw;
+  margin-top: 16vh;
 }
 
 #navbarResponsive h1{
@@ -220,7 +240,7 @@ margin-top: 2px;
   font-family: "Recoleta";
   line-height: 33px;
   text-align: right;
-  padding-top: 44px;
+  padding-top: 31px;
   padding-right: 20.18%;
   flex-grow: 1;
 }
@@ -238,8 +258,10 @@ margin-top: 2px;
 }
 
 .icons-top {
-  padding: 2.65vw 3.39vw;
-  padding-top: 44px;
+  padding-right: 3.39vw;
+  padding-left: 3.39vw;
+  padding-bottom:20px ;
+  padding-top: 37px;
   width: 190px;
   flex-grow: 0;
 }
@@ -315,7 +337,7 @@ ul {
 
 .phone-nr {
   /* padding: 44px 40px 2.28vw 36px; */
-  padding-top: 44px;
+  padding-top: 34px;
   align-items: center;
   position: relative;
   width: 219px;
@@ -323,6 +345,7 @@ ul {
 }
 
 .icons-top.button {
+  padding-top: 34px;
   padding-left: 2.39vw;
   padding-right: 2.39vw;
   text-align: center;
@@ -825,6 +848,7 @@ footer ul {
 
 .first-body-section .content::after,
 .col-xl-6.order-2.order-lg-2 .content::after,
+.last-nav-item::after,
 .review-content::after{
   content: url(../svg/curly-line.svg);
   display: block;
@@ -1221,7 +1245,11 @@ h6.header {
 }
 
 @media only screen and (min-width: 1621px) {
-  .icons-top,
+  .icons-top{
+    padding-top: calc(2.5vw + 3px);
+    width: 11.11vw;
+
+  }
   .icons-top.button,
   .phone-nr {
     width: 11.11vw;
@@ -1229,7 +1257,7 @@ h6.header {
   }
 
   .title{
-    padding-top: 2.5vw;
+    padding-top: calc(2.5vw - 3px);
   }
 
   .review-social-network {
@@ -1243,10 +1271,14 @@ h6.header {
 
 @media only screen and (max-width: 1199px) {
 
-  .icons-top,.title, .phone-nr {
+  .phone-nr {
     padding-top: 27px;
   }
+  .icons-top{
+    padding-top: 30px;
+  }
   .title{
+    padding-top: 23px;
     padding-right: 0;
     text-align: center;
   }
@@ -1442,7 +1474,7 @@ h6.header {
   }
 
   .right-bottom,
-  .social-net {
+  .align-items-end .social-net {
     display: none;
   }
 
@@ -1476,8 +1508,12 @@ h6.header {
     display: none;
   }
 
-  .phone-nr-ul {
+  .phone-nr-ul .number{
     display: none;
+  }
+
+  .phone-nr-ul {
+    text-align: center;
   }
 
   .phone-nr {
@@ -1568,6 +1604,22 @@ h6.header {
 }
 
 @media only screen and (max-width: 650px) {
+  .navbar-collapse .social-net ul{
+    width: 100%;
+  }
+  .navbar-collapse .social-net{
+    padding-left: 0;
+  }
+  .navbar-collapse .social-net ul li {
+    display: inline;
+    padding-right: 24px;
+  }
+
+  .navbar-collapse .social-net ul li.last-icon{
+    padding-right: 0;
+  }
+
+  
 }
 
 @media only screen and (max-width: 568px) {
