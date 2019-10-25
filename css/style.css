@@ -15,6 +15,10 @@ h1 {
 }
 
 /* the toggle nav bar*/
+.nav-open{
+  position: fixed;
+  z-index: 11;
+}
 .navbar-collapse .social-net ul {
   width: 22px;
 }
@@ -29,7 +33,6 @@ h1 {
   width: 100vw;
   height: 95vh;
   display: none;
-  z-index: 100;
   padding-top: 16vh;
 }
 
@@ -78,10 +81,6 @@ h1 {
 
 .middle-bar {
   display: none;
-}
-
-.navbar {
-  z-index: 10;
 }
 
 .navbar-collapse h1 {
@@ -1183,7 +1182,8 @@ footer {
 }
 .email-decorator {
   text-decoration: underline;
-  text-decoration-color: #b38a58;
+  color:#b38a58;
+  text-decoration-color: #b38a58!important;
   cursor: pointer;
 }
 
