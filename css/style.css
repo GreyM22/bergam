@@ -1,10 +1,91 @@
+/*default style*/
+h1 {
+  font-family: ".SF NS Display";
+  font-size: 90px;
+  font-weight: 400;
+  line-height: 98px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h2 {
+  font-family: ".SF NS Display Regular";
+  font-size: 66px;
+  font-weight: 400;
+  line-height: 64px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h3 {
+  font-family: "Recoleta Regular DEMO";
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 38px;
+  text-align: center;
+}
+
+h4 {
+  font-family: ".SF NS Display";
+  font-size: 26px;
+  line-height: 36px;
+  text-align: center;
+}
+
+h5 {
+  font-family: ".SF NS Display";
+  font-size: 68px;
+  line-height: 96px;
+  text-align: center;
+}
+
+h6 {
+  font-family: 'Recoleta';
+  font-size: 26px;
+  line-height: 34px;
+  text-align: center;
+}
+
+.recola {
+  font-family: "Recoleta";
+}
+
+.small-header {
+  font-family: "Recoleta Regular DEMO";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.big-header {
+  color: #ffffff;
+  font-family: "Recoleta DEMO";
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  line-height: 33px;
+}
+
+
+.primary-color {
+  color: #ffffff;
+}
+
+.secondary-color {
+  color: #b38a58;
+}
+
+/*end of default style*/
+
 h1 {
   font-size: 5.5vw;
   line-height: 6.04vw;
 }
 .phone-svg::before {
   content: url(../svg/cell-phone.svg);
-  display: block;
   margin-bottom: 2px;
   margin-right: 13px;
 }
@@ -627,10 +708,6 @@ button img {
   max-width: 400px;
 }
 
-.second-body-section {
-  position: relative;
-}
-
 .second-body-section .col-xl-6.order-1.order-xl-2,
 .col-lg-6.order-1.order-lg-1 {
   /* position: relative; */
@@ -644,8 +721,7 @@ button img {
   padding-right: auto;
 }
 
-.second-body-section .below_heading::before,
-.third-body-section .below_heading::before {
+ .text .content::before {
   content: "";
   box-sizing: border-box;
   height: 1px;
@@ -653,17 +729,12 @@ button img {
   background-color: #b38a58;
   display: block;
   margin-left: -15vw;
+  margin-top: 19px;
+  margin-bottom: 30px;
 }
 
-.second-body-section .below_heading,
-.third-body-section .below_heading {
-  padding-top: 10px;
-}
 
-.second-body-section .below_heading .content,
-.third-body-section .below_heading .content {
-  padding-top: 30px;
-  display: block;
+.text .content {
   max-width: 350px;
 }
 
@@ -855,7 +926,6 @@ footer ul {
 }
 
 .menu .content {
-  display: block;
   max-width: 500px;
   margin: 0 auto;
   margin-top: 50px;
@@ -932,13 +1002,14 @@ footer ul {
   z-index: -1;
 }
 
-.first-body-section .content::after,
-.col-md-6.order-2.order-md-2 .content::after,
-.navbar-collapse ul:first-child li:last-child::after,
-.review-content::after {
+.curly-line::after{
   content: url(../svg/curly-line.svg);
   display: block;
   margin-top: 30px;
+}
+
+.row.main .curly-line::after{
+  margin-top: 0;
 }
 
 .review-content::before {
@@ -962,10 +1033,6 @@ footer ul {
 .col-lg-6.img img {
   height: 35.92vw;
   width: 28.39vw;
-  /* position: absolute;
-  top: -10;
-  right: 11.11vw; */
-  /* z-index: 5; */
   display: block;
   margin-right: 11.11vw;
   margin-left: auto;
@@ -996,7 +1063,7 @@ footer ul {
 }
 
 .review-social-network {
-  position: relative;
+  /* position: relative; */
   height: 45.17vw;
   width: 100%;
   background-color: #fbfaf9;
@@ -1005,12 +1072,15 @@ footer ul {
 .review-social-network .row {
   margin: 0;
   z-index: 10;
+  height: inherit;
+  position: relative;
+  bottom: -2.46vw;
 }
 
 .social-network {
   padding: 0;
   padding-top: 5.8vw;
-  height: 48.14vw;
+  /* height: 48.14vw; */
   background-color: #3c3c3c;
   text-align: center;
   position: relative;
@@ -1036,6 +1106,7 @@ footer ul {
 
 .insta-button {
   margin-top: 29px;
+  margin-bottom: 30px;
   box-sizing: border-box;
   height: 55px;
   width: 170px;
@@ -1046,7 +1117,6 @@ footer ul {
   box-sizing: border-box;
   padding: 0;
   padding-top: 5.8vw;
-  height: 48.14vw;
   background-color: #ffffff;
   text-align: center;
   position: relative;
@@ -1059,7 +1129,6 @@ footer ul {
 }
 
 .romb1 {
-  /* opacity: 0.6; */
   z-index: 3;
   width: 9px;
   height: 9px;
@@ -1071,13 +1140,11 @@ footer ul {
   z-index: 3;
   width: 9px;
   height: 9px;
-  /* background: #b38a58; */
   border: solid 0.5px #b38a58;
   transform: rotate(45deg);
 }
 
 .romb3 {
-  /* opacity: 0.6; */
   z-index: 3;
   width: 9px;
   height: 9px;
@@ -1101,6 +1168,7 @@ footer ul {
   position: static;
   margin-left: 3.22%;
   margin-right: auto;
+  margin-bottom: 20px;
 }
 
 .review ol li {
@@ -1385,10 +1453,6 @@ h6.header {
   .social-network {
     top: -1.46vw;
   }
-  .review-social-network {
-    height: 37.03vw;
-  }
-
   .second-body-section .placeholder {
     display: none;
   }
@@ -1673,8 +1737,7 @@ h6.header {
     top: 80;
   }
 
-  .second-body-section .below_heading::before,
-  .third-body-section .below_heading::before {
+  .text .content::before{
     width: 172px;
   }
 
