@@ -35,7 +35,7 @@ $(document).ready(function () {
     $('.navbar').toggleClass('dark-bg');
     $('.the-button').toggleClass('rotate');
     $('#navbarResponsive').toggle('fast');
-    $('body').toggleClass('overflow-hidden');
+    // $('body').toggleClass('overflow-hidden');
   });
 });
 
