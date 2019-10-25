@@ -817,6 +817,15 @@ button img {
   left: 0;
 }
 
+.menu-header{
+  font-family: ".SF NS Display";
+  font-size: 68px;
+  line-height: 96px;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+
 .menu ul li {
   display: inline;
   line-height: 50px;
@@ -925,7 +934,7 @@ footer ul {
 
 .first-body-section .content::after,
 .col-md-6.order-2.order-md-2 .content::after,
-.last-nav-item::after,
+.navbar-collapse ul:first-child li:last-child::after,
 .review-content::after {
   content: url(../svg/curly-line.svg);
   display: block;
@@ -1524,10 +1533,6 @@ h6.header {
 }
 
 @media only screen and (max-width: 846px) {
-  .radial-grad-img,
-  .mask {
-    height: 124vh;
-  }
 
   .right-bottom,
   .align-items-end .social-net {
@@ -1771,4 +1776,21 @@ h6.header {
   .header-button{
     width: 80vw;
   }
+}
+
+@media only screen and (max-height: 700px) {
+
+  .row.main{
+    padding-top: 15.7vh;
+  }
+  .header-button{
+    margin: 20px auto;
+  }
+}
+
+@media only screen and (max-height: 523px) {
+  .row.main{
+    padding-top: 10.7vh;
+  }
+
 }
