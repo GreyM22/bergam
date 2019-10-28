@@ -3,6 +3,7 @@
 <head>
     <title>Benelli’s</title>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width , initial-scale=1.0">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -13,7 +14,7 @@
 
 <body>
     <header class="mask primary-color " id="header">
-        <div  class="carousel slide" data-ride="carousel">
+        <div class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item  embed-responsive-item  active">
                     <div class="bg-img1">
@@ -63,7 +64,7 @@
                             </a>
                         </div>
                         <div class="right-side-button-flex">
-                            <a href="#">
+                            <a>
                                 BOOK NOW
                             </a>
                         </div>
@@ -72,26 +73,26 @@
                         <ul class="text-center">
                             <li>
                                 <a class="" href="#header">
-                                    <h1>home</h1>
+                                    <h2>home</h2>
                                 </a>
                             </li>
                             <li>
                                 <a class="" href="#about">
-                                    <h1>about</h1>
+                                    <h2>about</h2>
                                 </a>
                             </li>
                             <li>
                                 <a class="" href="#menu">
-                                    <h1>menu</h1>
+                                    <h2>menu</h2>
                                 </a>
                             </li>
                             <li class=" curly-line">
                                 <a class="" href="#contact">
-                                    <h1>contact</h1>
+                                    <h2>contact</h2>
                                 </a>
                             </li>
                         </ul>
-                        <div class="social-net pt-5">
+                        <div class="social-net d-none pt-5">
                             <ul class="text-center">
                                 <li class="pb-2">
                                     <a href="">
@@ -140,7 +141,7 @@
                                     varius nunc in in volutpat dui.
                                 </p>
                             </div>
-                            <a href="" class="header-button">
+                            <a class="btn btn-primary">
                                 BOOK NOW
                                 <?xml version="1.0" encoding="utf-8"?>
                                 <svg width="7px" height="22px" viewBox="0 0 11 26" version="1.1"
@@ -227,6 +228,39 @@
             </div>
         </div>
     </header>
+
+    <section class="booking primary-color d-none">
+        <form class="px-5" action="">
+            <h2 class="curly-line">make booking</h2>
+            <div class="form-row mt-5  justify-content-around w-100">
+                <div class="form-group col-md-4  ">
+                    <div class=" input-field d-flex justify-content-center">
+                            <input type="button" value="-" class="minus">
+                            <input type="number" class="form-control d-flex justify-content-center" id="guest" min='1'>
+                            <input type="button" value="+" class="plus">
+                    </div>
+                        <label class="d-flex justify-content-center align-items-center" for="guest">guests</label>
+                </div>
+                <div class="form-group col-md-4  ">
+                        <input type="date" class="form-control" id="date">
+                        <label for="date"  class="d-flex justify-content-center align-items-center" >date</label>
+                </div>
+                <div class="form-group col-md-4 ">
+                        <input type="time" class="form-control" id="time" >
+                        <label for="time" class="d-flex justify-content-center align-items-center" >time</label>
+                </div>
+            </div>
+            <div class="form-group my-3 w-100 mx-4 text-left">
+                    <input type="text" class="form-control w-100" id="name" placeholder="name">
+            </div>
+            <div class="form-group my-3 w-100 mx-4 text-left">
+                    <input type="email" class="form-control w-100" id="email-booking" placeholder="email">
+            </div>
+            <div class="form-group my-3 w-100 mx-4 text-left">
+                    <input type="tel" class="form-control w-100" id="tel" placeholder="phone">
+            </div>
+        </form>
+    </section>
     <section class="first-body-section" id="first-body-section">
         <div class="container-fluid">
             <div class="row">
@@ -256,22 +290,22 @@
                         <h2>
                             European <br> Cuisine
                         </h2>
-                            <div class="content">
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                    Fusce sapien elit, facilisis
-                                    quis
-                                    augue in, feugiat tincidunt odio. Cras in urna convallis,
-                                    volutpat mi in, aliquam
-                                    magna. <br><br>
+                        <div class="content">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Fusce sapien elit, facilisis
+                                quis
+                                augue in, feugiat tincidunt odio. Cras in urna convallis,
+                                volutpat mi in, aliquam
+                                magna. <br><br>
 
-                                    Suspendisse vitae urna a lectus cursus suscipit non non
-                                    lacus. Donec pellentesque metus
-                                    nec
-                                    nulla blandit condimentum.
+                                Suspendisse vitae urna a lectus cursus suscipit non non
+                                lacus. Donec pellentesque metus
+                                nec
+                                nulla blandit condimentum.
 
-                                </p>
-                            </div>
+                            </p>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-6 order-1 order-md-2 pr-0 pb-5">
@@ -308,74 +342,180 @@
     </section>
 
     <section class="mask-table" id="menu">
-        <div class="img-mask">
-        </div>
         <div class="menu primary-color">
             <div>
-                <div class="menu-header">MENU</div>
+                <div class="menu-header curly-line">MENU</div>
                 <div class="content">
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit phasellus.
                     </p>
                 </div>
-                <ul>
-                    <li> <a href=""><button>LUNCH</button></a> </li>
-                    <li> <a href=""><button>DINNER</button></a></li>
-                    <li> <a href=""><button>DRINKS</button></a></li>
-                </ul>
-                <div class="notification">
-                    *Menus change regularly
-                </div>
-                <div class="container-fluid dinner-content mt-5">
-                    <div class="row">
-                        <div class="col-md-6 first-col">
-                            <div class="row pb-4">
-                                <div class="col-12 pb-3">Baby gem, grapefruit, pistachio aioli </div>
-                                <div class="col-12 pb-3 price">$8.00</div>
-                            </div>
-                            <div class="row pb-4">
-                                <div class="col-12 pb-3">Baby gem, grapefruit, pistachio aioli </div>
-                                <div class="col-12 pb-3 price">$8.00</div>
-                            </div>
-                            <div class="row pb-4">
-                                <div class="col-12 pb-3">Baby gem, grapefruit, pistachio aioli </div>
-                                <div class="col-12 pb-3 price">$8.00</div>
-                            </div>
-                            <div class="row pb-4">
-                                <div class="col-12 pb-3">Baby gem, grapefruit, pistachio aioli </div>
-                                <div class="col-12 pb-3 price">$8.00</div>
-                            </div>
-                            <div class="row pb-4">
-                                <div class="col-12 pb-3">Baby gem, grapefruit, pistachio aioli </div>
-                                <div class="col-12 pb-3 price">$8.00</div>
+
+                <div id="menu-carousel" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#menu-carousel" data-slide-to="0" class="active"> <a
+                                class="btn btn-secondary">LUNCH</a> </li>
+                        <li data-target="#menu-carousel" data-slide-to="1"><a class="btn btn-secondary">DINNER</a></li>
+                        <li data-target="#menu-carousel" data-slide-to="2"> <a class="btn btn-secondary">DRINKS</a></li>
+                    </ol>
+                    <div class="notification">
+                        *Menus change regularly
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="container-fluid dinner-content mt-5">
+                                <div class="row">
+                                    <div class="col-md-6 first-col">
+                                        <div class="row pb-4">
+                                            <div class="col-12 pb-3">Baby gem, grapefruit, pistachio aioli </div>
+                                            <div class="col-12 pb-3 price">$8.00</div>
+                                        </div>
+                                        <div class="row pb-4">
+                                            <div class="col-12 pb-3">Baby gem, grapefruit, pistachio aioli </div>
+                                            <div class="col-12 pb-3 price">$8.00</div>
+                                        </div>
+                                        <div class="row pb-4">
+                                            <div class="col-12 pb-3">Baby gem, grapefruit, pistachio aioli </div>
+                                            <div class="col-12 pb-3 price">$8.00</div>
+                                        </div>
+                                        <div class="row pb-4">
+                                            <div class="col-12 pb-3">Baby gem, grapefruit, pistachio aioli </div>
+                                            <div class="col-12 pb-3 price">$8.00</div>
+                                        </div>
+                                        <div class="row pb-4">
+                                            <div class="col-12 pb-3">Baby gem, grapefruit, pistachio aioli </div>
+                                            <div class="col-12 pb-3 price">$8.00</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="row pb-4">
+                                            <div class="col-12 pb-3">Baby gem, grapefruit, pistachio aioli </div>
+                                            <div class="col-12 pb-3 price">$8.00</div>
+                                        </div>
+                                        <div class="row pb-4">
+                                            <div class="col-12 pb-3">Baby gem, grapefruit, pistachio aioli </div>
+                                            <div class="col-12 pb-3 price">$8.00</div>
+                                        </div>
+                                        <div class="row pb-4">
+                                            <div class="col-12 pb-3">Baby gem, grapefruit, pistachio aioli </div>
+                                            <div class="col-12 pb-3 price">$8.00</div>
+                                        </div>
+                                        <div class="row pb-4">
+                                            <div class="col-12 pb-3">Baby gem, grapefruit, pistachio aioli </div>
+                                            <div class="col-12 pb-3 price">$8.00</div>
+                                        </div>
+                                        <div class="row pb-4">
+                                            <div class="col-12 pb-3">Baby gem, grapefruit, pistachio aioli </div>
+                                            <div class="col-12 pb-3 price">$8.00</div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="row pb-4">
-                                <div class="col-12 pb-3">Baby gem, grapefruit, pistachio aioli </div>
-                                <div class="col-12 pb-3 price">$8.00</div>
+                        <div class="carousel-item">
+                            <div class="container-fluid dinner-content mt-5">
+                                <div class="row">
+                                    <div class="col-md-6 first-col">
+                                        <div class="row pb-4">
+                                            <div class="col-12 pb-3">Baby gem, grapefruit, pistachio aioli </div>
+                                            <div class="col-12 pb-3 price">$8.00</div>
+                                        </div>
+                                        <div class="row pb-4">
+                                            <div class="col-12 pb-3">Baby gem, grapefruit, pistachio aioli </div>
+                                            <div class="col-12 pb-3 price">$8.00</div>
+                                        </div>
+                                        <div class="row pb-4">
+                                            <div class="col-12 pb-3">Baby gem, grapefruit, pistachio aioli </div>
+                                            <div class="col-12 pb-3 price">$8.00</div>
+                                        </div>
+                                        <div class="row pb-4">
+                                            <div class="col-12 pb-3">Baby gem, grapefruit, pistachio aioli </div>
+                                            <div class="col-12 pb-3 price">$8.00</div>
+                                        </div>
+                                        <div class="row pb-4">
+                                            <div class="col-12 pb-3">Baby gem, grapefruit, pistachio aioli </div>
+                                            <div class="col-12 pb-3 price">$8.00</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="row pb-4">
+                                            <div class="col-12 pb-3">Baby gem, grapefruit, pistachio aioli </div>
+                                            <div class="col-12 pb-3 price">$8.00</div>
+                                        </div>
+                                        <div class="row pb-4">
+                                            <div class="col-12 pb-3">Baby gem, grapefruit, pistachio aioli </div>
+                                            <div class="col-12 pb-3 price">$8.00</div>
+                                        </div>
+                                        <div class="row pb-4">
+                                            <div class="col-12 pb-3">Baby gem, grapefruit, pistachio aioli </div>
+                                            <div class="col-12 pb-3 price">$8.00</div>
+                                        </div>
+                                        <div class="row pb-4">
+                                            <div class="col-12 pb-3">Baby gem, grapefruit, pistachio aioli </div>
+                                            <div class="col-12 pb-3 price">$8.00</div>
+                                        </div>
+                                        <div class="row pb-4">
+                                            <div class="col-12 pb-3">Baby gem, grapefruit, pistachio aioli </div>
+                                            <div class="col-12 pb-3 price">$8.00</div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="row pb-4">
-                                <div class="col-12 pb-3">Baby gem, grapefruit, pistachio aioli </div>
-                                <div class="col-12 pb-3 price">$8.00</div>
-                            </div>
-                            <div class="row pb-4">
-                                <div class="col-12 pb-3">Baby gem, grapefruit, pistachio aioli </div>
-                                <div class="col-12 pb-3 price">$8.00</div>
-                            </div>
-                            <div class="row pb-4">
-                                <div class="col-12 pb-3">Baby gem, grapefruit, pistachio aioli </div>
-                                <div class="col-12 pb-3 price">$8.00</div>
-                            </div>
-                            <div class="row pb-4">
-                                <div class="col-12 pb-3">Baby gem, grapefruit, pistachio aioli </div>
-                                <div class="col-12 pb-3 price">$8.00</div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="container-fluid dinner-content mt-5">
+                                <div class="row">
+                                    <div class="col-md-6 first-col">
+                                        <div class="row pb-4">
+                                            <div class="col-12 pb-3">Baby gem, grapefruit, pistachio aioli </div>
+                                            <div class="col-12 pb-3 price">$8.00</div>
+                                        </div>
+                                        <div class="row pb-4">
+                                            <div class="col-12 pb-3">Baby gem, grapefruit, pistachio aioli </div>
+                                            <div class="col-12 pb-3 price">$8.00</div>
+                                        </div>
+                                        <div class="row pb-4">
+                                            <div class="col-12 pb-3">Baby gem, grapefruit, pistachio aioli </div>
+                                            <div class="col-12 pb-3 price">$8.00</div>
+                                        </div>
+                                        <div class="row pb-4">
+                                            <div class="col-12 pb-3">Baby gem, grapefruit, pistachio aioli </div>
+                                            <div class="col-12 pb-3 price">$8.00</div>
+                                        </div>
+                                        <div class="row pb-4">
+                                            <div class="col-12 pb-3">Baby gem, grapefruit, pistachio aioli </div>
+                                            <div class="col-12 pb-3 price">$8.00</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="row pb-4">
+                                            <div class="col-12 pb-3">Baby gem, grapefruit, pistachio aioli </div>
+                                            <div class="col-12 pb-3 price">$8.00</div>
+                                        </div>
+                                        <div class="row pb-4">
+                                            <div class="col-12 pb-3">Baby gem, grapefruit, pistachio aioli </div>
+                                            <div class="col-12 pb-3 price">$8.00</div>
+                                        </div>
+                                        <div class="row pb-4">
+                                            <div class="col-12 pb-3">Baby gem, grapefruit, pistachio aioli </div>
+                                            <div class="col-12 pb-3 price">$8.00</div>
+                                        </div>
+                                        <div class="row pb-4">
+                                            <div class="col-12 pb-3">Baby gem, grapefruit, pistachio aioli </div>
+                                            <div class="col-12 pb-3 price">$8.00</div>
+                                        </div>
+                                        <div class="row pb-4">
+                                            <div class="col-12 pb-3">Baby gem, grapefruit, pistachio aioli </div>
+                                            <div class="col-12 pb-3 price">$8.00</div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <a href="">
-                    <button>DOWNLOAD MENU</button>
+                <a class="btn btn-secondary last-button">
+                    DOWNLOAD MENU
                 </a>
             </div>
         </div>
@@ -395,25 +535,25 @@
                         natural
                         <br> wines
                     </h2>
-                        <div class="content">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                Fusce sapien elit, facilisis
-                                quis
-                                augue in, feugiat tincidunt odio. Cras in urna convallis,
-                                volutpat mi in, aliquam
-                                magna.
-                                <br> <br>
-                                Suspendisse vitae urna a lectus cursus suscipit non non
-                                lacus. Donec pellentesque metus
-                                nec
-                                nulla blandit condimentum. Lorem ipsum dolor sit amet,
-                                consectetur adipiscing
-                                elit.
+                    <div class="content">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Fusce sapien elit, facilisis
+                            quis
+                            augue in, feugiat tincidunt odio. Cras in urna convallis,
+                            volutpat mi in, aliquam
+                            magna.
+                            <br> <br>
+                            Suspendisse vitae urna a lectus cursus suscipit non non
+                            lacus. Donec pellentesque metus
+                            nec
+                            nulla blandit condimentum. Lorem ipsum dolor sit amet,
+                            consectetur adipiscing
+                            elit.
 
-                            </p>
+                        </p>
 
-                        </div>
+                    </div>
                 </div>
                 <div class="col-lg-6 img">
                     <img src="img/natural-wine.jpg" alt="red-wines">
@@ -464,10 +604,9 @@
                         </a>
                     </div>
                 </div>
-                <a href="#">
-                    <button class="insta-button">
-                        <i class="fab fa-instagram"></i>
-                        FOLLOW US</button>
+                <a href="#" class="btn btn-secondary">
+                    <i class="fab fa-instagram"></i>
+                    FOLLOW US
                 </a>
             </div>
             <div class="col-lg-6 order-1 order-lg-2 review">
@@ -544,6 +683,17 @@
         </div>
     </section>
 
+    <section class="sms-subscription primary-color d-none">
+        <div class="sms">
+            <h2 class="curly-line">Thankyou for
+                subscribing</h2>
+            <div class="sub-sms">
+                Lorem ipsum dolor sit amet consectetur adipiscing elit nam libero lacus bibendum ut urna et porttitor.
+            </div>
+        </div>
+        <a class="btn btn-dark"></a>
+    </section>
+
     <footer class="primary-color">
         <div class="content" id="contact">
             <h6>
@@ -566,18 +716,16 @@
                         <h6 class="header">newsletter sign up</h6>
                         <form class="email-form">
                             <input type="email" placeholder="Your email" required class="email">
-                            <a>
-                                <button type="submit" class="submit-email">SUBMIT
-                                    <?xml version="1.0" encoding="utf-8"?>
-                                    <svg width="7px" height="22px" viewBox="0 0 11 26" version="1.1"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
-                                        <desc>Created with Lunacy</desc>
-                                        <path d="M0 10L12.5 0L12.5 0L25 10"
-                                            transform="matrix(-4.371139E-08 1 -1 -4.371139E-08 10.5 0.5)"
-                                            id="Path-right" fill="none" stroke="#FFFFFF" stroke-width="2" />
-                                    </svg>
-                                </button>
-                            </a>
+                            <button type="submit" class="btn btn-primary">SUBMIT
+                                <?xml version="1.0" encoding="utf-8"?>
+                                <svg width="7px" height="22px" viewBox="0 0 11 26" version="1.1"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                                    <desc>Created with Lunacy</desc>
+                                    <path d="M0 10L12.5 0L12.5 0L25 10"
+                                        transform="matrix(-4.371139E-08 1 -1 -4.371139E-08 10.5 0.5)" id="Path-right"
+                                        fill="none" stroke="#FFFFFF" stroke-width="2" />
+                                </svg>
+                            </button>
                         </form>
                         <div class="sms-form">
                             *We won't share your e-mail address. Promise.
@@ -589,7 +737,8 @@
                             <p>
                                 123 King St. <br>
                                 123.456.7890 <br>
-                                <span class="email-decorator"> <span class="primary-color">info@banditorestaurant.com</span>  </span> <br>
+                                <span class="email-decorator"> <span
+                                        class="primary-color">info@banditorestaurant.com</span> </span> <br>
                             </p>
 
                         </div>

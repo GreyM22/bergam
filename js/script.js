@@ -31,41 +31,40 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('.the-button, #navbarResponsive a').click(function () {
-    // $('.the-button svg').toggleClass('d-none')
     $('.navbar').toggleClass('dark-bg');
     $('.the-button').toggleClass('rotate');
     $('#navbarResponsive').toggle('fast');
-    // $('body').toggleClass('overflow-hidden');
+    $('#navbarResponsive .social-net').toggleClass('d-none');
     $('nav').toggleClass("nav-open");
-
   });
+
+  $('.email-form').submit(function () {
+    $('.sms-subscription').removeClass('d-none');
+    $('.sms-subscription').addClass('d-flex');
+  });
+
+  $('.sms-subscription .btn-dark').click(function () {
+    $('.sms-subscription').fadeToggle(function () {
+      $('.sms-subscription').addClass('d-none');
+      $('.sms-subscription').removeClass('d-flex');
+    });
+  });
+
+  $(".minus").on("click", function () {
+    var oldValue = $('form input[type=number]').val();
+    if(oldValue == 0) return;
+    var newVal = parseFloat(oldValue) - 1;
+    $('form input[type=number]').val(newVal);
+  });
+
+  $(".plus").on("click", function () {
+    var oldValue = $('form input[type=number]').val();
+    if(oldValue === '') {
+      $('form input[type=number]').val(1);
+      return;
+    }
+    var newVal = parseFloat(oldValue) + 1;
+    $('form input[type=number]').val(newVal);
+  });
+
 });
-
-
-/* bacground slider */
-
-// var indexBackgroundImg = 0;
-// sliderBacgroundImg();
-
-// function sliderBacgroundImg(){
-//   var bacgroundImg = [
-//     'url("C:/Users/Grei/Desktop/work/Resturant/Web page/img/restaurant.jpg")',
-//     'url("C:/Users/Grei/Desktop/work/Resturant/Web page/img/restaurant2.jpg")',
-//     'url("C:/Users/Grei/Desktop/work/Resturant/Web page/img/restaurant3.jpg")'
-//   ];
-
-//   for( let i = 0; i < 3; i++){
-
-//     if(i == indexBackgroundImg){
-
-//       document.getElementById('header').style.backgroundImage = bacgroundImg[i];
-//       document.getElementById('header').classList.toggle("fade");
-//       indexBackgroundImg++;
-//       break;
-//     }
-//   }
-
-//   if(indexBackgroundImg >= 3) indexBackgroundImg = 0 ;
-//   setTimeout(sliderBacgroundImg, 2000);
-// }
-
