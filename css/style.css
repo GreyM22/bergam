@@ -705,9 +705,9 @@ footer .btn-primary {
   background: none !important;
   text-align: center;
   border-radius: 0;
-  color: white !important;
+  color: white ;
   transition: 0.5s;
-  font-family: ".SF NS Display Regular" !important;
+  font-family: ".SF NS Display Regular";
 }
 
 input:-webkit-autofill,
@@ -743,12 +743,18 @@ input[type="date"]::-webkit-clear-button {
   appearance: none;
   margin: -10px;
 }
+
 #name,
 .booking input[type="email"],
 .booking input[type="tel"] {
   text-align: left;
   padding: 21px 19px;
   height: 60px;
+  font-size: 12px!important;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: "Neue Haas Unica W1G Medium"!important;
 }
 
 .booking input[type="text"]::placeholder,
@@ -779,7 +785,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   background: none;
   text-align: center;
   border-top: none;
-  font-family: ".SF NS Display Regular";
+  font-family: "Neue Haas Unica W1G Medium";
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 2px;
   line-height: 40px;
   text-transform: uppercase;
 }
@@ -812,24 +821,25 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   line-height: 80px;
   position: absolute;
   bottom: -40px;
+  font-family: "Recoleta Regular DEMO";
 }
 
 .sub-booking {
   max-width: 461px;
   opacity: 0.6;
-  font-family: "Recoleta";
+  font-family: "Recoleta Regular DEMO";
   font-size: 15px;
   line-height: 24px;
   margin: 82px auto;
   margin-bottom: 0;
 }
 
-.sub-error{
+.sub-error {
   max-width: 461px;
   font-family: "Recoleta";
   font-size: 15px;
   line-height: 24px;
-  color:#B38A58;
+  color: #b38a58;
 }
 
 .booking form .input-field input {
@@ -844,14 +854,14 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .booking form .input-field input[type="number"] {
   border-left: none;
   border-right: none;
-  width: 34.33%!important;
+  width: 34.33% !important;
 }
 
 .minus,
 .plus {
   font-size: 24px;
   color: rgba(255, 255, 255, 0.5) !important;
-  width: 33.33%!important;
+  width: 33.33% !important;
 }
 
 .plus {

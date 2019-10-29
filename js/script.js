@@ -84,7 +84,7 @@ $(document).ready(function () {
 
   $(".minus").on("click", function () {
     var oldValue = $('form input[type=number]').val();
-    if(oldValue == 0) return;
+    if(oldValue == 2) return;
     var newVal = parseFloat(oldValue) - 1;
     $('form input[type=number]').val(newVal);
   });
