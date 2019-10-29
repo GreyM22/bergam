@@ -844,12 +844,14 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .booking form .input-field input[type="number"] {
   border-left: none;
   border-right: none;
+  width: 34.33%!important;
 }
 
 .minus,
 .plus {
   font-size: 24px;
   color: rgba(255, 255, 255, 0.5) !important;
+  width: 33.33%!important;
 }
 
 .plus {
