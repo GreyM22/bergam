@@ -66,5 +66,20 @@ $(document).ready(function () {
     var newVal = parseFloat(oldValue) + 1;
     $('form input[type=number]').val(newVal);
   });
+  $('.right-side-button-flex').click(function(){
+    $('body *').toggleClass('d-none');
+    $('.booking').toggleClass('d-none');
+  });
+
+  $('.form-group.date').click( function(){
+    $('.form-group.date').datepicker({
+      format: 'mm/dd',
+      calendarWeeks: true,
+      todayHighlight: true,
+      autoclose: true
+    });  
+    $(".datepicker-switch").attr("colspan", "5");
+    $(".table-condensed").addClass('w-100');  
+  });
 
 });

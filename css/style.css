@@ -593,8 +593,7 @@ footer .btn-primary {
 /* end of button styles*/
 
 /*display after subscription and display of booking*/
-.sms-subscription,
-.booking {
+.sms-subscription {
   background-color: #202020;
   display: flex;
   justify-content: center;
@@ -602,12 +601,12 @@ footer .btn-primary {
   height: 100vh;
   width: 100vw;
   position: fixed;
-  bottom: 0;
+  top: 0;
   z-index: 12;
 }
 
 .sms-subscription .curly-line::after {
-  margin-top: 0;
+  margin-top: 3vh;
 }
 .sms {
   min-height: 360px;
@@ -622,26 +621,6 @@ footer .btn-primary {
   flex-direction: column;
   padding-top: 76px;
   padding-bottom: 73px;
-}
-
-.booking form {
-  max-width: 780px;
-  width: 80.72vw;
-  height: auto;
-  border: 1px solid #4c4c4c;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  flex-direction: column;
-  padding-top: 77px;
-  padding-bottom: 100px;
-}
-
-.booking form h2 {
-  font-family: ".SF NS Display";
-  font-size: 58px;
-  line-height: 64px;
 }
 
 .sms h2 {
@@ -686,62 +665,106 @@ footer .btn-primary {
 /*end of css for display after subscription*/
 
 /*booking-form*/
-.booking form input,.booking form .input-field{
-  width: 200px;
-  height: 120px;
-  border: 1px solid #4C4C4C;
+
+.booking {
+  background-color: #202020;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  z-index: 12;
+  padding: 20vh 0;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.booking .form-container {
+  max-width: 780px;
+  width: 80.72vw;
+  height: auto;
+  border: 1px solid #4c4c4c;
+  text-align: center;
+  flex-direction: column;
+  padding: 7.7vh 50px 10vh 50px;
+  position: relative;
+}
+
+.booking form h2 {
+  font-family: ".SF NS Display";
+  font-size: 5.8vh;
+  line-height: 6.4vh;
+}
+
+.booking .curly-line::after {
+  margin-top: 1vh;
+}
+.booking form input,
+.booking form .input-field {
+  height: 80px;
+  border: 1px solid #4c4c4c;
   background: none;
   text-align: center;
   border-radius: 0;
-  color:white;
+  color: white;
   transition: 0.5s;
   font-family: ".SF NS Display Regular";
 }
 
-.booking form .input-field:hover{
-  border-color: #B38A58;
+.booking form .input-field:hover {
+  border-color: #b38a58;
 }
 
-.minus, .plus{
+.minus,
+.plus {
   font-size: 24px;
   opacity: 0.5;
 }
 
-.minus:focus, .plus:focus{
+.minus:focus,
+.plus:focus {
   outline: none;
-  border:none;
+  border: none;
   background: none;
   opacity: 1;
   box-shadow: none;
 }
 
 input::-webkit-inner-spin-button,
-input::-webkit-outer-spin-button
-{
+input::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-/* input[type=time]::-webkit-datetime-edit-ampm-field {
-  display: none;
-} */
-input[type=time]::-webkit-clear-button, input[type=date]::-webkit-clear-button {
+input[type="time"]::-webkit-clear-button,
+input[type="date"]::-webkit-clear-button {
   -webkit-appearance: none;
   -moz-appearance: none;
   -o-appearance: none;
-  -ms-appearance:none;
+  -ms-appearance: none;
   appearance: none;
-  margin: -10px; 
+  margin: -10px;
+}
+#name,
+.booking input[type="email"],
+.booking input[type="tel"] {
+  text-align: left;
+  padding: 21px 19px;
+  height: 60px;
 }
 
-input[type=date]::-webkit-inner-spin-button,
-input[type=date]::-webkit-calendar-picker-indicator {
-    display: none;
-    -webkit-appearance: none;
+.booking input[type="text"]::placeholder,
+.booking input[type="email"]::placeholder,
+.booking input[type="tel"]::placeholder {
+  text-transform: uppercase;
+}
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
 }
 
-.booking form  .input-field input{
-  height: 120px;
+.booking form .input-field input {
+  height: 80px;
   width: 100px;
   border: none;
   background: none;
@@ -749,47 +772,120 @@ input[type=date]::-webkit-calendar-picker-indicator {
   border-radius: 0;
 }
 
-.booking form input.form-control{
+.booking form input.form-control {
   font-size: 1.5rem;
 }
-.booking form input.form-control:focus{
+.booking form input.form-control:focus {
   outline: none;
-  border-color: #B38A58;
+  border-color: #b38a58;
   background: none;
   color: white;
   box-shadow: none;
 }
 
-
-
-.booking form label{
-  width: 200px;
+.booking form label {
   height: 40px;
-  border: 1px solid #4C4C4C;
+  border: 1px solid #4c4c4c;
   background: none;
   text-align: center;
-  border-top:none;
+  border-top: none;
   font-family: ".SF NS Display Regular";
   line-height: 40px;
   text-transform: uppercase;
 }
 
-.booking form label[for='guest']::before{
+.booking form label[for="guest"]::before {
   content: url(../svg/user.svg);
   text-align: center;
-  margin-right:5px;
+  margin-right: 5px;
 }
 
-.booking form label[for='date']::before{
+.booking form label[for="date"]::before {
   content: url(../svg/date.svg);
   text-align: center;
-  margin-right:5px;
+  margin-right: 5px;
 }
 
-.booking form label[for='time']::before{
+.booking form label[for="time"]::before {
   content: url(../svg/time.svg);
   text-align: center;
-  margin-right:5px;
+  margin-right: 5px;
+}
+
+.booking .btn-primary {
+  height: 80px;
+  width: 220px;
+  background-color: #202020;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 2px;
+  line-height: 80px;
+  position: absolute;
+  bottom: -40px;
+}
+
+.sub-booking {
+  /* display: inline-block; */
+  max-width: 461px;
+  opacity: 0.6;
+  font-family: "Recoleta";
+  font-size: 15px;
+  line-height: 24px;
+  margin: 82px auto;
+  margin-bottom: 0;
+}
+
+.datepicker-dropdown {
+  top: 0;
+  left: 0%;
+  z-index: 1000;
+  padding: 4px;
+  background-color: #202020;
+  border-radius: 10px;
+}
+
+.datepicker-inline {
+  background-color: #202020;
+  position: absolute;
+  border: 1px solid #b38a58;
+  font-family: ".SF NS Display Regular";
+}
+
+.datepicker-inline thead {
+  color: white;
+}
+
+
+.datepicker-inline thead tr:nth-child(2) th:hover {
+  color: #b38a58;
+  background: none;
+}
+
+.datepicker-inline table tbody tr td {
+  color:white
+}
+
+.datepicker .cw{
+  display: none;
+}
+
+.datepicker table tbody tr td.day:hover,
+.datepicker table tbody tr td.focused,
+.datepicker table tbody tr td.active {
+  background-color: white!important;
+  color:#b38a58!important;
+  cursor: pointer;
+  text-shadow: none;
+}
+
+.datepicker-inline table tbody tr td.today {
+  color:#d8a76a;
+  background: none;
+}
+
+.datepicker table tr td.old,
+.datepicker table tr td.new {
+opacity: 0.5;
 }
 
 

@@ -8,7 +8,9 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker3.min.css">
+        <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -229,37 +231,50 @@
         </div>
     </header>
 
-    <section class="booking primary-color d-none">
-        <form class="px-5" action="">
+    <section class="booking primary-color text-center">
+        <div class="form-container d-inline-block">
             <h2 class="curly-line">make booking</h2>
-            <div class="form-row mt-5  justify-content-around w-100">
-                <div class="form-group col-md-4  ">
-                    <div class=" input-field d-flex justify-content-center">
-                            <input type="button" value="-" class="minus">
-                            <input type="number" class="form-control d-flex justify-content-center" id="guest" min='1'>
-                            <input type="button" value="+" class="plus">
+            <form class="d-flex justify-content-center align-items-center flex-column" action="">
+                <div class="form-row mt-5  w-100 d-flex justify-content-between">
+                    <div class="form-group col-md-4 p-0  pr-md-3 pr-lg-4 ">
+                        <div class=" input-field d-flex justify-content-center w-100 w-md-95 ">
+                            <input type="button" value="-" class="minus ">
+                            <input type="number" class="form-control d-flex justify-content-center h-18" id="guest"
+                                min='1'>
+                            <input type="button" value="+" class="plus ">
+                        </div>
+                        <label class="d-flex justify-content-center align-items-center w-100 w-md-95"
+                            for="guest">guests</label>
                     </div>
-                        <label class="d-flex justify-content-center align-items-center" for="guest">guests</label>
+                    <div class="form-group date col-md-4 p-0 px-md-1 px-lg-2 px-xl-3">
+                        <input type="text" class="form-control mx-md-auto w-100 w-md-95" id="date" placeholder="MM/DD"
+                            required>
+                        <label for="date"
+                            class="d-flex justify-content-center align-items-center mx-md-auto w-100 w-md-95">date</label>
+                    </div>
+                    <div class="form-group col-md-4 p-0 pl-md-3  pl-lg-4 ">
+                        <input type="time" class="form-control ml-md-auto w-100 w-md-95" id="time">
+                        <label for="time"
+                            class="d-flex justify-content-center align-items-center ml-md-auto w-100 w-md-95">time</label>
+                    </div>
                 </div>
-                <div class="form-group col-md-4  ">
-                        <input type="date" class="form-control" id="date">
-                        <label for="date"  class="d-flex justify-content-center align-items-center" >date</label>
-                </div>
-                <div class="form-group col-md-4 ">
-                        <input type="time" class="form-control" id="time" >
-                        <label for="time" class="d-flex justify-content-center align-items-center" >time</label>
-                </div>
-            </div>
-            <div class="form-group my-3 w-100 mx-4 text-left">
+                <div class="form-group my-3 w-100 mx-4">
                     <input type="text" class="form-control w-100" id="name" placeholder="name">
-            </div>
-            <div class="form-group my-3 w-100 mx-4 text-left">
+                </div>
+                <div class="form-group my-3 w-100 mx-4 text-left">
                     <input type="email" class="form-control w-100" id="email-booking" placeholder="email">
-            </div>
-            <div class="form-group my-3 w-100 mx-4 text-left">
+                </div>
+                <div class="form-group my-3 w-100 mx-4 text-left">
                     <input type="tel" class="form-control w-100" id="tel" placeholder="phone">
-            </div>
-        </form>
+                </div>
+                <a class="btn btn-primary">make booking</a>
+            </form>
+        </div>
+        <div class="sub-booking">
+            *Lorem ipsum dolor sit amet consectetur adipiscing elit nam libero lacus bibendum ut urna et porttitor
+            aliquam sapien.
+        </div>
+        <a class="btn btn-dark"></a>
     </section>
     <section class="first-body-section" id="first-body-section">
         <div class="container-fluid">
@@ -835,6 +850,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+        <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.min.js"></script>
     <script src="js/script.js"></script>
 
 </body>
