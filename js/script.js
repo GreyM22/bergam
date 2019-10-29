@@ -50,6 +50,38 @@ $(document).ready(function () {
     });
   });
 
+  $('.booking .btn-dark, .right-side-button-flex, .row.main .btn.btn-primary').click(function () {
+      $('.booking').fadeToggle('fast');
+  });
+
+  $('.booking .form-container form').submit(function () {
+
+    let date = $("#date").val();
+    let month = date.split("/")[0];
+    let day = date.split("/")[1];
+    let time = $('#time').val();
+
+    let currentDate = new Date();
+
+    if(parseInt(month) >= parseInt(currentDate.getMonth()) && parseInt(day) >= parseInt(currentDate.getDate())){
+      
+      if( parseInt(time.split(':')[0]) >= (parseInt(currentDate.getHours()) + 2) && parseInt(time.split(':')[1]) >= parseInt(currentDate.getMinutes()) ){
+        $('.booking').fadeToggle('fast');
+        $('.booking .form-container form').trigger("reset");
+      }
+      else{
+        $('.sub-error').text('*Pleas book two hours in advance');
+        $('.sub-error').removeClass('d-none');  
+      }
+    }
+    else{
+      $('.sub-error').text('*Pleas do not insert e previus date');
+      $('.sub-error').removeClass('d-none');
+    }
+
+  });
+
+
   $(".minus").on("click", function () {
     var oldValue = $('form input[type=number]').val();
     if(oldValue == 0) return;
@@ -66,20 +98,20 @@ $(document).ready(function () {
     var newVal = parseFloat(oldValue) + 1;
     $('form input[type=number]').val(newVal);
   });
-  $('.right-side-button-flex').click(function(){
-    $('body *').toggleClass('d-none');
-    $('.booking').toggleClass('d-none');
-  });
 
-  $('.form-group.date').click( function(){
-    $('.form-group.date').datepicker({
-      format: 'mm/dd',
-      calendarWeeks: true,
-      todayHighlight: true,
-      autoclose: true
-    });  
-    $(".datepicker-switch").attr("colspan", "5");
-    $(".table-condensed").addClass('w-100');  
-  });
+  $( ".booking form .input-field input[type='number']" ).focus(function(){
+    $('.booking .minus').css('border-color', '#b38a58');
+  })
+
+  $( ".booking form .input-field input[type='number']" ).focusout(function(){
+    $('.booking .minus').css('border-color', '#4c4c4c');
+  })
+
+  // $('#time').keydown(function(){
+  //   let x = $('#time').val().length;
+  //   if($('#time').val().length ==  2){
+  //     $('#time').val( $('#time').val() + ":");
+  //   }
+  // })
 
 });

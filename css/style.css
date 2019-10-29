@@ -676,6 +676,7 @@ footer .btn-primary {
   padding: 20vh 0;
   overflow: hidden;
   overflow-y: auto;
+  display: none;
 }
 
 .booking .form-container {
@@ -698,35 +699,33 @@ footer .btn-primary {
 .booking .curly-line::after {
   margin-top: 1vh;
 }
-.booking form input,
-.booking form .input-field {
+.booking form input {
   height: 80px;
   border: 1px solid #4c4c4c;
-  background: none;
+  background: none !important;
   text-align: center;
   border-radius: 0;
-  color: white;
+  color: white !important;
   transition: 0.5s;
-  font-family: ".SF NS Display Regular";
+  font-family: ".SF NS Display Regular" !important;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid #b38a58;
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0px 1000px #202020 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
 .booking form .input-field:hover {
   border-color: #b38a58;
-}
-
-.minus,
-.plus {
-  font-size: 24px;
-  opacity: 0.5;
-}
-
-.minus:focus,
-.plus:focus {
-  outline: none;
-  border: none;
-  background: none;
-  opacity: 1;
-  box-shadow: none;
 }
 
 input::-webkit-inner-spin-button,
@@ -761,15 +760,6 @@ input[type="date"]::-webkit-inner-spin-button,
 input[type="date"]::-webkit-calendar-picker-indicator {
   display: none;
   -webkit-appearance: none;
-}
-
-.booking form .input-field input {
-  height: 80px;
-  width: 100px;
-  border: none;
-  background: none;
-  text-align: center;
-  border-radius: 0;
 }
 
 .booking form input.form-control {
@@ -825,7 +815,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .sub-booking {
-  /* display: inline-block; */
   max-width: 461px;
   opacity: 0.6;
   font-family: "Recoleta";
@@ -835,60 +824,70 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   margin-bottom: 0;
 }
 
-.datepicker-dropdown {
-  top: 0;
-  left: 0%;
-  z-index: 1000;
-  padding: 4px;
-  background-color: #202020;
-  border-radius: 10px;
+.sub-error{
+  max-width: 461px;
+  font-family: "Recoleta";
+  font-size: 15px;
+  line-height: 24px;
+  color:#B38A58;
 }
 
-.datepicker-inline {
-  background-color: #202020;
-  position: absolute;
-  border: 1px solid #b38a58;
-  font-family: ".SF NS Display Regular";
-}
-
-.datepicker-inline thead {
-  color: white;
-}
-
-
-.datepicker-inline thead tr:nth-child(2) th:hover {
-  color: #b38a58;
+.booking form .input-field input {
+  height: 80px;
+  width: 100px;
   background: none;
+  text-align: center;
+  border-radius: 0;
+  border: 1px solid #4c4c4c;
 }
 
-.datepicker-inline table tbody tr td {
-  color:white
+.booking form .input-field input[type="number"] {
+  border-left: none;
+  border-right: none;
 }
 
-.datepicker .cw{
-  display: none;
+.minus,
+.plus {
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.5) !important;
 }
 
-.datepicker table tbody tr td.day:hover,
-.datepicker table tbody tr td.focused,
-.datepicker table tbody tr td.active {
-  background-color: white!important;
-  color:#b38a58!important;
-  cursor: pointer;
-  text-shadow: none;
+.plus {
+  border-left: none !important;
 }
 
-.datepicker-inline table tbody tr td.today {
-  color:#d8a76a;
+.minus {
+  border-right: none !important;
+}
+
+.minus:focus,
+.plus:focus {
+  outline: none;
   background: none;
+  color: rgba(255, 255, 255, 1) !important;
+  box-shadow: none;
 }
 
-.datepicker table tr td.old,
-.datepicker table tr td.new {
-opacity: 0.5;
+.booking form .input-field input[type="number"]:focus,
+.booking form .input-field input[type="number"]:focus + .plus {
+  border-color: #b38a58;
 }
 
+.booking
+  form
+  .input-field
+  input[type="number"]:focus
+  + .booking
+  form
+  .input-field
+  input[type="button"] {
+  border-color: #b38a58;
+}
 
+button.btn.btn-primary:focus {
+  outline: 0;
+  box-shadow: none !important;
+}
 /*end of booking-form*/
 
 .align-items-center p {
