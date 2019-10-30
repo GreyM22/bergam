@@ -159,7 +159,9 @@ $(document).ready(function () {
   })
 
   $('.mask .carousel-inner').children('.carousel-item').each(function () {
-    $('.carousel-item').hasClass('active');
+    if($('.carousel-item').hasClass('active')){
+      $('.fill').css('width',(13.33*$(this).index())+'');
+    }
 });
 
 

@@ -1,6 +1,6 @@
 /*default style*/
 h1 {
-  font-family: "Recoleta";
+  font-family: "Recoleta DEMO";
   font-size: 9vh;
   font-weight: 400;
   line-height: 9.8vh;
@@ -9,7 +9,7 @@ h1 {
 }
 
 h2 {
-  font-family: "Recoleta";
+  font-family: "Recoleta DEMO";
   font-size: 66px;
   font-weight: 400;
   line-height: 64px;
@@ -40,18 +40,18 @@ h5 {
 }
 
 h6 {
-  font-family: "Recoleta";
+  font-family: "Recoleta DEMO";
   font-size: 26px;
   line-height: 34px;
   text-align: center;
 }
 
 .recola {
-  font-family: "Recoleta";
+  font-family: "Recoleta DEMO";
 }
 
 .small-header {
-  font-family: "Recoleta";
+  font-family: "Recoleta DEMO";
   font-size: 14px;
   font-weight: 400;
   line-height: 24px;
@@ -383,7 +383,7 @@ ul,
   flex-grow: 0;
   flex-direction: row;
   align-items: center;
-  font-family: "Recoleta";
+  font-family: "Recoleta DEMO";
   font-size: 13px;
   letter-spacing: 2.36px;
   line-height: 18px;
@@ -401,7 +401,7 @@ ul,
   justify-content: center;
   flex-direction: row;
   align-items: center;
-  font-family: "Recoleta";
+  font-family: "Recoleta DEMO";
   font-size: 24px;
   letter-spacing: 3px;
   line-height: 33px;
@@ -424,7 +424,7 @@ ul,
   justify-content: center;
   flex-direction: row;
   align-items: center;
-  font-family: "Recoleta";
+  font-family: "Recoleta DEMO";
   font-size: 13px;
   letter-spacing: 2.36px;
   line-height: 18px;
@@ -444,7 +444,7 @@ ul,
   justify-content: center;
   flex-direction: row;
   align-items: center;
-  font-family: "Recoleta";
+  font-family: "Recoleta DEMO";
   font-size: 13px;
   letter-spacing: 2.36px;
   line-height: 18px;
@@ -504,7 +504,7 @@ ul,
 }
 
 .raiting {
-  font-family: "Recoleta";
+  font-family: "Recoleta DEMO";
   font-size: 12px;
   letter-spacing: 2.18px;
   line-height: 16px;
@@ -533,7 +533,7 @@ button:focus {
   width: 180px;
   border: 1px solid white;
   margin: 0 30px;
-  font-family: "Recoleta";
+  font-family: "Recoleta DEMO";
   font-size: 14px;
   line-height: 60px;
 }
@@ -562,7 +562,7 @@ button:focus {
   width: 300px;
   border: 1px solid #b38a58;
   position: relative;
-  font-family: "Recoleta";
+  font-family: "Recoleta DEMO";
   font-size: 14px;
   line-height: 56px;
 }
@@ -623,7 +623,7 @@ footer .btn-primary {
 }
 
 .sms h2 {
-  font-family: "Recoleta";
+  font-family: "Recoleta DEMO";
   font-size: 48px;
   line-height: 54px;
   display: block;
@@ -707,7 +707,7 @@ footer .btn-primary {
   border-radius: 0;
   color: white ;
   transition: 0.5s;
-  font-family: "Recoleta";
+  font-family: "Recoleta DEMO";
 }
 
 input:-webkit-autofill,
@@ -825,13 +825,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   line-height: 80px;
   position: absolute;
   bottom: -40px;
-  font-family: "Recoleta";
+  font-family: "Recoleta DEMO";
 }
 
 .sub-booking {
   max-width: 461px;
   opacity: 0.6;
-  font-family: "Recoleta";
+  font-family: "Recoleta DEMO";
   font-size: 15px;
   line-height: 24px;
   margin: 82px auto;
@@ -840,7 +840,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .sub-error {
   max-width: 461px;
-  font-family: "Recoleta";
+  font-family: "Recoleta DEMO";
   font-size: 15px;
   line-height: 24px;
   color: #b38a58;
@@ -975,7 +975,7 @@ button img {
   display: block;
   max-width: 600px;
   margin: 0 auto;
-  font-family: "Recoleta";
+  font-family: "Recoleta DEMO";
   font-size: 26px;
   font-weight: 400;
   line-height: 38px;
@@ -995,7 +995,7 @@ button img {
   display: block;
   max-width: 420px;
   margin: 0 auto;
-  font-family: "Recoleta";
+  font-family: "Recoleta DEMO";
   font-size: 26px;
   line-height: 36px;
   text-align: center;
@@ -1150,7 +1150,7 @@ button img {
 .second-body-section .placeholder {
   opacity: 0.05;
   color: #000000;
-  font-family: "Recoleta";
+  font-family: "Recoleta DEMO";
   font-size: 18.51vw;
   line-height: 0.8;
   position: absolute;
@@ -1174,7 +1174,7 @@ button img {
 }
 
 .menu-header {
-  font-family: "Recoleta";
+  font-family: "Recoleta DEMO";
   font-size: 68px;
   line-height: 96px;
   text-align: center;
@@ -1207,7 +1207,7 @@ footer ul {
   max-width: 500px;
   margin: 0 auto;
   margin-top: 50px;
-  font-family: "Recoleta";
+  font-family: "Recoleta DEMO";
   font-size: 26px;
   line-height: 34px;
   text-align: center;
@@ -1241,7 +1241,7 @@ footer ul {
 }
 
 .dinner-content {
-  font-family: "Recoleta";
+  font-family: "Recoleta DEMO";
   font-size: 14px;
 }
 
@@ -1258,7 +1258,7 @@ footer ul {
 }
 
 .notification {
-  font-family: "Recoleta";
+  font-family: "Recoleta DEMO";
   font-size: 16px;
   line-height: 24px;
   text-align: center;
@@ -1334,7 +1334,7 @@ footer ul {
   height: auto;
   opacity: 0.05;
   color: #000000;
-  font-family: "Recoleta";
+  font-family: "Recoleta DEMO";
   font-size: 18.51vw;
   line-height: 0.8;
   position: absolute;
@@ -1370,7 +1370,7 @@ footer ul {
 }
 
 .social-net-title {
-  font-family: "Recoleta";
+  font-family: "Recoleta DEMO";
   font-size: 15px;
   line-height: 24px;
 }
@@ -1465,7 +1465,7 @@ footer {
 }
 
 .side-content  {
-  font-family: "Recoleta";
+  font-family: "Recoleta DEMO";
   font-size: 16px;
   line-height: 26px;
   font-weight: 400;
@@ -1492,7 +1492,7 @@ footer {
 
 .sms-form {
   opacity: 0.6;
-  font-family: "Recoleta";
+  font-family: "Recoleta DEMO";
   font-size: 14px;
   line-height: 24px;
 }
@@ -1548,7 +1548,7 @@ footer ul li {
 }
 
 .term-privacy {
-  font-family: "Recoleta";
+  font-family: "Recoleta DEMO";
   font-size: 11px;
   letter-spacing: 2px;
   line-height: 24px;
@@ -1620,7 +1620,7 @@ footer .content {
 }
 
 footer h6 {
-  font-family: "Recoleta";
+  font-family: "Recoleta DEMO";
   font-size: 24px;
   line-height: 34px;
   letter-spacing: 3px;
@@ -1630,7 +1630,7 @@ footer h6 {
 }
 
 h6.header {
-  font-family: "Recoleta";
+  font-family: "Recoleta DEMO";
   font-size: 15px;
   font-weight: 400;
   line-height: 96px;
