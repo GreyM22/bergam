@@ -9,16 +9,16 @@ function checkValue(str, max) {
   return str;
 };
 
-date.addEventListener('input', function(e) {
+date.addEventListener('input', function (e) {
   this.type = 'text';
   var input = this.value;
   if (/\D\/$/.test(input)) input = input.substr(0, input.length - 3);
-  var values = input.split('/').map(function(v) {
+  var values = input.split('/').map(function (v) {
     return v.replace(/\D/g, '')
   });
   if (values[0]) values[0] = checkValue(values[0], 12);
   if (values[1]) values[1] = checkValue(values[1], 31);
-  var output = values.map(function(v, i) {
+  var output = values.map(function (v, i) {
     return v.length == 2 && i < 1 ? v + ' / ' : v;
   });
   this.value = output.join('').substr(0, 14);
@@ -26,16 +26,16 @@ date.addEventListener('input', function(e) {
 
 var time = document.getElementById('time');
 
-time.addEventListener('input', function(e) {
+time.addEventListener('input', function (e) {
   this.type = 'text';
   var input = this.value;
   if (/\D\:$/.test(input)) input = input.substr(0, input.length - 3);
-  var values = input.split(':').map(function(v) {
+  var values = input.split(':').map(function (v) {
     return v.replace(/\D/g, '')
   });
   if (values[0]) values[0] = checkValue(values[0], 23);
   if (values[1]) values[1] = checkValue(values[1], 60);
-  var output = values.map(function(v, i) {
+  var output = values.map(function (v, i) {
     return v.length == 2 && i < 1 ? v + ' : ' : v;
   });
   this.value = output.join('').substr(0, 14);
@@ -100,7 +100,7 @@ $(document).ready(function () {
     $('.booking').fadeToggle('fast');
   });
 
-  $('.booking .btn-dark').click(function(){
+  $('.booking .btn-dark').click(function () {
     $('.booking form ').trigger("reset");
   })
   $('.booking .form-container form').submit(function () {
@@ -158,11 +158,13 @@ $(document).ready(function () {
     $('.booking .minus').css('border-color', '#4c4c4c');
   })
 
-  $('.mask .carousel-inner').children('.carousel-item').each(function () {
-    if($('.carousel-item').hasClass('active')){
-      $('.fill').css('width',(13.33*$(this).index())+'');
-    }
-});
-
+  $(".mask .carousel").on('slid.bs.carousel', function () {
+    $('.mask .carousel-inner').children('.carousel-item').each(function () {
+      if ($(this).hasClass('active')) {
+        let widthScrollBar = 10 * ($(this).index() + 1);
+        $('.fill').css('width', widthScrollBar + 'px');
+      }
+    });
+  });
 
 });

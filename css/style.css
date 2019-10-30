@@ -95,7 +95,7 @@ h2 {
   z-index: 11;
 }
 .navbar-collapse .social-net ul {
-  width: 22px;
+  padding:0;
 }
 
 .navbar-collapse .social-net {
@@ -945,7 +945,7 @@ button img {
 .fill {
   box-sizing: border-box;
   height: 1px;
-  width: 20px;
+  width: 10px;
   border: 1px solid #b38a58;
   background-color: #b38a58;
   border-radius: 1px;
