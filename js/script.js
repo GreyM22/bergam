@@ -1,3 +1,71 @@
+/* Ajax section */
+function getFormDataString(formEl) {
+  var formData = new FormData(formEl),
+      data = [];
+
+  for (var keyValue of formData) {
+    data.push(encodeURIComponent(keyValue[0]) + "=" + encodeURIComponent(keyValue[1]));
+  }
+
+  return data.join("&");
+}
+
+// Fetch the form element
+var formBooking = document.getElementById("booking-form");
+
+var formEmail = document.getElementById("email-form");
+
+// Override the submit event
+formBooking.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  if (grecaptcha) {
+    var recaptchaResponse = grecaptcha.getResponse();
+    if (!recaptchaResponse) { // reCAPTCHA not clicked yet
+      return false;
+    }
+  }
+
+  var request = new XMLHttpRequest();
+
+  request.addEventListener("load", function () {
+    if (request.status === 302) { // CloudCannon redirects on success
+      // It worked
+    }
+  });
+
+  request.open(formBooking.method, formBooking.action);
+  request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+  request.send(getFormDataString(formBooking));
+});
+
+// Override the submit event
+formEmail.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  if (grecaptcha) {
+    var recaptchaResponse = grecaptcha.getResponse();
+    if (!recaptchaResponse) { // reCAPTCHA not clicked yet
+      return false;
+    }
+  }
+
+  var request = new XMLHttpRequest();
+
+  request.addEventListener("load", function () {
+    if (request.status === 302) { // CloudCannon redirects on success
+      // It worked
+    }
+  });
+
+  request.open(formBooking.method, formBooking.action);
+  request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+  request.send(getFormDataString(formBooking));
+});
+
+
+
+/* Fromating the date in the booking form  */
 var date = document.getElementById('date');
 
 function checkValue(str, max) {
@@ -72,12 +140,14 @@ $(document).ready(function () {
   });
 });
 
+
+
 $(document).ready(function () {
   $('.the-button, #navbarResponsive a').click(function () {
     $('.navbar').toggleClass('dark-bg');
     $('.the-button').toggleClass('rotate');
     $('#navbarResponsive').toggle('fast');
-    $('#navbarResponsive .social-net').toggleClass('d-none');
+    $('#navbarResponsive .social-net, .left-side-flex .menu-text').toggleClass('d-none');
     $('nav').toggleClass("nav-open");
   });
 
@@ -112,8 +182,11 @@ $(document).ready(function () {
 
     let currentDate = new Date();
 
-    if (parseInt(month) >= parseInt(currentDate.getMonth()) && parseInt(day) >= parseInt(currentDate.getDate())) {
-
+    if (parseInt(month) > parseInt(currentDate.getMonth()) ) {
+      $('.booking').fadeToggle('fast');
+      $('.booking .form-container form').trigger("reset");
+    }
+    else if(parseInt(month) == parseInt(currentDate.getMonth()) && parseInt(day) >= parseInt(currentDate.getDate()) ){
       if (parseInt(time.split(':')[0]) >= (parseInt(currentDate.getHours()) + 2) && parseInt(time.split(':')[1]) >= parseInt(currentDate.getMinutes())) {
         $('.booking').fadeToggle('fast');
         $('.booking .form-container form').trigger("reset");
@@ -166,5 +239,4 @@ $(document).ready(function () {
       }
     });
   });
-
 });
