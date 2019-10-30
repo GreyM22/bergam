@@ -954,6 +954,7 @@ button img {
   position: absolute;
   top: -1;
   left: -1;
+  transform: all 0.3s;
 }
 
 .align-items-end .col {

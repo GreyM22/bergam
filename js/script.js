@@ -158,11 +158,9 @@ $(document).ready(function () {
     $('.booking .minus').css('border-color', '#4c4c4c');
   })
 
-  // $('#time').keydown(function(){
-  //   let x = $('#time').val().length;
-  //   if($('#time').val().length ==  2){
-  //     $('#time').val( $('#time').val() + ":");
-  //   }
-  // })
+  $('.mask .carousel-inner').children('.carousel-item').each(function () {
+    $('.carousel-item').hasClass('active');
+});
+
 
 });
