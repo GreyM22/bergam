@@ -45,15 +45,21 @@ $(document).ready(function () {
 
   $('.sms-subscription .btn-dark').click(function () {
     $('.sms-subscription').fadeToggle(function () {
+      $('.email-form .email').val('');
       $('.sms-subscription').addClass('d-none');
       $('.sms-subscription').removeClass('d-flex');
     });
+    window.scrollTo(0, document.body.scrollHeight);
+
   });
 
   $('.booking .btn-dark, .right-side-button-flex, .row.main .btn.btn-primary').click(function () {
-      $('.booking').fadeToggle('fast');
+    $('.booking').fadeToggle('fast');
   });
 
+  $('.booking .btn-dark').click(function(){
+    $('.booking form ').trigger("reset");
+  })
   $('.booking .form-container form').submit(function () {
 
     let date = $("#date").val();
@@ -63,20 +69,22 @@ $(document).ready(function () {
 
     let currentDate = new Date();
 
-    if(parseInt(month) >= parseInt(currentDate.getMonth()) && parseInt(day) >= parseInt(currentDate.getDate())){
-      
-      if( parseInt(time.split(':')[0]) >= (parseInt(currentDate.getHours()) + 2) && parseInt(time.split(':')[1]) >= parseInt(currentDate.getMinutes()) ){
+    if (parseInt(month) >= parseInt(currentDate.getMonth()) && parseInt(day) >= parseInt(currentDate.getDate())) {
+
+      if (parseInt(time.split(':')[0]) >= (parseInt(currentDate.getHours()) + 2) && parseInt(time.split(':')[1]) >= parseInt(currentDate.getMinutes())) {
         $('.booking').fadeToggle('fast');
         $('.booking .form-container form').trigger("reset");
       }
-      else{
+      else {
         $('.sub-error').text('*Pleas book two hours in advance');
-        $('.sub-error').removeClass('d-none');  
+        $('.sub-error').removeClass('d-none');
+        $(".booking").animate({ scrollTop: 0 }, "slow");
       }
     }
-    else{
+    else {
       $('.sub-error').text('*Pleas do not insert e previus date');
       $('.sub-error').removeClass('d-none');
+      $(".booking").animate({ scrollTop: 0 }, "slow");
     }
 
   });
@@ -84,14 +92,14 @@ $(document).ready(function () {
 
   $(".minus").on("click", function () {
     var oldValue = $('form input[type=number]').val();
-    if(oldValue == 2) return;
+    if (oldValue == 2) return;
     var newVal = parseFloat(oldValue) - 1;
     $('form input[type=number]').val(newVal);
   });
 
   $(".plus").on("click", function () {
     var oldValue = $('form input[type=number]').val();
-    if(oldValue === '') {
+    if (oldValue === '') {
       $('form input[type=number]').val(1);
       return;
     }
@@ -99,11 +107,11 @@ $(document).ready(function () {
     $('form input[type=number]').val(newVal);
   });
 
-  $( ".booking form .input-field input[type='number']" ).focus(function(){
+  $(".booking form .input-field input[type='number']").focus(function () {
     $('.booking .minus').css('border-color', '#b38a58');
   })
 
-  $( ".booking form .input-field input[type='number']" ).focusout(function(){
+  $(".booking form .input-field input[type='number']").focusout(function () {
     $('.booking .minus').css('border-color', '#4c4c4c');
   })
 

@@ -1,15 +1,15 @@
 /*default style*/
 h1 {
-  font-family: ".SF NS Display";
-  font-size: 90px;
+  font-family: "Recoleta";
+  font-size: 9vh;
   font-weight: 400;
-  line-height: 98px;
+  line-height: 9.8vh;
   text-transform: uppercase;
   text-align: center;
 }
 
 h2 {
-  font-family: ".SF NS Display";
+  font-family: "Recoleta";
   font-size: 66px;
   font-weight: 400;
   line-height: 64px;
@@ -51,7 +51,7 @@ h6 {
 }
 
 .small-header {
-  font-family: "Recoleta Regular DEMO";
+  font-family: "Recoleta";
   font-size: 14px;
   font-weight: 400;
   line-height: 24px;
@@ -231,13 +231,9 @@ h2 {
 }
 
 .mask .header-content {
-  display: block;
   max-width: 320px;
   margin: 0 auto;
-}
-
-.mask .header-content {
-  font-family: ".SF NS Display";
+  font-family: "NeueHaasUnicaW1G-Regular";
   font-size: 16px;
   line-height: 28px;
   text-align: center;
@@ -357,6 +353,9 @@ ul,
   margin-top: 3px;
 }
 
+.menu-icon a {
+  margin-top: -1px;
+}
 /* end of Top bar */
 
 /* top of the flex container */
@@ -461,7 +460,7 @@ ul,
 
 /* the rest of the header section, below the nav top bar*/
 .row.main {
-  padding-top: 26.7vh;
+  padding-top: 24.7vh;
 }
 
 .row.align-items-end {
@@ -624,7 +623,7 @@ footer .btn-primary {
 }
 
 .sms h2 {
-  font-family: ".SF NS Display";
+  font-family: "Recoleta";
   font-size: 48px;
   line-height: 54px;
   display: block;
@@ -638,6 +637,7 @@ footer .btn-primary {
   height: 64px;
   max-width: 461px;
   width: 74.35%;
+  font-family: "NeueHaasUnicaW1G-Regular";
 }
 
 .btn-dark {
@@ -707,7 +707,7 @@ footer .btn-primary {
   border-radius: 0;
   color: white ;
   transition: 0.5s;
-  font-family: ".SF NS Display Regular";
+  font-family: "Recoleta";
 }
 
 input:-webkit-autofill,
@@ -722,9 +722,13 @@ select:-webkit-autofill:focus {
   border: 1px solid #b38a58;
   -webkit-text-fill-color: white;
   -webkit-box-shadow: 0 0 0px 1000px #202020 inset;
+  caret-color: white;
   transition: background-color 5000s ease-in-out 0s;
 }
-.booking form .input-field:hover {
+.booking form .input-field:hover input[type="button"],
+.booking form .input-field:hover input[type="number"],
+#date:hover,
+#time:hover {
   border-color: #b38a58;
 }
 
@@ -821,13 +825,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   line-height: 80px;
   position: absolute;
   bottom: -40px;
-  font-family: "Recoleta Regular DEMO";
+  font-family: "Recoleta";
 }
 
 .sub-booking {
   max-width: 461px;
   opacity: 0.6;
-  font-family: "Recoleta Regular DEMO";
+  font-family: "Recoleta";
   font-size: 15px;
   line-height: 24px;
   margin: 82px auto;
@@ -970,7 +974,7 @@ button img {
   display: block;
   max-width: 600px;
   margin: 0 auto;
-  font-family: "Recoleta Regular DEMO";
+  font-family: "Recoleta";
   font-size: 26px;
   font-weight: 400;
   line-height: 38px;
@@ -979,7 +983,7 @@ button img {
 
 .second-body-section .content,
 .third-body-section .content {
-  font-family: ".SF NS Display";
+  font-family: "NeueHaasUnicaW1G-Regular";
   font-size: 16px;
   line-height: 28px;
   text-align: left;
@@ -990,7 +994,7 @@ button img {
   display: block;
   max-width: 420px;
   margin: 0 auto;
-  font-family: ".SF NS Display";
+  font-family: "Recoleta";
   font-size: 26px;
   line-height: 36px;
   text-align: center;
@@ -1060,7 +1064,7 @@ button img {
 }
 
 .second-body-section .food-right img {
-  width: 100%;
+  width: 39.5vw;
   height: auto;
   display: block;
   margin-right: 0;
@@ -1145,11 +1149,11 @@ button img {
 .second-body-section .placeholder {
   opacity: 0.05;
   color: #000000;
-  font-family: ".SF NS Display";
-  font-size: 300px;
-  line-height: 64px;
+  font-family: "Recoleta";
+  font-size: 18.51vw;
+  line-height: 0.8;
   position: absolute;
-  top: 100;
+  top: 0;
   right: -50;
   text-transform: uppercase;
 }
@@ -1169,7 +1173,7 @@ button img {
 }
 
 .menu-header {
-  font-family: ".SF NS Display";
+  font-family: "Recoleta";
   font-size: 68px;
   line-height: 96px;
   text-align: center;
@@ -1236,7 +1240,7 @@ footer ul {
 }
 
 .dinner-content {
-  font-family: ".SF NS Display";
+  font-family: "Recoleta";
   font-size: 14px;
 }
 
@@ -1326,14 +1330,15 @@ footer ul {
 }
 
 .third-body-section .placeholder {
+  height: auto;
   opacity: 0.05;
   color: #000000;
-  font-family: ".SF NS Display";
+  font-family: "Recoleta";
   font-size: 18.51vw;
-  line-height: 64px;
+  line-height: 0.8;
   position: absolute;
-  left: -5;
-  top: -10;
+  left: 0;
+  top: 0;
 }
 
 .review-social-network {
@@ -1458,7 +1463,7 @@ footer {
   justify-content: center;
 }
 
-.side-content p {
+.side-content  {
   font-family: "Recoleta";
   font-size: 16px;
   line-height: 26px;
@@ -1473,11 +1478,12 @@ footer {
   display: block;
   margin: auto;
   text-align: center;
+  font-family: "Neue Haas Unica W1G";
 }
 
 .email::placeholder {
   color: #646463;
-  font-family: ".SF NS Display";
+  font-family: "Neue Haas Unica W1G";
   font-size: 16px;
   line-height: 56px;
   text-align: center;
@@ -1613,7 +1619,7 @@ footer .content {
 }
 
 footer h6 {
-  font-family: "Recoleta DEMO";
+  font-family: "Recoleta";
   font-size: 24px;
   line-height: 34px;
   letter-spacing: 3px;
@@ -1623,7 +1629,7 @@ footer h6 {
 }
 
 h6.header {
-  font-family: "Recoleta DEMO";
+  font-family: "Recoleta";
   font-size: 15px;
   font-weight: 400;
   line-height: 96px;
@@ -1655,16 +1661,10 @@ h6.header {
   .social-network {
     top: -1.46vw;
   }
-  .second-body-section .placeholder {
-    display: none;
-  }
   .third-body-section .placeholder {
     display: none;
   }
 
-  .col-md-6.order-2.order-md-2 {
-    overflow: visible;
-  }
 }
 
 @media only screen and (max-width: 999px) {
@@ -1841,6 +1841,11 @@ h6.header {
   .phone-svg::before {
     margin-right: 0;
   }
+
+  .col-md-6.order-2.order-md-2 {
+    overflow: visible;
+  }
+
 }
 
 @media only screen and (max-width: 767px) {
@@ -1883,6 +1888,7 @@ h6.header {
   .food-middle {
     width: 320px;
   }
+  
 }
 
 @media only screen and (max-width: 660px) {
@@ -1998,6 +2004,23 @@ h6.header {
   }
 }
 
+@media only screen and (max-width: 440px) {
+  .booking h2{
+    font-size: 9.5vw;
+    line-height: 10.04vw;
+  }
+}
+
+
+@media only screen and (max-width: 430px) {
+
+  .sms h2{
+    font-size: 11.15vw;
+    line-height: 12.55vw;
+  }
+}
+
+
 @media only screen and (max-width: 411px) {
   .small-screen-hide {
     display: none;
@@ -2011,14 +2034,42 @@ h6.header {
 }
 
 @media only screen and (max-width: 374px) {
-  .mask h1 {
-    width: 280px;
-    min-width: 280px;
+
+  .mask h1{
+    font-size: 13.33vw;
+    line-height: 14.4vw;
+    width: 90vw;
+    min-width: 90vw;
   }
 
-  .header-button {
+   .btn-primary, input.email{
     width: 80vw;
   }
+
+  h2{
+    font-size: 14.4vw;
+    line-height: 13.8vw;
+  }
+
+  .food-left img{
+    height: 106.1vw;
+    width: 90.4vw;
+  }
+
+  .food-left::before{
+    height:138.6vw;
+  }
+
+  .col.col-md-6.order-1.order-md-1{
+    height: auto;
+  }
+
+  .col-md-6.order-2.order-md-2{
+    height: auto;
+    padding-top: 133px;
+    padding-bottom:62px;
+  }
+
 }
 
 @media only screen and (max-height: 700px) {
@@ -2035,3 +2086,4 @@ h6.header {
     padding-top: 10.7vh;
   }
 }
+
