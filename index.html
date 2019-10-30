@@ -249,12 +249,12 @@
                     </div>
                     <div class="form-group date col-md-4 p-0 px-md-1 px-lg-2 px-xl-3">
                         <input type="text" class="form-control mx-md-auto w-100 w-md-95" id="date" placeholder="MM/DD" 
-                            required autocomplete="off">
+                            required autocomplete="off" minlength="7">
                         <label for="date"
                             class="d-flex justify-content-center align-items-center mx-md-auto w-100 w-md-95">date</label>
                     </div>
                     <div class="form-group col-md-4 p-0 pl-md-3  pl-lg-4 ">
-                        <input type="text" class="form-control ml-md-auto w-100 w-md-95" id="time" placeholder="hh:mm" required>
+                        <input type="text" class="form-control ml-md-auto w-100 w-md-95" id="time" placeholder="hh:mm" minlength="7" required>
                         <label for="time"
                             class="d-flex justify-content-center align-items-center ml-md-auto w-100 w-md-95">time</label>
                     </div>
@@ -268,7 +268,7 @@
                 <div class="form-group my-3 w-100 mx-4 text-left">
                     <input type="tel" class="form-control w-100" id="tel" placeholder="phone" required>
                 </div>
-                <button  class="btn btn-primary">make booking</button>
+                <input  type="submit" class="btn btn-primary" value="make booking">
             </form>
         </div>
         <div class="sub-booking px-1">
