@@ -725,13 +725,37 @@
                     </div>
                     <div class="col-lg-4 order-lg-2 order-1">
                         <h6 class="header">newsletter sign up</h6>
-                        <form class="email-form" id="email-form" method="POST" action="html/success.html">
+                        <!-- <form class="email-form" id="email-form" method="POST" action="html/success.html">
                             <input type="email" placeholder="Your email" required class="email" name="email">
                             <input type="hidden" name="_to" value="grei@aledia.ca">
                             <input type="text" name="_message" value="Subscribtion" style="display: none;">
                             <button type="submit" class="btn btn-primary">  SUBMIT
                                 </button>                        
-                        </form>
+                        </form> -->
+
+                        <form method="post" id="email-form" action="html/success.html">
+                            <label>Email Address</label>
+                            <input type="text" name="email">
+                          
+                            <label>Name</label>
+                            <input type="text" name="name">
+                          
+                            <label>Message</label>
+                            <textarea name="message"></textarea>
+                          
+                            <label>Urgent</label>
+                            <input type="checkbox" name="urgent">
+                          
+                            <label>Type of Enquiry</label>
+                            <input type="radio" name="_subject" value="Sales Enquiry"> Sales
+                            <input type="radio" name="_subject" value="General Enquiry"> General
+                          
+                            <input type="hidden" name="_to" value="grei@aledia.ca,matty@aledia.ca">
+                            <input type="hidden" name="_cc" value="greimuka@gmail.com">
+                            <input type="text" name="_gotcha" style="display: none;">
+                          
+                            <input type="submit" value="Send Message">
+                          </form>
                         <div class="sms-form">
                             *We won't share your e-mail address. Promise.
                         </div>
