@@ -143,21 +143,6 @@ $(document).ready(function () {
     $('nav').toggleClass("nav-open");
   });
 
-  $('.email-form').submit(function () {
-    $('.sms-subscription').removeClass('d-none');
-    $('.sms-subscription').addClass('d-flex');
-  });
-
-  $('.sms-subscription .btn-dark').click(function () {
-    $('.sms-subscription').fadeToggle(function () {
-      $('.email-form .email').val('');
-      $('.sms-subscription').addClass('d-none');
-      $('.sms-subscription').removeClass('d-flex');
-    });
-    window.scrollTo(0, document.body.scrollHeight);
-
-  });
-
   $('.booking .btn-dark, .right-side-button-flex, .row.main .btn.btn-primary').click(function () {
     $('.booking').fadeToggle('fast');
   });
