@@ -115,7 +115,7 @@
             this.DOM.scrollable = this.DOM.main.querySelector('div[data-scroll]');
             // the items on the page
             this.items = [];
-            [...this.DOM.main.querySelectorAll('.content > .item')].forEach(item => this.items.push(new Item(item)));
+            [...this.DOM.main.querySelectorAll('section')].forEach(item => this.items.push(new Item(item)));
             // here we define which property will change as we scroll the page
             // in this case we will be translating on the y-axis
             // we interpolate between the previous and current value to achieve the smooth scrolling effect

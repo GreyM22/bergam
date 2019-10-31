@@ -1,14 +1,112 @@
-/* Ajax section */
-function getFormDataString(formEl) {
-  let formData = new FormData(formEl),
-      data = [];
+$(document).ready(function () {
+  $('.lazy').Lazy({
+    // your configuration goes here
+    scrollDirection: 'vertical',
+    effect: 'fadeIn',
+    visibleOnly: true,
+    onError: function(element) {
+        console.log('error loading ' + element.data('src'));
+    }
+});
 
-  for (let keyValue of formData) {
-    data.push(encodeURIComponent(keyValue[0]) + "=" + encodeURIComponent(keyValue[1]));
+  $('.the-button, #navbarResponsive a').click(function () {
+    $('.navbar').toggleClass('dark-bg');
+    $('.the-button').toggleClass('rotate');
+    $('#navbarResponsive').toggle('fast');
+    $('#navbarResponsive .social-net, .left-side-flex .menu-text').toggleClass('d-none');
+    $('nav').toggleClass("nav-open");
+  });
+
+  $('.booking .btn-dark, .right-side-button-flex, .row.main .btn.btn-primary').click(function () {
+    $('.booking').fadeToggle('fast');
+  });
+
+  $('.booking .btn-dark').click(function () {
+    $('.booking form ').trigger("reset");
+  })
+  $('.booking .form-container form').submit(function () {
+
+    let date = $("#date").val();
+    let month = date.split("/")[0];
+    let day = date.split("/")[1];
+    let time = $('#time').val();
+
+    let currentDate = new Date();
+
+    if (parseInt(month) > parseInt(currentDate.getMonth()) ) {
+      $('.booking').fadeToggle('fast');
+      $('.booking .form-container form').trigger("reset");
+    }
+    else if(parseInt(month) == parseInt(currentDate.getMonth()) && parseInt(day) >= parseInt(currentDate.getDate()) ){
+      if (parseInt(time.split(':')[0]) >= (parseInt(currentDate.getHours()) + 2) && parseInt(time.split(':')[1]) >= parseInt(currentDate.getMinutes())) {
+        $('.booking').fadeToggle('fast');
+        $('.booking .form-container form').trigger("reset");
+      }
+      else {
+        $('.sub-error').text('*Pleas book two hours in advance');
+        $('.sub-error').removeClass('d-none');
+        $(".booking").animate({ scrollTop: 0 }, "slow");
+      }
+    }
+    else {
+      $('.sub-error').text('*Pleas do not insert e previus date');
+      $('.sub-error').removeClass('d-none');
+      $(".booking").animate({ scrollTop: 0 }, "slow");
+    }
+
+  });
+
+
+  $(".minus").on("click", function () {
+    var oldValue = $('form input[type=number]').val();
+    if (oldValue == 2) return;
+    var newVal = parseFloat(oldValue) - 1;
+    $('form input[type=number]').val(newVal);
+  });
+
+  $(".plus").on("click", function () {
+    var oldValue = $('form input[type=number]').val();
+    if (oldValue === '') {
+      $('form input[type=number]').val(1);
+      return;
+    }
+    var newVal = parseFloat(oldValue) + 1;
+    $('form input[type=number]').val(newVal);
+  });
+
+  $(".booking form .input-field input[type='number']").focus(function () {
+    $('.booking .minus').css('border-color', '#b38a58');
+  })
+
+  $(".booking form .input-field input[type='number']").focusout(function () {
+    $('.booking .minus').css('border-color', '#4c4c4c');
+  })
+
+  /* header carusel section */
+  let nrImgHeader = $('.mask .carousel-inner > .carousel-item').length;
+
+  /* setting the nr of img in the header */
+  if(nrImgHeader < 10){
+    $(".nr-img-header").text("0"+nrImgHeader);
+  }
+  else{
+    $(".nr-img-header").text(nrImgHeader);
   }
 
-  return data.join("&");
-}
+  /* changing the snack bar each time img slides*/
+  $(".mask .carousel").on('slid.bs.carousel', function () {
+    $('.mask .carousel-inner').children('.carousel-item').each(function () {
+      if ($(this).hasClass('active')) {
+        let widthScrollBar = 40/nrImgHeader * ($(this).index() + 1);
+        $('.fill').css('width', widthScrollBar + 'px');
+      }
+    });
+  });
+});
+
+
+
+
 
 // Fetch the form element
 var formBooking = document.getElementById("booking-form");
@@ -156,98 +254,3 @@ scrElement.setAttribute( 'src', 'https://api.instagram.com/v1/users/self/media/r
 document.body.appendChild( scrElement );
 
 
-$(document).ready(function () {
-  $('.the-button, #navbarResponsive a').click(function () {
-    $('.navbar').toggleClass('dark-bg');
-    $('.the-button').toggleClass('rotate');
-    $('#navbarResponsive').toggle('fast');
-    $('#navbarResponsive .social-net, .left-side-flex .menu-text').toggleClass('d-none');
-    $('nav').toggleClass("nav-open");
-  });
-
-  $('.booking .btn-dark, .right-side-button-flex, .row.main .btn.btn-primary').click(function () {
-    $('.booking').fadeToggle('fast');
-  });
-
-  $('.booking .btn-dark').click(function () {
-    $('.booking form ').trigger("reset");
-  })
-  $('.booking .form-container form').submit(function () {
-
-    let date = $("#date").val();
-    let month = date.split("/")[0];
-    let day = date.split("/")[1];
-    let time = $('#time').val();
-
-    let currentDate = new Date();
-
-    if (parseInt(month) > parseInt(currentDate.getMonth()) ) {
-      $('.booking').fadeToggle('fast');
-      $('.booking .form-container form').trigger("reset");
-    }
-    else if(parseInt(month) == parseInt(currentDate.getMonth()) && parseInt(day) >= parseInt(currentDate.getDate()) ){
-      if (parseInt(time.split(':')[0]) >= (parseInt(currentDate.getHours()) + 2) && parseInt(time.split(':')[1]) >= parseInt(currentDate.getMinutes())) {
-        $('.booking').fadeToggle('fast');
-        $('.booking .form-container form').trigger("reset");
-      }
-      else {
-        $('.sub-error').text('*Pleas book two hours in advance');
-        $('.sub-error').removeClass('d-none');
-        $(".booking").animate({ scrollTop: 0 }, "slow");
-      }
-    }
-    else {
-      $('.sub-error').text('*Pleas do not insert e previus date');
-      $('.sub-error').removeClass('d-none');
-      $(".booking").animate({ scrollTop: 0 }, "slow");
-    }
-
-  });
-
-
-  $(".minus").on("click", function () {
-    var oldValue = $('form input[type=number]').val();
-    if (oldValue == 2) return;
-    var newVal = parseFloat(oldValue) - 1;
-    $('form input[type=number]').val(newVal);
-  });
-
-  $(".plus").on("click", function () {
-    var oldValue = $('form input[type=number]').val();
-    if (oldValue === '') {
-      $('form input[type=number]').val(1);
-      return;
-    }
-    var newVal = parseFloat(oldValue) + 1;
-    $('form input[type=number]').val(newVal);
-  });
-
-  $(".booking form .input-field input[type='number']").focus(function () {
-    $('.booking .minus').css('border-color', '#b38a58');
-  })
-
-  $(".booking form .input-field input[type='number']").focusout(function () {
-    $('.booking .minus').css('border-color', '#4c4c4c');
-  })
-
-  /* header carusel section */
-  let nrImgHeader = $('.mask .carousel-inner > .carousel-item').length;
-
-  /* setting the nr of img in the header */
-  if(nrImgHeader < 10){
-    $(".nr-img-header").text("0"+nrImgHeader);
-  }
-  else{
-    $(".nr-img-header").text(nrImgHeader);
-  }
-
-  /* changing the snack bar each time img slides*/
-  $(".mask .carousel").on('slid.bs.carousel', function () {
-    $('.mask .carousel-inner').children('.carousel-item').each(function () {
-      if ($(this).hasClass('active')) {
-        let widthScrollBar = 40/nrImgHeader * ($(this).index() + 1);
-        $('.fill').css('width', widthScrollBar + 'px');
-      }
-    });
-  });
-});
