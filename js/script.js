@@ -43,13 +43,6 @@ formBooking.addEventListener("submit", function (e) {
 formEmail.addEventListener("submit", function (e) {
   e.preventDefault();
 
-  if (grecaptcha) {
-    var recaptchaResponse = grecaptcha.getResponse();
-    if (!recaptchaResponse) { // reCAPTCHA not clicked yet
-      return false;
-    }
-  }
-
   var request = new XMLHttpRequest();
 
   request.addEventListener("load", function () {
