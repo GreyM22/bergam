@@ -1,9 +1,9 @@
 /* Ajax section */
 function getFormDataString(formEl) {
-  var formData = new FormData(formEl),
+  let formData = new FormData(formEl),
       data = [];
 
-  for (var keyValue of formData) {
+  for (let keyValue of formData) {
     data.push(encodeURIComponent(keyValue[0]) + "=" + encodeURIComponent(keyValue[1]));
   }
 
@@ -20,13 +20,13 @@ formBooking.addEventListener("submit", function (e) {
   e.preventDefault();
 
   if (grecaptcha) {
-    var recaptchaResponse = grecaptcha.getResponse();
+    let recaptchaResponse = grecaptcha.getResponse();
     if (!recaptchaResponse) { // reCAPTCHA not clicked yet
       return false;
     }
   }
 
-  var request = new XMLHttpRequest();
+  let request = new XMLHttpRequest();
 
   request.addEventListener("load", function () {
     if (request.status === 302) { // CloudCannon redirects on success
@@ -42,7 +42,7 @@ formBooking.addEventListener("submit", function (e) {
 formEmail.addEventListener("submit", function (e) {
   e.preventDefault();
 
-  var request = new XMLHttpRequest();
+  let request = new XMLHttpRequest();
 
   request.addEventListener("load", function () {
     if (request.status === 302) { // CloudCannon redirects on success
