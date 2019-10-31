@@ -655,7 +655,7 @@ footer .btn-primary::after,
 }
 
 .sms h2 {
-  font-family: "Recoleta DEMO";
+  font-family: recoleta, serif;
   font-size: 48px;
   line-height: 54px;
   display: block;
@@ -669,7 +669,6 @@ footer .btn-primary::after,
   height: 64px;
   max-width: 461px;
   width: 74.35%;
-  /* font-family: "NeueHaasUnicaW1G-Regular"; */
   font-family: neue-haas-unica, sans-serif;
   font-weight: 400;
 
@@ -793,7 +792,7 @@ input[type="date"]::-webkit-clear-button {
   font-weight: 500;
   letter-spacing: 2px;
   text-transform: uppercase;
-  font-family: neue-haas-unica !important;
+  font-family: neue-haas-unica, sans-serif;
   font-weight: 500;
 }
 
@@ -863,7 +862,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   line-height: 80px;
   position: absolute;
   bottom: -40px;
-  font-family: "Recoleta DEMO";
+  font-family: recoleta, serif;
   border-color: #b38a58;
   box-shadow: none;
 }
@@ -871,7 +870,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .sub-booking {
   max-width: 461px;
   opacity: 0.6;
-  font-family: "Recoleta DEMO";
+  font-family: recoleta, serif;
   font-size: 15px;
   line-height: 24px;
   margin: 82px auto;
