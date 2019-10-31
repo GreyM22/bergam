@@ -707,7 +707,6 @@ footer .btn-primary::after,
   position: fixed;
   top: 0;
   z-index: 12;
-  padding: 20vh 0;
   overflow: hidden;
   overflow-y: auto;
   display: none;
@@ -722,6 +721,7 @@ footer .btn-primary::after,
   flex-direction: column;
   padding: 7.7vh 50px 10vh 50px;
   position: relative;
+  margin-top: 15vh;
 }
 
 .booking form h2 {
@@ -754,11 +754,21 @@ select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
   border: 1px solid #b38a58;
-  -webkit-text-fill-color: white;
+  -webkit-text-fill-color: white!important;
   -webkit-box-shadow: 0 0 0px 1000px #202020 inset;
   caret-color: white;
   transition: background-color 5000s ease-in-out 0s;
 }
+
+/* .booking .edge-autofilled{
+  color:white!important;
+} */
+
+input::-ms-clear{
+  display: none;
+}
+
+
 .booking form .input-field:hover input[type="button"],
 .booking form .input-field:hover input[type="number"],
 #date:hover,
@@ -826,7 +836,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   border-top: none;
   font-family: neue-haas-unica, sans-serif;
   font-weight: 500;
-
   font-size: 12px;
   font-weight: 500;
   letter-spacing: 2px;
@@ -874,7 +883,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   font-size: 15px;
   line-height: 24px;
   margin: 82px auto;
-  margin-bottom: 0;
+  margin-bottom: 5vh;
 }
 
 .sub-error {
@@ -1233,7 +1242,7 @@ button img {
   border: none;
 }
 
-.menu .content,
+
 .menu ol.carousel-indicators,
 .menu .notification,
 .review .small-header,
@@ -1251,6 +1260,7 @@ footer ul {
   font-size: 26px;
   line-height: 34px;
   text-align: center;
+  margin-top: 32px;
 }
 
 .price {
@@ -1328,7 +1338,7 @@ footer ul {
 }
 
 .menu-header.curly-line::after {
-  margin-top: 15px;
+  margin-top: 4px;
 }
 
 .review-content::before {
@@ -1475,16 +1485,28 @@ footer ul {
   background: #b38a58;
 }
 
+.review .carousel-indicators li{
+  box-sizing: none;
+  flex:none;
+  width: 0;
+  height: 0;
+  margin:0;
+  text-indent: none;
+  background:none;
+  border:none;
+  opacity: 1;
+  padding-left:10px
+}
+
+
 .carousel-indicators {
   position: static;
-  margin-left: 3.22%;
-  margin-right: auto;
   margin-bottom: 20px;
 }
 
 .review ol li {
   display: inline;
-  padding-right: 14px;
+  padding-right: 10px;
 }
 
 .review ol {
@@ -1519,12 +1541,19 @@ footer {
   display: block;
   margin: auto;
   text-align: center;
-  font-family: "Neue Haas Unica W1G";
+  font-family: neue-haas-unica, sans-serif;
+  font-size: 16px;
+  line-height: 56px;
+}
+
+.email:focus{
+  box-shadow: none!important;
+  border:none!important;
 }
 
 .email::placeholder {
   color: #646463;
-  font-family: "Neue Haas Unica W1G";
+  font-family: neue-haas-unica, sans-serif;
   font-size: 16px;
   line-height: 56px;
   text-align: center;
@@ -1789,7 +1818,7 @@ h6.header {
   }
 
   .review ol {
-    padding-top: 84px;
+    padding-top: 48px;
   }
   .review {
     bottom: -2.08vw;

@@ -102,13 +102,14 @@ time.addEventListener('input', function (e) {
   this.value = output.join('').substr(0, 14);
 });
 
-
+/* smooth scroll for arrow down button */
 function moveToFirsBodySection() {
   document.querySelector('.first-body-section').scrollIntoView({
     behavior: 'smooth'
   });
 }
 
+/* smooth scroll for the navigation */
 $(document).ready(function () {
   // Add smooth scrolling to all links
   $("a").on('click', function (event) {
@@ -133,6 +134,26 @@ $(document).ready(function () {
   });
 });
 
+/* instagram feed */
+
+var token = '1362124742.7b33a8d.6613a3567f0a425f9852055b8ef743b7',
+    num_photos = 10,
+    container = document.getElementById( 'social-net-img' ),
+    scrElement = document.createElement( 'script' );
+ 
+window.mishaProcessResult = function( data ) {
+  let firstItem = true;
+	for( x in data.data ){
+    if(firstItem){
+      container.innerHTML += '<div class="carousel-item active"><img class="item__img" src="' + data.data[x].images.low_resolution.url + '"></div>';
+      firstItem = false;
+    }
+		container.innerHTML += '<div class="carousel-item"><img class="item__img" src="' + data.data[x].images.low_resolution.url + '"></div>';
+	}
+}
+ 
+scrElement.setAttribute( 'src', 'https://api.instagram.com/v1/users/self/media/recent?access_token=' + token + '&count=' + num_photos + '&callback=mishaProcessResult' );
+document.body.appendChild( scrElement );
 
 
 $(document).ready(function () {
@@ -209,10 +230,22 @@ $(document).ready(function () {
     $('.booking .minus').css('border-color', '#4c4c4c');
   })
 
+  /* header carusel section */
+  let nrImgHeader = $('.mask .carousel-inner > .carousel-item').length;
+
+  /* setting the nr of img in the header */
+  if(nrImgHeader < 10){
+    $(".nr-img-header").text("0"+nrImgHeader);
+  }
+  else{
+    $(".nr-img-header").text(nrImgHeader);
+  }
+
+  /* changing the snack bar each time img slides*/
   $(".mask .carousel").on('slid.bs.carousel', function () {
     $('.mask .carousel-inner').children('.carousel-item').each(function () {
       if ($(this).hasClass('active')) {
-        let widthScrollBar = 10 * ($(this).index() + 1);
+        let widthScrollBar = 40/nrImgHeader * ($(this).index() + 1);
         $('.fill').css('width', widthScrollBar + 'px');
       }
     });
