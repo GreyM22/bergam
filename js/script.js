@@ -40,6 +40,7 @@ formBooking.addEventListener("submit", function (e) {
 
 // Override the submit event
 formEmail.addEventListener("submit", function (e) {
+  console.log
   e.preventDefault();
 
   let request = new XMLHttpRequest();
