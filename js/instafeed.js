@@ -11,11 +11,11 @@ window.mishaProcessResult = function( data ) {
   let firstItem = true;
 	for( x in data.data ){
     if(firstItem){
-      container.innerHTML += '<div class="carousel-item active"><img class="lazy"  src="' + data.data[x].images.low_resolution.url + '"></div>';
+      container.innerHTML += '<div class="carousel-item active"><img class="lazy rellax" data-rellax-speed="1"  src="' + data.data[x].images.low_resolution.url + '"></div>';
       firstItem = false;
     }
     else {
-      container.innerHTML += '<div class="carousel-item"><img class="lazy"  src="'+ data.data[x].images.low_resolution.url + '"></div>';
+      container.innerHTML += '<div class="carousel-item"><img class="lazy rellax" data-rellax-speed="1"  src="'+ data.data[x].images.low_resolution.url + '"></div>';
     }
   }
 }

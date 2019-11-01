@@ -1566,7 +1566,6 @@ footer {
   height: auto;
   width: 100%;
   background: #202020 url("../images/pattern2.png") repeat center center;
-  
   background-size: 100% inherit;
   z-index: 0;
 }
