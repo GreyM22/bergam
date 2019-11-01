@@ -1569,11 +1569,6 @@ footer {
   background-size: 100% inherit;
   z-index: 0;
 }
-
-/* footer.lazy-bg-loaded{
-background-image: url("../images/pattern2.png");
-} */
-
 .social-net-icons {
   justify-content: center;
 }
@@ -1658,14 +1653,10 @@ background-image: url("../images/pattern2.png");
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-.social-icons-footer {
-  /* text-align: center; */
-}
 
 footer ul li {
   display: inline;
   margin: 5px;
-  /* margin: 15px 0; */
 }
 
 .term-privacy {
