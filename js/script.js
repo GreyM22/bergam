@@ -1,9 +1,4 @@
 
-/* lazy loading for img */
-
-
-document.addEventListener("DOMContentLoaded", yall);
-
 
 /*rellax animation  */
 // var rellax = new Rellax('.rellax',{

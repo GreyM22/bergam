@@ -196,6 +196,7 @@ h2 {
   background-color: #000000;
   background-position: 50% 30%;
   background-repeat: no-repeat;
+  background-image: url("../images/restaurant.jpg");
   background-size: cover;
   background-blend-mode: screen;
   display: block;
@@ -204,14 +205,15 @@ h2 {
   z-index: -1;
 }
 
-.bg-img1.lazy-bg-loaded{
+/* .bg-img1.lazy-bg-loaded{
   background-image: url("../images/restaurant.jpg");
-}
+} */
 
 .bg-img2 {
   background-color: #000000;
   background-position: 50% 30%;
   background-repeat: no-repeat;
+  background-image: url("../images/restaurant2.jpg");
   background-size: cover;
   background-blend-mode: screen;
   display: block;
@@ -220,14 +222,15 @@ h2 {
   z-index: -1;
 }
 
-.bg-img2.lazy-bg-loaded{
+/* .bg-img2.lazy-bg-loaded{
   background-image: url("../images/restaurant2.jpg");
-}
+} */
 
 .bg-img3 {
   background-color: #000000;
   background-position: 50% 30%;
   background-repeat: no-repeat;
+  background-image: url("../images/restaurant3.jpg");
   background-size: cover;
   background-blend-mode: screen;
   display: block;
@@ -236,9 +239,9 @@ h2 {
   z-index: -1;
 }
 
-.bg-img3.lazy-bg-loaded{
+/* .bg-img3.lazy-bg-loaded{
   background-image: url("../images/restaurant3.jpg");
-}
+} */
 
 .dark-bg {
   background-color: #202020;
@@ -1238,6 +1241,7 @@ button img {
 .mask-table {
   background-color: #121212;
   background-repeat: no-repeat;
+  background: url("../images/tables.jpg");
   background-position: center center;
   background-size: cover;
   background-blend-mode: screen;
@@ -1245,14 +1249,14 @@ button img {
   width: 100%;
 }
 
-.mask-table.lazy-bg-loaded{
+/* .mask-table.lazy-bg-loaded{
   background: url("../images/tables.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   background-blend-mode: screen;
 
-}
+} */
 
 .menu {
   padding-top: 8.09vw;
@@ -1470,7 +1474,7 @@ footer ul {
 
 .review-social-network img {
   height: 25.92vw;
-  width: 18.51vw;
+  width: auto;
 }
 
 .review {
@@ -1555,15 +1559,16 @@ footer ul {
 footer {
   position: relative;
   height: auto;
+  background-image: url("../images/pattern2.png");
   width: 100%;
   background: #202020 repeat center center;
   background-size: 100% inherit;
   z-index: 0;
 }
 
-footer.lazy-bg-loaded{
+/* footer.lazy-bg-loaded{
 background-image: url("../images/pattern2.png");
-}
+} */
 
 .social-net-icons {
   justify-content: center;
@@ -1838,7 +1843,7 @@ h6.header {
 
   .review-social-network img {
     height: 357px;
-    width: 255px;
+    width: auto;
   }
 }
 
