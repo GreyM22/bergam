@@ -1564,9 +1564,9 @@ footer ul {
 footer {
   position: relative;
   height: auto;
-  background-image: url("../images/pattern2.png");
   width: 100%;
-  background: #202020 repeat center center;
+  background: #202020 url("../images/pattern2.png") repeat center center;
+  
   background-size: 100% inherit;
   z-index: 0;
 }
