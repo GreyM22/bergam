@@ -1,11 +1,11 @@
 
 /* lazy loading for img */
 document.addEventListener("DOMContentLoaded", yall);
-var image = document.querySelectorAll('.food-middle img')[0];
-new simpleParallax(image, {
-	scale: 1.5
-});
 
+/*rellax animation  */
+var rellax = new Rellax('.rellax',{
+  center:true
+})
 
 $(document).ready(function () {
 

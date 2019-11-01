@@ -14,24 +14,6 @@
   }
 }
 
-/* trying lazyloading */
-
-.grid.effect-2 .container-fluid.animate {
-	-webkit-transform: translateY(200px);
-	transform: translateY(200px);
-	-webkit-animation: moveUp 0.65s ease forwards;
-	animation: moveUp 0.65s ease forwards;
-}
-
-@-webkit-keyframes moveUp {
-	0% { }
-	100% { -webkit-transform: translateY(0); opacity: 1; }
-}
-
-@keyframes moveUp {
-	0% { }
-	100% { -webkit-transform: translateY(0); transform: translateY(0); opacity: 1; }
-}
 
 /*default style*/
 h1 {
@@ -1220,7 +1202,7 @@ button img {
 }
 
 .food-middle {
-  /* height: auto; */
+  height: auto;
   width: 19.75vw;
   /* position: absolute;
   left: 50vw;
@@ -1233,8 +1215,7 @@ button img {
 }
 
 .food-middle img{
-  max-width: 100%;
-  height: auto;
+  width: 100%;
 }
 
 .second-body-section .placeholder {
@@ -1413,6 +1394,7 @@ footer ul {
   margin-top: -10;
   z-index: 5;
 }
+
 
 .third-body-section::after {
   content: "";
