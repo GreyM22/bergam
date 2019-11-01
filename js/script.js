@@ -1,13 +1,41 @@
-$(document).ready(function () {
-  $('.lazy').Lazy({
-    // your configuration goes here
-    scrollDirection: 'vertical',
-    effect: 'fadeIn',
-    visibleOnly: true,
-    onError: function(element) {
-        console.log('error loading ' + element.data('src'));
-    }
+
+/* lazy loading for img */
+document.addEventListener("DOMContentLoaded", yall);
+var image = document.querySelectorAll('.food-middle img')[0];
+new simpleParallax(image, {
+	scale: 1.5
 });
+
+
+$(document).ready(function () {
+
+
+
+  //   jQuery(window).on('scroll', function(e) {
+
+  //     if (isScrolledIntoView($('.d-none'))) {
+  //       $('.d-none').first().css('animation', 'SlideUp 0.3s ease');
+  //       $('.d-none').first().removeClass('d-none');
+  //    }
+  // });
+
+  // $(window).on("scroll", function() {
+  //   const scrollbarWidth = (outer.offsetWidth - inner.offsetWidth);
+
+  //   console.log("scrollTop: "+ $(window).scrollTop()+" window height: "+ $(window).height()+ " document height"+$(document).height() )
+  // 	if($(window).scrollTop() + scrollbarWidth == $(document).height()) {
+  //     $('.d-none').first().css('animation', 'SlideUp 0.3s ease');
+  //     $('.d-none').first().removeClass('d-none');
+  // }
+  // });
+
+
+  // $('.arrow-button-down').click(function(){
+  //   $('#first-body-section').removeClass('d-none');
+  //   $([document.documentElement, document.body]).animate({
+  //     scrollTop: $("#first-body-section").offset().top
+  // }, 2000);
+  // })
 
   $('.the-button, #navbarResponsive a').click(function () {
     $('.navbar').toggleClass('dark-bg');
@@ -33,11 +61,11 @@ $(document).ready(function () {
 
     let currentDate = new Date();
 
-    if (parseInt(month) > parseInt(currentDate.getMonth()) ) {
+    if (parseInt(month) > parseInt(currentDate.getMonth())) {
       $('.booking').fadeToggle('fast');
       $('.booking .form-container form').trigger("reset");
     }
-    else if(parseInt(month) == parseInt(currentDate.getMonth()) && parseInt(day) >= parseInt(currentDate.getDate()) ){
+    else if (parseInt(month) == parseInt(currentDate.getMonth()) && parseInt(day) >= parseInt(currentDate.getDate())) {
       if (parseInt(time.split(':')[0]) >= (parseInt(currentDate.getHours()) + 2) && parseInt(time.split(':')[1]) >= parseInt(currentDate.getMinutes())) {
         $('.booking').fadeToggle('fast');
         $('.booking .form-container form').trigger("reset");
@@ -86,10 +114,10 @@ $(document).ready(function () {
   let nrImgHeader = $('.mask .carousel-inner > .carousel-item').length;
 
   /* setting the nr of img in the header */
-  if(nrImgHeader < 10){
-    $(".nr-img-header").text("0"+nrImgHeader);
+  if (nrImgHeader < 10) {
+    $(".nr-img-header").text("0" + nrImgHeader);
   }
-  else{
+  else {
     $(".nr-img-header").text(nrImgHeader);
   }
 
@@ -97,7 +125,7 @@ $(document).ready(function () {
   $(".mask .carousel").on('slid.bs.carousel', function () {
     $('.mask .carousel-inner').children('.carousel-item').each(function () {
       if ($(this).hasClass('active')) {
-        let widthScrollBar = 40/nrImgHeader * ($(this).index() + 1);
+        let widthScrollBar = 40 / nrImgHeader * ($(this).index() + 1);
         $('.fill').css('width', widthScrollBar + 'px');
       }
     });
@@ -138,7 +166,7 @@ formBooking.addEventListener("submit", function (e) {
 
 // Override the submit event
 formEmail.addEventListener("submit", function (e) {
-  
+
   e.preventDefault();
 
   let request = new XMLHttpRequest();
@@ -201,11 +229,11 @@ time.addEventListener('input', function (e) {
 });
 
 /* smooth scroll for arrow down button */
-function moveToFirsBodySection() {
-  document.querySelector('.first-body-section').scrollIntoView({
-    behavior: 'smooth'
-  });
-}
+// function moveToFirsBodySection() {
+//   document.querySelector('.first-body-section').scrollIntoView({
+//     behavior: 'smooth'
+//   });
+// }
 
 /* smooth scroll for the navigation */
 $(document).ready(function () {
@@ -232,25 +260,5 @@ $(document).ready(function () {
   });
 });
 
-/* instagram feed */
-
-var token = '1362124742.7b33a8d.6613a3567f0a425f9852055b8ef743b7',
-    num_photos = 10,
-    container = document.getElementById( 'social-net-img' ),
-    scrElement = document.createElement( 'script' );
- 
-window.mishaProcessResult = function( data ) {
-  let firstItem = true;
-	for( x in data.data ){
-    if(firstItem){
-      container.innerHTML += '<div class="carousel-item active"><img class="item__img" src="' + data.data[x].images.low_resolution.url + '"></div>';
-      firstItem = false;
-    }
-		container.innerHTML += '<div class="carousel-item"><img class="item__img" src="' + data.data[x].images.low_resolution.url + '"></div>';
-	}
-}
- 
-scrElement.setAttribute( 'src', 'https://api.instagram.com/v1/users/self/media/recent?access_token=' + token + '&count=' + num_photos + '&callback=mishaProcessResult' );
-document.body.appendChild( scrElement );
 
 

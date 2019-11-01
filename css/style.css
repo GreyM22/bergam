@@ -5,6 +5,34 @@
   font-family: recoleta;
 }
 
+@keyframes SlideUp{
+  0%{
+    transform: translateY(250px);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+
+/* trying lazyloading */
+
+.grid.effect-2 .container-fluid.animate {
+	-webkit-transform: translateY(200px);
+	transform: translateY(200px);
+	-webkit-animation: moveUp 0.65s ease forwards;
+	animation: moveUp 0.65s ease forwards;
+}
+
+@-webkit-keyframes moveUp {
+	0% { }
+	100% { -webkit-transform: translateY(0); opacity: 1; }
+}
+
+@keyframes moveUp {
+	0% { }
+	100% { -webkit-transform: translateY(0); transform: translateY(0); opacity: 1; }
+}
+
 /*default style*/
 h1 {
   font-family: recoleta, serif;
@@ -186,20 +214,6 @@ h2 {
   background-color: #000000;
   background-position: 50% 30%;
   background-repeat: no-repeat;
-  background-image: url("../img/restaurant.jpg");
-  background-size: cover;
-  background-blend-mode: screen;
-  display: block;
-  height: 100%;
-  width: 100%;
-  z-index: -1;
-}
-.bg-img2 {
-  background-color: #000000;
-  background-position: 50% 30%;
-  background-repeat: no-repeat;
-  background-image: url("../img/restaurant2.jpg");
-  /* background: #000000 url("../img/restaurant.jpg") no-repeat 50% 30%; */
   background-size: cover;
   background-blend-mode: screen;
   display: block;
@@ -208,18 +222,40 @@ h2 {
   z-index: -1;
 }
 
-.bg-img3 {
+.bg-img1.lazy-bg-loaded{
+  background-image: url("../img/restaurant.jpg");
+}
+
+.bg-img2 {
   background-color: #000000;
   background-position: 50% 30%;
   background-repeat: no-repeat;
-  background-image: url("../img/restaurant3.jpg");
-  /* background: #000000 url("../img/restaurant.jpg") no-repeat 50% 30%; */
   background-size: cover;
   background-blend-mode: screen;
   display: block;
   height: 100%;
   width: 100%;
   z-index: -1;
+}
+
+.bg-img2.lazy-bg-loaded{
+  background-image: url("../img/restaurant2.jpg");
+}
+
+.bg-img3 {
+  background-color: #000000;
+  background-position: 50% 30%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: screen;
+  display: block;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.bg-img3.lazy-bg-loaded{
+  background-image: url("../img/restaurant3.jpg");
 }
 
 .dark-bg {
@@ -1184,7 +1220,7 @@ button img {
 }
 
 .food-middle {
-  height: auto;
+  /* height: auto; */
   width: 19.75vw;
   /* position: absolute;
   left: 50vw;
@@ -1194,6 +1230,11 @@ button img {
   margin-right: auto;
   margin-top: 5vw;
   margin-bottom: 10.8vw;
+}
+
+.food-middle img{
+  max-width: 100%;
+  height: auto;
 }
 
 .second-body-section .placeholder {
@@ -1209,11 +1250,15 @@ button img {
 }
 
 .mask-table {
-  background: #121212 url("../img/tables.jpg") no-repeat center center;
+  background: #121212  no-repeat center center;
   background-size: cover;
   background-blend-mode: screen;
   height: auto;
   width: 100%;
+}
+
+.mask-table.lazy-bg-loaded{
+  background: url("../img/tables.jpg");
 }
 
 .menu {
@@ -1517,9 +1562,13 @@ footer {
   position: relative;
   height: auto;
   width: 100%;
-  background: #202020 url("../img/pattern2.png") repeat center center;
+  background: #202020 repeat center center;
   background-size: 100% inherit;
   z-index: 0;
+}
+
+footer.lazy-bg-loaded{
+background-image: url("../img/pattern2.png");
 }
 
 .social-net-icons {
@@ -2149,3 +2198,5 @@ h6.header {
     padding-top: 10.7vh;
   }
 }
+
+

@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width , initial-scale=1.0">
-
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.typekit.net/scl1kzs.css">
@@ -13,21 +12,21 @@
 </head>
 
 <body>
-    <header class="mask primary-color lazy" data-loader="header" id="header">
+    <header class="mask primary-color"  id="header">
         <div class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item  embed-responsive-item  active">
-                    <div class="bg-img1">
+                    <div class="bg-img1 lazy-bg">
 
                     </div>
                 </div>
                 <div class="carousel-item embed-responsive-item  ">
-                    <div class="bg-img2">
+                    <div class="bg-img2 lazy-bg">
 
                     </div>
                 </div>
                 <div class="carousel-item embed-responsive-item  ">
-                    <div class="bg-img3">
+                    <div class="bg-img3 lazy-bg">
 
                     </div>
                 </div>
@@ -48,7 +47,7 @@
                             </div>
                             <a href="#">
                                 <span class="menu-text">MENU</span>
-                                <span class="menu-text d-none">CLOSE</span>
+                                <span class="menu-text  d-none">CLOSE</span>
 
 
                             </a>
@@ -94,7 +93,7 @@
                                 </a>
                             </li>
                         </ul>
-                        <div class="social-net d-none pt-5">
+                        <div class="social-net d-none  pt-5">
                             <ul class="text-center">
                                 <li class="pb-2">
                                     <a href="">
@@ -188,7 +187,7 @@
                                 </ul>
                             </div>
                             <div class="arrow-button-down">
-                                <a href="#first-body-section">
+                                <a href="#">
                                     <div class="rhombus">
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <svg width="13px" height="25px" viewBox="0 0 13 18" version="1.1"
@@ -274,7 +273,7 @@
         <a class="btn btn-dark"></a>
     </section>
 
-    <section class="first-body-section lazy" data-loader="firstBodySection" id="first-body-section">
+    <section class="first-body-section"   id="first-body-section">
         <div class="container-fluid">
             <div class="row">
                 <div class="col">
@@ -292,10 +291,10 @@
         </div>
     </section>
 
-    <section class="second-body-section lazy" data-loader="secondBodySection" id="about">
+    <section class="second-body-section   "  id="about">
         <div class="container-fluid">
-            <div class="row lazy">
-                <div class="col-md-6 order-2 order-md-1 pl-0 pt-md-0 pt-5 ">
+            <div class="row  ">
+                <div class="col-md-6 order-2 order-md-1 pl-0 pt-md-0 pt-5   ">
                     <div class="text">
                         <h6 class="small-header secondary-color ">we live for food</h6>
 
@@ -321,20 +320,20 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 order-1 order-md-2 pr-0 ">
-                    <div class="food-right w-md-37 h-md-36">
-                        <img src="./img/bitmap.jpg" alt="pizza-margherita">
+                <div class="col-md-6 order-1 order-md-2 pr-0   ">
+                    <div class="food-right w-md-37 h-md-36  ">
+                        <img class="lazy" src="img/placeholder.jpg" data-src="./img/bitmap.jpg" alt="pizza-margherita">
                     </div>
                 </div>
             </div>
-            <div class="row lazy" class="second-section">
+            <div class="row  " class="second-section">
                 <div class=" col col-md-6 order-1 order-md-1">
-                    <div class="food-left">
-                        <img class=" " src="img/pizza-prosciut.jpg" alt="pizza-prosciutto">
+                    <div class="food-left  ">
+                        <img class="lazy" src="img/placeholder.jpg" data-src="img/pizza-prosciut.jpg" alt="pizza-prosciutto">
                     </div>
                 </div>
-                <div class=" col-md-6 order-2 order-md-2">
-                    <div class="content curly-line px-1">
+                <div class=" col-md-6 order-2 order-md-2  ">
+                    <div class="content curly-line px-1  ">
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                             Praesent tristique purus eget
@@ -343,19 +342,21 @@
                             odio.
                         </p>
                     </div>
-                    <span class="placeholder">food</span>
+                    <span class="placeholder  ">food</span>
                 </div>
             </div>
-            <div class="row end lazy">
+            <div class="row end    ">
                 <div class="col">
-                    <img class="food-middle  " src="img/pasta.jpg" alt="pasta">
+                    <div class="food-middle" style="overflow: hidden;">
+                            <img class="lazy" src="img/placeholder.jpg"  data-src="img/pasta.jpg" alt="pasta">
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="mask-table lazy"  data-loader="menu" id="menu">
-        <div class="menu primary-color">
+    <section class="mask-table lazy-bg " id="menu">
+        <div class="menu primary-color  ">
             <div>
                 <div class="menu-header curly-line">MENU</div>
                 <div class="content">
@@ -364,7 +365,7 @@
                     </p>
                 </div>
 
-                <div id="menu-carousel" class="carousel slide">
+                <div id="menu-carousel" class="carousel slide  ">
                     <ol class="carousel-indicators">
                         <li data-target="#menu-carousel" data-slide-to="0" class="active"> <a
                                 class="btn btn-secondary">LUNCH</a> </li>
@@ -564,13 +565,13 @@
         </div>
     </section>
 
-    <section class="third-body-section lazy" data-loader="thirdBodySection">
-        <div class="placeholder">
+    <section class="third-body-section   " >
+        <div class="placeholder  ">
             WINES
         </div>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-6 text ">
+                <div class="col-lg-6 text  ">
                     <h6 class="small-header secondary-color">low intervention</h6>
 
 
@@ -598,16 +599,16 @@
 
                     </div>
                 </div>
-                <div class="col-lg-6 img">
-                    <img class=" " src="img/natural-wine.jpg" alt="red-wines">
+                <div class="col-lg-6 img  ">
+                    <img class="lazy" src="img/placeholder.jpg" data-src="img/natural-wine.jpg" alt="red-wines">
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="review-social-network lazy" data-loader="reviewSocialNet">
+    <section class="review-social-network   " >
         <div class="row">
-            <div class="col-lg-6 order-2 order-lg-1 primary-color social-network">
+            <div class="col-lg-6 order-2 order-lg-1 primary-color social-network  ">
                 <div class="social-net-title">
                     INSTAGRAM
                 </div>
@@ -643,7 +644,7 @@
                     &nbsp FOLLOW US
                 </a>
             </div>
-            <div class="col-lg-6 order-1 order-lg-2 review">
+            <div class="col-lg-6 order-1 order-lg-2 review  ">
                 <div class="social-net-title">
                     REVIEWS
                 </div>
@@ -720,7 +721,7 @@
         </div>
     </section>
 
-    <section class="sms-subscription primary-color d-none">
+    <!-- <section class="sms-subscription primary-color  ">
         <div class="sms">
             <h2 class="curly-line">Thank you for
                 subscribing</h2>
@@ -731,15 +732,15 @@
         </div>
         <a class="btn btn-dark"></a>
     </section>
-
-    <footer class="primary-color lazy" data-loader="footer">
+ -->
+    <footer class="primary-color  lazy-bg">
         <div class="content" id="contact">
             <h6>
                 benellis
             </h6>
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-lg-4 order-lg-1 order-2 left-side">
+                    <div class="col-lg-4 order-lg-1 order-2 left-side  ">
                         <h6 class="header">Hours</h6>
                         <div class="side-content">
                             <p>
@@ -750,7 +751,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-lg-4 order-lg-2 order-1">
+                    <div class="col-lg-4 order-lg-2 order-1  ">
                         <h6 class="header">newsletter sign up</h6>
                         <form class="email-form" id="email-form" method="POST" action="html/success.html">
                             <input type="email" placeholder="Your email" required class="email" name="email">
@@ -787,7 +788,7 @@
                             *We won't share your e-mail address. Promise.
                         </div>
                     </div>
-                    <div class="col-lg-4 right-side order-lg-3 order-3">
+                    <div class="col-lg-4 right-side order-lg-3 order-3  ">
                         <h6 class="header"> Contact us</h6>
                         <div class="side-content">
                             <p>
@@ -801,7 +802,7 @@
                         </div>
                     </div>
                 </div>
-                <ul>
+                <ul class=" ">
                     <li>
                         <div class="circular-div">
                             <a href="">
@@ -880,7 +881,7 @@
                     </div>
                 </a>
             </div>
-            <div class="term-privacy mt-4 pt-4 pb-1 px-2">
+            <div class="term-privacy mt-4 pt-4 pb-1 px-2  ">
                 Restaurant Website by Bonfork • 2019 benelli’s •
                 TERMS & PRIVACY
             </div>
@@ -892,12 +893,11 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    <!-- <script src="js/imagesloaded.pkgd.min.js"> </script> -->
-
-    <script type="text/javascript" src="jquery.lazy-master/jquery.lazy.min.js"></script> 
+        <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.0.2/dist/simpleParallax.min.js"></script>
+        <script src="js/yall.min.js"></script>
+        <script src="js/instafeed.js"></script>
 
     <script src="js/script.js"></script>
-    <!-- <script src="js/parallaximg.js"></script> -->
 </body>
 
 </html>
