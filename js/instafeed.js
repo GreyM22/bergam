@@ -14,7 +14,9 @@ window.mishaProcessResult = function( data ) {
       container.innerHTML += '<div class="carousel-item active"><img class="lazy"  src="img/placeholder.jpg" data-src="' + data.data[x].images.low_resolution.url + '"></div>';
       firstItem = false;
     }
-		container.innerHTML += '<div class="carousel-item"><img class="lazy"  src="img/placeholder.jpg" data-src="'+ data.data[x].images.low_resolution.url + '"></div>';
+    else {
+      container.innerHTML += '<div class="carousel-item"><img class="lazy"  src="img/placeholder.jpg" data-src="'+ data.data[x].images.low_resolution.url + '"></div>';
+    }
   }
 }
  
