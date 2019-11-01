@@ -101,7 +101,7 @@ h2 {
   line-height: 6.04vw;
 }
 .phone-svg::before {
-  content: url(../svg/cell-phone.svg);
+  content: url(../img/svg/cell-phone.svg);
   margin-bottom: 2px;
   margin-right: 13px;
 }
@@ -321,7 +321,7 @@ h2 {
 }
 
 .mask .align-items-center h1::after {
-  content: url(../svg/curly-line-menu.svg);
+  content: url(../img/svg/curly-line-menu.svg);
   display: block;
   margin-top: 30px;
 }
@@ -616,7 +616,7 @@ footer .btn-primary {
 
 footer .btn-primary::after,
 .mask .btn-primary::after {
-  content: url(../svg/arrow-right.svg);
+  content: url(../img/svg/arrow-right.svg);
   margin-top: -5.5px;
   display: block;
   width: 5px;
@@ -717,7 +717,7 @@ footer .btn-primary::after,
 }
 
 .btn-dark::after {
-  content: url(../svg/close.svg);
+  content: url(../img/svg/close.svg);
 }
 /*end of css for display after subscription*/
 
@@ -867,19 +867,19 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .booking form label[for="guest"]::before {
-  content: url(../svg/user.svg);
+  content: url(../img/svg/user.svg);
   text-align: center;
   margin-right: 5px;
 }
 
 .booking form label[for="date"]::before {
-  content: url(../svg/date.svg);
+  content: url(../img/svg/date.svg);
   text-align: center;
   margin-right: 5px;
 }
 
 .booking form label[for="time"]::before {
-  content: url(../svg/time.svg);
+  content: url(../img/svg/time.svg);
   text-align: center;
   margin-right: 5px;
 }
@@ -1236,7 +1236,9 @@ button img {
 }
 
 .mask-table {
-  background: #121212  no-repeat center center;
+  background-color: #121212;
+  background-repeat: no-repeat;
+  background-position: center center;
   background-size: cover;
   background-blend-mode: screen;
   height: auto;
@@ -1245,6 +1247,11 @@ button img {
 
 .mask-table.lazy-bg-loaded{
   background: url("../img/tables.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-blend-mode: screen;
+
 }
 
 .menu {
@@ -1356,7 +1363,7 @@ footer ul {
 }
 
 .curly-line::after {
-  content: url(../svg/curly-line.svg);
+  content: url(../img/svg/curly-line.svg);
   display: block;
   margin: 0 auto;
   margin-top: 30px;
@@ -1373,7 +1380,7 @@ footer ul {
 }
 
 .review-content::before {
-  content: url(../svg/quotes.svg);
+  content: url(../img/svg/quotes.svg);
   display: block;
   margin-bottom: 15px;
 }
@@ -1385,7 +1392,7 @@ footer ul {
 }
 
 .menu h5::after {
-  content: url(../svg/curly-line-menu.svg);
+  content: url(../img/svg/curly-line-menu.svg);
   display: block;
   margin-top: 15px;
 }
