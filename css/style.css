@@ -298,6 +298,11 @@ h2 {
   color: rgb(247, 206, 155);
   cursor: pointer;
 }
+
+.right-side-number-flex:hover .span-numb{
+  color: rgb(247, 206, 155);
+
+}
 /* The top bar */
 
 .row.head > [class*="col-"],
