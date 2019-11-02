@@ -753,8 +753,14 @@ footer .btn-primary::after,
 }
 
 .booking .curly-line::after,.term-privacy-modal .curly-line::after {
-  margin-top: 1vh;
+  padding-top: 30px;
+  margin-top:0;
 }
+
+.booking form > div.form-row{
+  margin-top: 30px;
+}
+
 .booking form input {
   height: 80px;
   border: 1px solid #4c4c4c;
