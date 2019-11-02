@@ -587,7 +587,6 @@ button:focus {
 .btn-secondary:active {
   background-color: white !important;
   color: #000000 !important;
-  font-weight: 600;
 }
 
 .btn-primary {
@@ -792,6 +791,16 @@ input::-ms-clear {
   display: none;
 }
 
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
 .booking form .input-field:hover input[type="button"],
 .booking form .input-field:hover input[type="number"],
 #date:hover,
@@ -907,6 +916,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   line-height: 24px;
   margin: 82px auto;
   margin-bottom: 5vh;
+}
+
+.term-privacy-modal .sub-booking{
+  margin-top:40px;
 }
 
 .sub-error {

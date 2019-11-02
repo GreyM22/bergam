@@ -1,75 +1,13 @@
 
 
 /*rellax animation  */
-var rellax = new Rellax('.rellax',{
+var rellax = new Rellax('.rellax', {
   center: true
 })
 
 $(document).ready(function () {
 
 
-  $('.img-parallax').each(function(){
-    var img = $(this);
-    var imgParent = $(this).parent();
-    function parallaxImg () {
-      var speed = img.data('speed');
-      var imgY = imgParent.offset().top;
-      var winY = $(this).scrollTop();
-      var winH = $(this).height();
-      var parentH = imgParent.innerHeight();
-  
-  
-      // The next pixel to show on screen      
-      var winBottom = winY + winH;
-  
-      // If block is shown on screen
-      if (winBottom > imgY && winY < imgY + parentH) {
-        // Number of pixels shown after block appear
-        var imgBottom = ((winBottom - imgY) * speed);
-        // Max number of pixels until block disappear
-        var imgTop = winH + parentH;
-        // Porcentage between start showing until disappearing
-        var imgPercent = ((imgBottom / imgTop) * 100) + (50 - (speed * 50));
-      }
-      img.css({
-        top: imgPercent + 'px',
-        //transform: 'translate(-50%, -' + imgPercent + '%)'
-      });
-    }
-    $(document).on({
-      scroll: function () {
-        parallaxImg();
-      }, ready: function () {
-        parallaxImg();
-      }
-    });
-  });
-
-  //   jQuery(window).on('scroll', function(e) {
-
-  //     if (isScrolledIntoView($('.d-none'))) {
-  //       $('.d-none').first().css('animation', 'SlideUp 0.3s ease');
-  //       $('.d-none').first().removeClass('d-none');
-  //    }
-  // });
-
-  // $(window).on("scroll", function() {
-  //   const scrollbarWidth = (outer.offsetWidth - inner.offsetWidth);
-
-  //   console.log("scrollTop: "+ $(window).scrollTop()+" window height: "+ $(window).height()+ " document height"+$(document).height() )
-  // 	if($(window).scrollTop() + scrollbarWidth == $(document).height()) {
-  //     $('.d-none').first().css('animation', 'SlideUp 0.3s ease');
-  //     $('.d-none').first().removeClass('d-none');
-  // }
-  // });
-
-
-  // $('.arrow-button-down').click(function(){
-  //   $('#first-body-section').removeClass('d-none');
-  //   $([document.documentElement, document.body]).animate({
-  //     scrollTop: $("#first-body-section").offset().top
-  // }, 2000);
-  // })
 
   $('.the-button, #navbarResponsive a').click(function () {
     $('.navbar').toggleClass('dark-bg');
@@ -91,7 +29,7 @@ $(document).ready(function () {
 
   /* term-privacy modal */
 
-  $('.term-privacy-btn, .term-privacy-modal .btn-dark').click(function(){
+  $('.term-privacy-btn, .term-privacy-modal .btn-dark').click(function () {
     $('.term-privacy-modal').fadeToggle('fast');
   })
 
@@ -128,7 +66,7 @@ $(document).ready(function () {
 
   });
 
-/* to lower the number of guest in the resarvation form  */
+  /* to lower the number of guest in the resarvation form  */
   $(".minus").on("click", function () {
     var oldValue = $('form input[type=number]').val();
     if (oldValue == 2) return;
@@ -157,7 +95,7 @@ $(document).ready(function () {
     $('.booking .minus').css('border-color', '#4c4c4c');
   })
 
-/***************************************************/
+  /***************************************************/
   /* header carusel section */
   let nrImgHeader = $('.mask .carousel-inner > .carousel-item').length;
 
@@ -181,14 +119,15 @@ $(document).ready(function () {
 
   /***************** end of the carusel  ********************** */
 
+
   /* resert the form on reload of the page  */
+  window.addEventListener("beforeunload", function (event) {
+    $('#email-form').trigger("reset");
 
-  $('body').bind('beforeunload',function(){
     $('.booking .form-container form').trigger("reset");
-    $('.email-form').trigger("reset");
- });
-});
+  });
 
+});
 
 
 
