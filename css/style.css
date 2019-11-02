@@ -738,7 +738,7 @@ footer .btn-primary::after,
   flex-direction: column;
   padding: 7.7vh 50px 10vh 50px;
   position: relative;
-  margin-top: 15vh;
+  margin-top: 20vh;
 }
 .term-privacy-modal .form-container{
   margin-bottom: 20vh ;
