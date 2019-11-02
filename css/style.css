@@ -204,9 +204,6 @@ h2 {
   z-index: -1;
 }
 
-/* .bg-img1.lazy-bg-loaded{
-  background-image: url("../images/restaurant.jpg");
-} */
 
 .bg-img2 {
   background-color: #000000;
@@ -221,9 +218,6 @@ h2 {
   z-index: -1;
 }
 
-/* .bg-img2.lazy-bg-loaded{
-  background-image: url("../images/restaurant2.jpg");
-} */
 
 .bg-img3 {
   background-color: #000000;
@@ -238,9 +232,6 @@ h2 {
   z-index: -1;
 }
 
-/* .bg-img3.lazy-bg-loaded{
-  background-image: url("../images/restaurant3.jpg");
-} */
 
 .dark-bg {
   background-color: #202020;
@@ -716,14 +707,18 @@ footer .btn-primary::after,
   background-color: #b38a58;
 }
 
-.btn-dark::after {
-  content: url(../images/svg/close.svg);
+.btn-dark img {
+  width: 1.91vw;
+  height: auto;
+  min-width: 10px;
+  max-width: 31px;
+
 }
 /*end of css for display after subscription*/
 
 /*booking-form*/
 
-.booking {
+.booking, .term-privacy-modal {
   background-color: #202020;
   height: 100vh;
   width: 100vw;
@@ -735,7 +730,7 @@ footer .btn-primary::after,
   display: none;
 }
 
-.booking .form-container {
+.booking .form-container, .term-privacy-modal .form-container{
   max-width: 780px;
   width: 80.72vw;
   height: auto;
@@ -746,6 +741,10 @@ footer .btn-primary::after,
   position: relative;
   margin-top: 15vh;
 }
+.term-privacy-modal .form-container{
+  margin-bottom: 10vh ;
+}
+
 
 .booking form h2 {
   font-family: ".SF NS Display";
@@ -753,7 +752,7 @@ footer .btn-primary::after,
   line-height: 6.4vh;
 }
 
-.booking .curly-line::after {
+.booking .curly-line::after,.term-privacy-modal .curly-line::after {
   margin-top: 1vh;
 }
 .booking form input {
@@ -1245,14 +1244,6 @@ button img {
   width: 100%;
 }
 
-/* .mask-table.lazy-bg-loaded{
-  background: url("../images/tables.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  background-blend-mode: screen;
-
-} */
 
 .menu {
   padding-top: 8.09vw;
@@ -1287,6 +1278,11 @@ footer .container-fluid,
 footer .sms-form,
 footer ul {
   margin-top: 50px;
+}
+
+footer .term-privacy-btn:hover{
+  cursor: pointer;
+  color: rgb(247, 206, 155);
 }
 
 .menu .content {
@@ -1672,12 +1668,12 @@ footer .term-privacy::before {
   height: 0.5px;
   width: 320px;
   background-color: #979797;
-  border: 0.5px solid #979797;
+  border-top: 0.5px solid #979797;
   opacity: 0.4;
   content: "";
   display: block;
   margin: 0 auto;
-  margin-bottom: 10;
+  margin-bottom: 50;
 }
 
 .arrow-up {
@@ -2042,6 +2038,11 @@ h6.header {
     line-height: 52px;
   }
 
+  .booking h2 {
+    font-size: 5.5vw;
+    line-height: 6.04vw;
+  }
+
   .food-middle {
     width: 50.13vw;
     height: 61.86vw;
@@ -2122,8 +2123,10 @@ h6.header {
 
 @media only screen and (max-width: 440px) {
   .booking h2 {
-    font-size: 9.5vw;
-    line-height: 10.04vw;
+    /* font-size: 9.5vw;
+    line-height: 10.04vw; */
+    font-size: 5.5vw;
+    line-height: 6.04vw;
   }
 }
 
@@ -2162,6 +2165,11 @@ h6.header {
   h2 {
     font-size: 14.4vw;
     line-height: 13.8vw;
+  }
+
+  .booking h2{
+    font-size: 5.5vw;
+    line-height: 6.04vw;
   }
 
   .food-left img {

@@ -79,13 +79,23 @@ $(document).ready(function () {
     $('nav').toggleClass("nav-open");
   });
 
+  /* modal for reservation  */
   $('.booking .btn-dark, .right-side-button-flex, .row.main .btn.btn-primary').click(function () {
     $('.booking').fadeToggle('fast');
   });
 
+  /* function to reset the form if no reservation is made*/
   $('.booking .btn-dark').click(function () {
     $('.booking form ').trigger("reset");
   })
+
+  /* term-privacy modal */
+
+  $('.term-privacy-btn, .term-privacy-modal .btn-dark').click(function(){
+    $('.term-privacy-modal').fadeToggle('fast');
+  })
+
+  /* validation of the resarvation  form */
   $('.booking .form-container form').submit(function () {
 
     let date = $("#date").val();
@@ -118,7 +128,7 @@ $(document).ready(function () {
 
   });
 
-
+/* to lower the number of guest in the resarvation form  */
   $(".minus").on("click", function () {
     var oldValue = $('form input[type=number]').val();
     if (oldValue == 2) return;
@@ -126,6 +136,7 @@ $(document).ready(function () {
     $('form input[type=number]').val(newVal);
   });
 
+  /* to incres the number of guest in a resarvation form  */
   $(".plus").on("click", function () {
     var oldValue = $('form input[type=number]').val();
     if (oldValue === '') {
@@ -136,14 +147,17 @@ $(document).ready(function () {
     $('form input[type=number]').val(newVal);
   });
 
+  /* to change  the color of the border of the input on focus in the resarvaion form  */
   $(".booking form .input-field input[type='number']").focus(function () {
     $('.booking .minus').css('border-color', '#b38a58');
   })
 
+  /* to change  the color of the border of the input on focus in the resarvaion form  */
   $(".booking form .input-field input[type='number']").focusout(function () {
     $('.booking .minus').css('border-color', '#4c4c4c');
   })
 
+/***************************************************/
   /* header carusel section */
   let nrImgHeader = $('.mask .carousel-inner > .carousel-item').length;
 
@@ -164,6 +178,8 @@ $(document).ready(function () {
       }
     });
   });
+
+  /***************** end of the carusel  ********************** */
 });
 
 
