@@ -2038,7 +2038,7 @@ h6.header {
     line-height: 52px;
   }
 
-  .booking h2 {
+  .booking h2, .term-privacy-modal h2 {
     font-size: 5.5vw;
     line-height: 6.04vw;
   }
@@ -2122,9 +2122,7 @@ h6.header {
 }
 
 @media only screen and (max-width: 440px) {
-  .booking h2 {
-    /* font-size: 9.5vw;
-    line-height: 10.04vw; */
+  .booking h2, .term-privacy-modal h2 {
     font-size: 5.5vw;
     line-height: 6.04vw;
   }
@@ -2167,7 +2165,7 @@ h6.header {
     line-height: 13.8vw;
   }
 
-  .booking h2{
+  .booking h2, .term-privacy-modal h2{
     font-size: 5.5vw;
     line-height: 6.04vw;
   }
