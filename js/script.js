@@ -1,9 +1,9 @@
 
 
 /*rellax animation  */
-var rellax = new Rellax('.rellax',{
-  center: true
-})
+// var rellax = new Rellax('.rellax',{
+//   center: true
+// })
 
 $(document).ready(function () {
 
@@ -180,6 +180,13 @@ $(document).ready(function () {
   });
 
   /***************** end of the carusel  ********************** */
+
+  /* resert the form on reload of the page  */
+
+  $('body').bind('beforeunload',function(){
+    $('.booking .form-container form').trigger("reset");
+    $('.email-form').trigger("reset");
+ });
 });
 
 
