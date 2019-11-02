@@ -1,9 +1,9 @@
 
 
 /*rellax animation  */
-// var rellax = new Rellax('.rellax',{
-//   center: true
-// })
+var rellax = new Rellax('.rellax',{
+  center: true
+})
 
 $(document).ready(function () {
 
