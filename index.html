@@ -195,8 +195,8 @@
                                 <ul>
                                     <li>
                                         <a href="">
-                                            <svg  class="instagram-icon" width="14px" height="14px" viewBox="0 0 14 14" version="1.1"
-                                                xmlns="http://www.w3.org/2000/svg"
+                                            <svg class="instagram-icon" width="14px" height="14px" viewBox="0 0 14 14"
+                                                version="1.1" xmlns="http://www.w3.org/2000/svg"
                                                 xmlns:xlink="http://www.w3.org/1999/xlink">
                                                 <g id="Page-1" stroke="none" stroke-width="1" fill="none"
                                                     fill-rule="evenodd">
@@ -291,7 +291,7 @@
                         <div class=" input-field d-flex justify-content-center w-100 w-md-95 ">
                             <input type="button" value="-" class="minus ">
                             <input type="number" class="form-control d-flex justify-content-center h-18" id="guest"
-                                min='2' value="2" required>
+                                min='2' value="2" required name="nr-guest">
                             <input type="button" value="+" class="plus">
                         </div>
                         <label class="d-flex justify-content-center align-items-center w-100 w-md-95"
@@ -299,26 +299,31 @@
                     </div>
                     <div class="form-group date col-md-4 p-0 px-md-1 px-lg-2 px-xl-3">
                         <input type="text" class="form-control mx-md-auto w-100 w-md-95" id="date" placeholder="MM/DD"
-                            required autocomplete="off" minlength="7">
+                            required autocomplete="off" minlength="7" name="date">
                         <label for="date"
                             class="d-flex justify-content-center align-items-center mx-md-auto w-100 w-md-95">date</label>
                     </div>
                     <div class="form-group col-md-4 p-0 pl-md-3  pl-lg-4 ">
                         <input type="text" class="form-control ml-md-auto w-100 w-md-95" id="time" placeholder="hh:mm"
-                            minlength="7" required>
+                            minlength="7" required name="time">
                         <label for="time"
                             class="d-flex justify-content-center align-items-center ml-md-auto w-100 w-md-95">time</label>
                     </div>
                 </div>
                 <div class="form-group my-3 w-100 mx-4">
-                    <input type="text" class="form-control w-100" id="name" placeholder="name" required>
+                    <input type="text" class="form-control w-100" id="name" placeholder="name" required
+                        name="client-name">
                 </div>
                 <div class="form-group my-3 w-100 mx-4 text-left">
-                    <input type="email" class="form-control w-100" id="email-booking" placeholder="email" required>
+                    <input type="email" class="form-control w-100" id="email-booking" placeholder="email" required
+                        name="email">
                 </div>
                 <div class="form-group my-3 w-100 mx-4 text-left">
-                    <input type="tel" class="form-control w-100" id="tel" placeholder="phone" required>
+                    <input type="tel" class="form-control w-100" id="tel" placeholder="phone" required name="phone">
                 </div>
+                <input type="hidden" name="_to" value="greimuka@gmail.com">
+                <input type="text" name="_gotcha" style="display: none;">
+                <input type="hidden" name="_subject" value="Reservation">
                 <input type="submit" class="btn btn-primary" value="Reserve">
             </form>
         </div>
@@ -696,8 +701,8 @@
                     </div>
                 </div>
                 <a href="#" class="d-flex justify-content-center align-items-center mr-auto ml-auto btn btn-secondary ">
-                    <svg  class="instagram-icon" width="12px" height="12px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <svg class="instagram-icon" width="12px" height="12px" viewBox="0 0 14 14" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                         <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                             <g id="Home-V1" transform="translate(-61.000000, -848.000000)" fill="#FFFFFF"
                                 fill-rule="nonzero">
@@ -840,19 +845,14 @@
                     </div>
                     <div class="col-lg-4 order-lg-2 order-1  ">
                         <h6 class="header">newsletter sign up</h6>
-                        <form class="email-form" id="email-form" method="post" action="https://fluttering-rose.cloudvent.net/html/success">
-                                                        <input type="hidden" name="_to" value="greimuka@gmail.com" />
-                                                        <input type="hidden" name="_subject" value="Email Subscription"> 
+                        <form class="email-form" id="email-form" method="post"
+                            action="https://fluttering-rose.cloudvent.net/html/success">
+                            <input type="hidden" name="_to" value="greimuka@gmail.com" />
+                            <input type="hidden" name="_subject" value="Email Subscription">
                             <input type="email" placeholder="Your email" required class="email" name="email">
                             <button type="submit" class="btn btn-primary"> SUBMIT
                             </button>
                         </form>
-                        <!-- <form action="html/success" id="email-form" method="post" class="contact-form">
-                            <input type="text" name="_gotcha" style="display: none;">
-                            <label for="email">Email Address</label>
-                            <input type="email" name="email" id="email" placeholder="Enter your email..." required />
-                            <input type="submit" value="Send Message" />
-                        </form> -->
                         <div class="sms-form">
                             *We won't share your e-mail address. Promise.
                         </div>
