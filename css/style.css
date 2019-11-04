@@ -637,6 +637,24 @@ footer .btn-primary::after,
 }
 /* end of button styles*/
 
+/* instagram icon */
+.instagram-icon:hover path#shape,.instagram-icon:hover #Oval{
+  fill:rgb(247, 206, 155);
+}
+
+.social-network .btn-secondary:hover .instagram-icon path#shape, 
+.social-network .btn-secondary:hover .instagram-icon path#shape, .social-network .btn-secondary:hover .instagram-icon #Oval{
+  fill: #000000;
+}
+.social-network .btn-secondary .instagram-icon{
+  vertical-align: none!important;
+}
+
+.social-network .btn-secondary{
+  line-height: 23!important;
+}
+/*  end of instagram icon*/
+
 /*display after subscription and display of booking*/
 .sms-subscription {
   background-color: #202020;
@@ -906,6 +924,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   font-family: recoleta, serif;
   border-color: #b38a58;
   box-shadow: none;
+}
+
+.booking .btn-primary:hover{
+  box-shadow: 0 0 2px 2px  #b38a58!important ;
 }
 
 .sub-booking {
