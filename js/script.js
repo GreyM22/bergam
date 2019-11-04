@@ -225,12 +225,6 @@ var formEmail = document.getElementById("email-form");
 formBooking.addEventListener("submit", function (e) {
   e.preventDefault();
 
-  if (grecaptcha) {
-    let recaptchaResponse = grecaptcha.getResponse();
-    if (!recaptchaResponse) { // reCAPTCHA not clicked yet
-      return false;
-    }
-  }
 
   let request = new XMLHttpRequest();
 
