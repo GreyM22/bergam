@@ -1709,7 +1709,7 @@ footer ul li {
 footer .term-privacy::before {
   box-sizing: border-box;
   height: 1px;
-  width: 320px;
+  width: 460px;
   background-color: #979797;
   border-top: 0.5px solid #979797;
   opacity: 0.4;
