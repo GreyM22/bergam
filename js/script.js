@@ -247,6 +247,7 @@ formBooking.addEventListener("submit", function (e) {
 // Override the submit event
 formEmail.addEventListener("submit", function (e) {
 
+  console.log("function called ok")
   e.preventDefault();
 
   let request = new XMLHttpRequest();
@@ -257,7 +258,7 @@ formEmail.addEventListener("submit", function (e) {
     }
   });
 
-  request.open(formBooking.method, formBooking.action);
+  request.open(formEmail.method, formEmail.action);
   request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
   request.send(getFormDataString(formEmail));
 });
