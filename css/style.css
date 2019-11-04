@@ -1,3 +1,9 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 /* imported font */
 
 @font-face {
@@ -100,7 +106,7 @@ h2 {
   line-height: 6.04vw;
 }
 .phone-svg::before {
-  content: url(../images/svg/cell-phone.svg);
+  content: url(../images/cell-phone.svg);
   margin-bottom: 2px;
   margin-right: 13px;
 }
@@ -313,7 +319,7 @@ h2 {
 }
 
 .mask .align-items-center h1::after {
-  content: url(../images/svg/curly-line-menu.svg);
+  content: url(../images/curly-line-menu.svg);
   display: block;
   margin-top: 30px;
 }
@@ -607,7 +613,7 @@ footer .btn-primary {
 
 footer .btn-primary::after,
 .mask .btn-primary::after {
-  content: url(../images/svg/arrow-right.svg);
+  content: url(../images/arrow-right.svg);
   margin-top: -5.5px;
   display: block;
   width: 5px;
@@ -894,19 +900,19 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .booking form label[for="guest"]::before {
-  content: url(../images/svg/user.svg);
+  content: url(../images/user.svg);
   text-align: center;
   margin-right: 5px;
 }
 
 .booking form label[for="date"]::before {
-  content: url(../images/svg/date.svg);
+  content: url(../images/date.svg);
   text-align: center;
   margin-right: 5px;
 }
 
 .booking form label[for="time"]::before {
-  content: url(../images/svg/time.svg);
+  content: url(../images/time.svg);
   text-align: center;
   margin-right: 5px;
 }
@@ -1395,7 +1401,7 @@ footer .term-privacy-btn:hover{
 }
 
 .curly-line::after {
-  content: url(../images/svg/curly-line.svg);
+  content: url(../images/curly-line.svg);
   display: block;
   margin: 0 auto;
   margin-top: 30px;
@@ -1412,7 +1418,7 @@ footer .term-privacy-btn:hover{
 }
 
 .review-content::before {
-  content: url(../images/svg/quotes.svg);
+  content: url(../images/quotes.svg);
   display: block;
   margin-bottom: 15px;
 }
@@ -1424,7 +1430,7 @@ footer .term-privacy-btn:hover{
 }
 
 .menu h5::after {
-  content: url(../images/svg/curly-line-menu.svg);
+  content: url(../images/curly-line-menu.svg);
   display: block;
   margin-top: 15px;
 }
@@ -1702,7 +1708,7 @@ footer ul li {
 
 footer .term-privacy::before {
   box-sizing: border-box;
-  height: 0.5px;
+  height: 1px;
   width: 320px;
   background-color: #979797;
   border-top: 0.5px solid #979797;
