@@ -135,16 +135,16 @@ $(document).ready(function () {
 // Fetch the form element
 
 
-// function getFormDataString(formEl) {
-//   var formData = new FormData(formEl),
-//       data = [];
+function getFormDataString(formEl) {
+  var formData = new FormData(formEl),
+      data = [];
 
-//   for (var keyValue of formData) {
-//     data.push(encodeURIComponent(keyValue[0]) + "=" + encodeURIComponent(keyValue[1]));
-//   }
+  for (var keyValue of formData) {
+    data.push(encodeURIComponent(keyValue[0]) + "=" + encodeURIComponent(keyValue[1]));
+  }
 
-//   return data.join("&");
-// }
+  return data.join("&");
+}
 
 var formBooking = document.getElementById("booking-form");
 
@@ -188,7 +188,7 @@ formEmail.addEventListener("submit", function (e) {
 
   request.open(formBooking.method, formBooking.action);
   request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-  request.send(formEmail);
+  request.send(getFormDataString(formEmail));
 });
 
 
