@@ -236,7 +236,10 @@ formBooking.addEventListener("submit", function (e) {
   request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
   request.send(getFormDataString(formBooking));
   let theHead = document.getElementById('header');
-  let alert = '<div class="alert alert-warning alert-dismissible fade show text-center m-0 " role="alert"><strong>Holy guacamole!</strong> You should check in on some of those fields below.<button type="button" class="close" data-dismiss="alert" aria-label="Close">span aria-hidden="true">&times;</span></button></div> '
+  let alert =     scrElement = document.createElement( 'div' );
+  alert.setAttribute('class', 'alert alert-warning alert-dismissible fade show text-center m-0 ')
+  alert.setAttribute('role','alert');
+  alert.innerHTML = '<strong>Holy guacamole!</strong> You should check in on some of those fields below.<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>'
   document.body.insertBefore(theHead, alert);
 });
 
