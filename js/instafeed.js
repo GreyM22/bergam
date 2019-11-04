@@ -23,9 +23,4 @@ window.mishaProcessResult = function( data ) {
 scrElement.setAttribute( 'src', 'https://api.instagram.com/v1/users/self/media/recent?access_token=' + token + '&count=' + num_photos + '&callback=mishaProcessResult' );
 document.body.insertBefore( scrElement, scripSRC);
 
-// document.addEventListener("DOMContentLoaded", function(){
-//   yall({
-//     observeChanges: true
-//   })
-// });
 
