@@ -7,8 +7,7 @@ var rellax = new Rellax('.rellax', {
 
 $(document).ready(function () {
 
-
-/* function to open and close the navigation bar  */
+  /* function to open and close the navigation bar  */
   $('.the-button, #navbarResponsive a').click(function () {
     $('.navbar').toggleClass('dark-bg');
     $('.the-button').toggleClass('rotate');
@@ -208,7 +207,7 @@ $(document).ready(function () {
 
 function getFormDataString(formEl) {
   var formData = new FormData(formEl),
-      data = [];
+    data = [];
 
   for (var keyValue of formData) {
     data.push(encodeURIComponent(keyValue[0]) + "=" + encodeURIComponent(keyValue[1]));
@@ -236,6 +235,9 @@ formBooking.addEventListener("submit", function (e) {
   request.open(formBooking.method, formBooking.action);
   request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
   request.send(getFormDataString(formBooking));
+  let theHead = document.getElementById('header');
+  let alert = '<div class="alert alert-warning alert-dismissible fade show text-center m-0 " role="alert"><strong>Holy guacamole!</strong> You should check in on some of those fields below.<button type="button" class="close" data-dismiss="alert" aria-label="Close">span aria-hidden="true">&times;</span></button></div> '
+  document.body.insertBefore(theHead, alert);
 });
 
 // Override the submit event
