@@ -133,6 +133,19 @@ $(document).ready(function () {
 
 
 // Fetch the form element
+
+
+function getFormDataString(formEl) {
+  var formData = new FormData(formEl),
+      data = [];
+
+  for (var keyValue of formData) {
+    data.push(encodeURIComponent(keyValue[0]) + "=" + encodeURIComponent(keyValue[1]));
+  }
+
+  return data.join("&");
+}
+
 var formBooking = document.getElementById("booking-form");
 
 var formEmail = document.getElementById("email-form");
@@ -175,7 +188,7 @@ formEmail.addEventListener("submit", function (e) {
 
   request.open(formBooking.method, formBooking.action);
   request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-  request.send(getFormDataString(formBooking));
+  request.send(getFormDataString(formEmail));
 });
 
 
