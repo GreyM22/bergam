@@ -840,11 +840,18 @@
                     </div>
                     <div class="col-lg-4 order-lg-2 order-1  ">
                         <h6 class="header">newsletter sign up</h6>
-                        <form class="email-form" id="email-form" method="post" action="html/success.html">
+                        <!-- <form class="email-form" id="email-form" method="post" action="html/success.html">
                             <input type="text" placeholder="Your email" required class="email" name="email">
                             <input type="hidden" name="_to" value="grei@aledia.ca">
                             <button type="submit" class="btn btn-primary"> SUBMIT
                             </button>
+                        </form> -->
+                        <form action="{{ site.baseurl }}/contact-success/" method="post" class="contact-form">
+                            <input type="hidden" name="_to" value="grei@aledia.ca" />
+                            <input type="text" name="_gotcha" style="display: none;">
+                            <label for="email">Email Address</label>
+                            <input type="email" name="email" id="email" placeholder="Enter your email..." required />
+                            <input type="submit" value="Send Message" />
                         </form>
                         <div class="sms-form">
                             *We won't share your e-mail address. Promise.
