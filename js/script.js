@@ -189,7 +189,7 @@ formEmail.addEventListener("submit", function (e) {
   request.open(formEmail.method, formEmail.action);
   request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
   request.send(getFormDataString(formEmail));
-  $('.sms-subscription').fadeToggle(function(){
+  $('.sms-subscription').fadeToggle('fast',function(){
     $('.sms-subscription').css('display','flex');
   });
 });
