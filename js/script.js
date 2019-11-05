@@ -54,13 +54,13 @@ $(document).ready(function () {
 
     if (parseInt(month) > parseInt(currentDate.getMonth())) {
       $('.reservation-confirmation').fadeToggle('fast');
-      $('.booking').fadeToggle('fast');
+      $('.booking').fadeToggle('slow');
       $('.booking .form-container form').trigger("reset");
     }
     else if (parseInt(month) == parseInt(currentDate.getMonth()) && parseInt(day) >= parseInt(currentDate.getDate())) {
       if (parseInt(time.split(':')[0]) >= (parseInt(currentDate.getHours()) + 2) && parseInt(time.split(':')[1]) >= parseInt(currentDate.getMinutes())) {
         $('.reservation-confirmation').fadeToggle('fast');
-        $('.booking').fadeToggle('fast');
+        $('.booking').fadeToggle('slow');
         $('.booking .form-container form').trigger("reset");
       }
       else {
