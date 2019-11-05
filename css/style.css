@@ -665,15 +665,13 @@ footer .btn-primary::after,
 /*display after subscription and display of booking*/
 .sms-subscription {
   background-color: #202020;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
   width: 100vw;
   position: fixed;
   top: 0;
   z-index: 12;
-  display: none;
+  overflow: hidden;
+  overflow-y: auto;
 }
 
 .sms-subscription .curly-line::after {
@@ -681,7 +679,6 @@ footer .btn-primary::after,
   margin-bottom: 30px;
 }
 .sms {
-  min-height: 360px;
   max-width: 620px;
   width: 80.72vw;
   height: auto;
@@ -693,6 +690,8 @@ footer .btn-primary::after,
   flex-direction: column;
   padding-top: 76px;
   padding-bottom: 73px;
+  margin-top: 30vh;
+  margin-bottom: 30vh;
 }
 
 .sms h2 {
