@@ -1803,6 +1803,12 @@ h6.header {
   .mask {
     background-size: cover;
   }
+  .booking h2{
+    font-size: 58px;
+line-height: 64px;
+  }
+
+  
 }
 
 @media only screen and (max-width: 1199px) {
