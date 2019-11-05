@@ -26,6 +26,11 @@ $(document).ready(function () {
     $('.sms-subscription').fadeToggle('fast');
   })
 
+  /* modal for reservation confirmation */
+  $('.reservation-confirmation .btn.btn-dark').click(function() {
+    $('.reservation-confirmation').fadeToggle('fast');
+  })
+
   /* function to reset the form if no reservation is made*/
   $('.booking .btn-dark').click(function () {
     $('.booking form ').trigger("reset");
@@ -49,11 +54,13 @@ $(document).ready(function () {
 
     if (parseInt(month) > parseInt(currentDate.getMonth())) {
       $('.booking').fadeToggle('fast');
+      $('.reservation-confirmation').fadeToggle('fast');
       $('.booking .form-container form').trigger("reset");
     }
     else if (parseInt(month) == parseInt(currentDate.getMonth()) && parseInt(day) >= parseInt(currentDate.getDate())) {
       if (parseInt(time.split(':')[0]) >= (parseInt(currentDate.getHours()) + 2) && parseInt(time.split(':')[1]) >= parseInt(currentDate.getMinutes())) {
         $('.booking').fadeToggle('fast');
+        $('.reservation-confirmation').fadeToggle('fast');
         $('.booking .form-container form').trigger("reset");
       }
       else {

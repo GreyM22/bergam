@@ -663,7 +663,7 @@ footer .btn-primary::after,
 /*  end of instagram icon*/
 
 /*display after subscription and display of booking*/
-.sms-subscription {
+.sms-subscription, .reservation-confirmation {
   display: none;
   background-color: #202020;
   height: 100vh;
@@ -675,7 +675,7 @@ footer .btn-primary::after,
   overflow-y: auto;
 }
 
-.sms-subscription .curly-line::after {
+.sms-subscription .curly-line::after, .reservation-confirmation .curly-line::after{
   margin-top: 20px;
   margin-bottom: 30px;
 }
