@@ -670,7 +670,7 @@ footer .btn-primary::after,
   width: 100vw;
   position: fixed;
   top: 0;
-  z-index: 12;
+  z-index: 15;
   overflow: hidden;
   overflow-y: auto;
 }
