@@ -665,7 +665,7 @@ footer .btn-primary::after,
 /*display after subscription and display of booking*/
 .sms-subscription {
   background-color: #202020;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   height: 100vh;
