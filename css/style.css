@@ -814,6 +814,10 @@ footer .btn-primary::after,
   transition: background-color 5000s ease-in-out 0s;
 }
 
+.booking .edge-autofilled{
+  color: white!important;
+}
+
 input::-ms-clear {
   display: none;
 }
