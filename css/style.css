@@ -676,7 +676,8 @@ footer .btn-primary::after,
 }
 
 .sms-subscription .curly-line::after {
-  margin-top: 3vh;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 .sms {
   min-height: 360px;

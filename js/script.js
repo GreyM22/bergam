@@ -21,6 +21,11 @@ $(document).ready(function () {
     $('.booking').fadeToggle('fast');
   });
 
+  /*  modal for the confimation of subscription*/
+  $('.sms-subscription .btn.btn-dark').click(function() {
+    $('.sms-subscription').fadeToggle('fast');
+  })
+
   /* function to reset the form if no reservation is made*/
   $('.booking .btn-dark').click(function () {
     $('.booking form ').trigger("reset");
@@ -126,6 +131,70 @@ $(document).ready(function () {
     $('.booking .form-container form').trigger("reset");
   });
 
+  // Fetch the form element
+
+
+function getFormDataString(formEl) {
+  var formData = new FormData(formEl),
+    data = [];
+
+  for (var keyValue of formData) {
+    data.push(encodeURIComponent(keyValue[0]) + "=" + encodeURIComponent(keyValue[1]));
+  }
+
+  return data.join("&");
+}
+
+var formBooking = document.getElementById("booking-form");
+
+var formEmail = document.getElementById("email-form");
+
+// Override the submit event
+formBooking.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+
+  let request = new XMLHttpRequest();
+
+  request.addEventListener("load", function () {
+    if (request.status === 302) { // CloudCannon redirects on success
+    }
+  });
+
+  request.open(formBooking.method, formBooking.action);
+  request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+  request.send(getFormDataString(formBooking));
+  let theHead = document.getElementById('header');
+  let alert =     scrElement = document.createElement( 'div' );
+  alert.setAttribute('class', 'alert alert-warning alert-dismissible fade show text-center m-0 ')
+  alert.setAttribute('role','alert');
+  alert.innerHTML = '<strong>Holy guacamole!</strong> You should check in on some of those fields below.<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>'
+  document.body.insertBefore(theHead, alert);
+});
+
+// Override the submit event
+formEmail.addEventListener("submit", function (e) {
+
+  console.log("function called ok")
+  e.preventDefault();
+
+  let request = new XMLHttpRequest();
+
+  request.addEventListener("load", function () {
+    if (request.status === 302) { // CloudCannon redirects on success
+      console.log("worked")
+    }
+  });
+
+  request.open(formEmail.method, formEmail.action);
+  request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+  request.send(getFormDataString(formEmail));
+  $('.sms-subscription').fadeToggle(function(){
+    $('.sms-subscription').css('display','flex');
+  });
+});
+
+
 });
 
 /* Fromating the date in the booking form  */
@@ -202,65 +271,6 @@ $(document).ready(function () {
 
 
 
-// Fetch the form element
-
-
-function getFormDataString(formEl) {
-  var formData = new FormData(formEl),
-    data = [];
-
-  for (var keyValue of formData) {
-    data.push(encodeURIComponent(keyValue[0]) + "=" + encodeURIComponent(keyValue[1]));
-  }
-
-  return data.join("&");
-}
-
-var formBooking = document.getElementById("booking-form");
-
-var formEmail = document.getElementById("email-form");
-
-// Override the submit event
-formBooking.addEventListener("submit", function (e) {
-  e.preventDefault();
-
-
-  let request = new XMLHttpRequest();
-
-  request.addEventListener("load", function () {
-    if (request.status === 302) { // CloudCannon redirects on success
-    }
-  });
-
-  request.open(formBooking.method, formBooking.action);
-  request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-  request.send(getFormDataString(formBooking));
-  let theHead = document.getElementById('header');
-  let alert =     scrElement = document.createElement( 'div' );
-  alert.setAttribute('class', 'alert alert-warning alert-dismissible fade show text-center m-0 ')
-  alert.setAttribute('role','alert');
-  alert.innerHTML = '<strong>Holy guacamole!</strong> You should check in on some of those fields below.<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>'
-  document.body.insertBefore(theHead, alert);
-});
-
-// Override the submit event
-formEmail.addEventListener("submit", function (e) {
-
-  console.log("function called ok")
-  e.preventDefault();
-
-  let request = new XMLHttpRequest();
-
-  request.addEventListener("load", function () {
-    if (request.status === 302) { // CloudCannon redirects on success
-      console.log("worked")
-    }
-  });
-
-  request.open(formEmail.method, formEmail.action);
-  request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-  request.send(getFormDataString(formEmail));
-});
 
 
 
