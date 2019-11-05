@@ -70,7 +70,7 @@ $(document).ready(function () {
       }
     }
     else {
-      $('.sub-error').text('*Pleas do not insert e previus date');
+      $('.sub-error').text('*You can not reserve a table in the past. Please change your reservation date.');
       $('.sub-error').removeClass('d-none');
       $(".booking").animate({ scrollTop: 0 }, "slow");
     }
