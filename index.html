@@ -33,7 +33,7 @@
 </head>
 
 <body>
-               
+
     <header class="mask primary-color" id="header">
         <div class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
@@ -279,14 +279,14 @@
             </div>
         </div>
     </header>
-    
+
     <section class="booking primary-color text-center ">
         <div class="form-container d-inline-block ">
             <h2 class="curly-line">Reservations </h2>
             <div class="sub-error  text-center mx-auto mt-3">
             </div>
 
-            <form class=" d-flex justify-content-center align-items-center flex-column" id="booking-form" method="POST" >
+            <form class=" d-flex justify-content-center align-items-center flex-column" id="booking-form" method="POST">
                 <div class="form-row w-100 d-flex justify-content-between">
                     <div class="form-group col-md-4 p-0  pr-md-3 pr-lg-4 ">
                         <div class=" input-field d-flex justify-content-center w-100 w-md-95 ">
@@ -345,7 +345,7 @@
                 porttitor.
             </div>
         </div>
-        <a class="btn btn-dark">  <img src="images/close.svg" alt="close-icon"></a>
+        <a class="btn btn-dark"> <img src="images/close.svg" alt="close-icon"></a>
     </section>
 
 
@@ -821,7 +821,7 @@
                 porttitor.
             </div>
         </div>
-        <a class="btn btn-dark">  <img src="images/close.svg" alt="close-icon"></a>
+        <a class="btn btn-dark"> <img src="images/close.svg" alt="close-icon"></a>
     </section>
     <section class="term-privacy-modal primary-color text-center ">
         <div class="form-container d-inline-block ">
@@ -980,6 +980,14 @@
     <script src="js/rellax.min.js"></script>
     <!--main js of the web page-->
     <script src="js/script.js"></script>
+    <script>
+        if (window.location.host === "app.cloudcannon.com") {
+            alert("Inside CloudCannon!");
+        } else {
+            alert("Not in CloudCannon.");
+        }
+    </script>
+
 </body>
 
 </html>
