@@ -152,7 +152,7 @@ function getFormDataString(formEl) {
   return data.join("&");
 }
 
-var formBooking = document.getElementById("booking-form");
+var formBooking = document.getElementById("reserve-form");
 
 var formEmail = document.getElementById("email-form");
 
