@@ -22,12 +22,12 @@ $(document).ready(function () {
   });
 
   /*  modal for the confimation of subscription*/
-  $('.sms-subscription .btn.btn-dark').click(function() {
+  $('.sms-subscription .btn.btn-dark').click(function () {
     $('.sms-subscription').fadeToggle('fast');
   })
 
   /* modal for reservation confirmation */
-  $('.reservation-confirmation .btn.btn-dark').click(function() {
+  $('.reservation-confirmation .btn.btn-dark').click(function () {
     $('.reservation-confirmation').fadeToggle('fast');
   })
 
@@ -43,39 +43,39 @@ $(document).ready(function () {
   })
 
   /* validation of the resarvation  form */
-  $('.booking .form-container form').submit(function () {
+  // $('.booking .form-container form').submit(function () {
 
-    let date = $("#date").val();
-    let month = date.split("/")[0];
-    let day = date.split("/")[1];
-    let time = $('#time').val();
+  //   let date = $("#date").val();
+  //   let month = date.split("/")[0];
+  //   let day = date.split("/")[1];
+  //   let time = $('#time').val();
 
-    let currentDate = new Date();
+  //   let currentDate = new Date();
 
-    if (parseInt(month) > parseInt(currentDate.getMonth())) {
-      $('.reservation-confirmation').fadeToggle('fast');
-      $('.booking').fadeToggle('slow');
-      $('.booking .form-container form').trigger("reset");
-    }
-    else if (parseInt(month) == parseInt(currentDate.getMonth()) && parseInt(day) >= parseInt(currentDate.getDate())) {
-      if (parseInt(time.split(':')[0]) >= (parseInt(currentDate.getHours()) + 2) && parseInt(time.split(':')[1]) >= parseInt(currentDate.getMinutes())) {
-        $('.reservation-confirmation').fadeToggle('fast');
-        $('.booking').fadeToggle('slow');
-        $('.booking .form-container form').trigger("reset");
-      }
-      else {
-        $('.sub-error').text('*Pleas book two hours in advance');
-        $('.sub-error').removeClass('d-none');
-        $(".booking").animate({ scrollTop: 0 }, "slow");
-      }
-    }
-    else {
-      $('.sub-error').text('*You can not reserve a table in the past. Please change your reservation date.');
-      $('.sub-error').removeClass('d-none');
-      $(".booking").animate({ scrollTop: 0 }, "slow");
-    }
+  //   if (parseInt(month) > parseInt(currentDate.getMonth())) {
+  //     $('.reservation-confirmation').fadeToggle('fast');
+  //     $('.booking').fadeToggle('slow');
+  //     $('.booking .form-container form').trigger("reset");
+  //   }
+  //   else if (parseInt(month) == parseInt(currentDate.getMonth()) && parseInt(day) >= parseInt(currentDate.getDate())) {
+  //     if (parseInt(time.split(':')[0]) >= (parseInt(currentDate.getHours()) + 2) && parseInt(time.split(':')[1]) >= parseInt(currentDate.getMinutes())) {
+  //       $('.reservation-confirmation').fadeToggle('fast');
+  //       $('.booking').fadeToggle('slow');
+  //       $('.booking .form-container form').trigger("reset");
+  //     }
+  //     else {
+  //       $('.sub-error').text('*Pleas book two hours in advance');
+  //       $('.sub-error').removeClass('d-none');
+  //       $(".booking").animate({ scrollTop: 0 }, "slow");
+  //     }
+  //   }
+  //   else {
+  //     $('.sub-error').text('*You can not reserve a table in the past. Please change your reservation date.');
+  //     $('.sub-error').removeClass('d-none');
+  //     $(".booking").animate({ scrollTop: 0 }, "slow");
+  //   }
 
-  });
+  // });
 
   /* to lower the number of guest in the resarvation form  */
   $(".minus").on("click", function () {
@@ -141,58 +141,115 @@ $(document).ready(function () {
   // Fetch the form element
 
 
-function getFormDataString(formEl) {
-  var formData = new FormData(formEl),
-    data = [];
+  function getFormDataString(formEl) {
+    var formData = new FormData(formEl),
+      data = [];
 
-  for (var keyValue of formData) {
-    data.push(encodeURIComponent(keyValue[0]) + "=" + encodeURIComponent(keyValue[1]));
+    for (var keyValue of formData) {
+      data.push(encodeURIComponent(keyValue[0]) + "=" + encodeURIComponent(keyValue[1]));
+    }
+
+    return data.join("&");
   }
 
-  return data.join("&");
-}
+  var formBooking = document.getElementById("reserve-form");
 
-var formBooking = document.getElementById("reserve-form");
+  var formEmail = document.getElementById("email-form");
 
-var formEmail = document.getElementById("email-form");
+  // Override the submit event
+  var formBooking = document.getElementById("reserve-form");
 
-// Override the submit event
-formBooking.addEventListener("submit", function (e) {
-  e.preventDefault();
+  // Override the submit event
+  formBooking.addEventListener("submit", function (e) {
 
+    e.preventDefault();
 
-  let request = new XMLHttpRequest();
+    let request = new XMLHttpRequest();
 
-  request.addEventListener("load", function () {
-    if (request.status === 302) { // CloudCannon redirects on success
+    request.addEventListener("load", function () {
+      if (request.status === 302) { // CloudCannon redirects on success
+      }
+    });
+
+    // Validation of the reservation form
+
+    let date = $("#date").val();
+    let month = date.split("/")[0];
+    let day = date.split("/")[1];
+    let time = $('#time').val();
+
+    let currentDate = new Date();
+
+    let x = parseInt(month);
+    let y = parseInt(currentDate.getMonth());
+    console.log(currentDate)
+
+    if (parseInt(month) > parseInt(currentDate.getMonth()) + 1) {
+      e.preventDefault();
+
+      let request = new XMLHttpRequest();
+
+      request.addEventListener("load", function () {
+        if (request.status === 302) { // CloudCannon redirects on success
+        }
+      });
+      request.open(formBooking.method, formBooking.action);
+      request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+      request.send(getFormDataString(formBooking));
+      $('.reservation-confirmation').fadeToggle('fast');
+      $('.booking').fadeToggle('slow');
+      $('.booking .form-container form').trigger("reset");
+    }
+    else if (parseInt(month) == parseInt(currentDate.getMonth() + 1) && parseInt(day) >= parseInt(currentDate.getDate())) {
+      if (parseInt(day) >= parseInt(currentDate.getDate())) {
+        request.open(formBooking.method, formBooking.action);
+        request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        request.send(getFormDataString(formBooking));
+        $('.reservation-confirmation').fadeToggle('fast');
+        $('.booking').fadeToggle('slow');
+        $('.booking .form-container form').trigger("reset");
+      }
+      else if (parseInt(time.split(':')[0]) >= (parseInt(currentDate.getHours()) + 2) && parseInt(time.split(':')[1]) >= parseInt(currentDate.getMinutes())) {
+        request.open(formBooking.method, formBooking.action);
+        request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        request.send(getFormDataString(formBooking));
+        $('.reservation-confirmation').fadeToggle('fast');
+        $('.booking').fadeToggle('slow');
+        $('.booking .form-container form').trigger("reset");
+      }
+      else {
+        $('.sub-error').text('*Pleas book two hours in advance');
+        $('.sub-error').removeClass('d-none');
+        $(".booking").animate({ scrollTop: 0 }, "slow");
+      }
+    }
+    else {
+      $('.sub-error').text('*You can not reserve a table in the past. Please change your reservation date.');
+      $('.sub-error').removeClass('d-none');
+      $(".booking").animate({ scrollTop: 0 }, "slow");
     }
   });
 
-  request.open(formBooking.method, formBooking.action);
-  request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-  request.send(getFormDataString(formBooking));
-});
+  // Override the submit event
+  formEmail.addEventListener("submit", function (e) {
 
-// Override the submit event
-formEmail.addEventListener("submit", function (e) {
+    console.log("function called ok")
+    e.preventDefault();
 
-  console.log("function called ok")
-  e.preventDefault();
+    let request = new XMLHttpRequest();
 
-  let request = new XMLHttpRequest();
+    request.addEventListener("load", function () {
+      if (request.status === 302) { // CloudCannon redirects on success
+        console.log("worked")
+      }
+    });
 
-  request.addEventListener("load", function () {
-    if (request.status === 302) { // CloudCannon redirects on success
-      console.log("worked")
-    }
+    request.open(formEmail.method, formEmail.action);
+    request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    request.send(getFormDataString(formEmail));
+    $('.sms-subscription').fadeToggle('fast');
+    $('#email-form').trigger("reset");
   });
-
-  request.open(formEmail.method, formEmail.action);
-  request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-  request.send(getFormDataString(formEmail));
-  $('.sms-subscription').fadeToggle('fast');
-  $('#email-form').trigger("reset");
-});
 
 
 });
