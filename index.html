@@ -5,6 +5,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    <meta property="og:site_name" content="Bergamo Restaurant" />
+    <meta property="og:title" content="Bergamo Restaurant" />
+    <meta property="og:url" content="https://bergamo.bonfork.net" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="12 Yonge St., Toronto ON —&amp;nbsp; M5E 1Z9 — 123.456.7890" />
+    <meta itemprop="name" content="Bergamo Restaurant" />
+    <meta itemprop="url" content="https://bergamo.bonfork.net" />
+    <meta itemprop="description" content="12 Yonge St., Toronto ON —&amp;nbsp; M5E 1Z9 — 123.456.7890" />
+    <meta name="twitter:title" content="Bergamo Restaurant" />
+    <meta name="twitter:url" content="https://bergamo.bonfork.net" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:description" content="12 Yonge St., Toronto ON —&amp;nbsp; M5E 1Z9 — 123.456.7890" />
+    <meta name="description" content="A demo website for the Bergamo Restaurant Template" />
     <!-- bootstrap stylesheet-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -595,7 +608,7 @@
                                         <div itemscope itemtype="http://schema.org/MenuItem">
                                             <div class="row pb-4">
                                                 <div class="col-12 pb-3"> <span itemprop="name">
-                                                    Build Your Own
+                                                        Build Your Own
                                                     </span>
                                                 </div>
                                                 <div class="col-12 pb-3 price">
@@ -610,7 +623,7 @@
                                         <div itemscope itemtype="http://schema.org/MenuItem">
                                             <div class="row pb-4">
                                                 <div class="col-12 pb-3"> <span itemprop="name">
-                                                    Black and Blue </span>
+                                                        Black and Blue </span>
                                                 </div>
                                                 <div class="col-12 pb-3 price">
                                                     <span itemprop="offers" itemscope
@@ -626,7 +639,7 @@
                                         <div itemscope itemtype="http://schema.org/MenuItem">
                                             <div class="row pb-4">
                                                 <div class="col-12 pb-3"> <span itemprop="name">
-                                                    Soup and Sandwich or Salad
+                                                        Soup and Sandwich or Salad
                                                     </span>
                                                 </div>
                                                 <div class="col-12 pb-3 price">
@@ -641,7 +654,7 @@
                                         <div itemscope itemtype="http://schema.org/MenuItem">
                                             <div class="row pb-4">
                                                 <div class="col-12 pb-3"> <span itemprop="name">
-                                                    Carribean Jerk </span>
+                                                        Carribean Jerk </span>
                                                 </div>
                                                 <div class="col-12 pb-3 price">
                                                     <span itemprop="offers" itemscope
@@ -658,7 +671,7 @@
                         </div>
                     </div>
                 </div>
-                <a class="btn btn-secondary last-button">
+                <a class="btn btn-secondary last-button mt-4">
                     DOWNLOAD MENU
                 </a>
             </div>
@@ -897,11 +910,17 @@
                         <h6 class="header"> Contact us</h6>
                         <div class="side-content">
                             <p>
-                                123 King St. <br>
-                                <a href="tel:+1234567890"> 123.456.7890 </a><br>
-                                <a href="mailto:hello@bergamorestaurant.com"><span class="email-decorator">
-                                        <span class="primary-color">hello@bergamorestaurant.com</span>
-                                    </span></a> <br>
+                                <address itemscope itemtype="http://schema.org/PostalAddress">
+                                    <span itemprop="streetAddress"> 12 Yonge St.</span><br>
+                                    <span itemprop="addressLocality d-none"> TORONTO ON</span>
+                                    <span itemprop="addressRegion" class="d-none">CA</span>
+                                    <span itemprop="postalCode" class="d-none">M5E 1Z9</span>
+                                    <a href="mailto:hello@bergamorestaurant.com"><span class="email-decorator">
+                                            <span class="primary-color">hello@bergamorestaurant.com</span>
+                                        </span></a> <br>
+                                    <a data-toggle="tooltip" data-placement="top" title="Call Us"
+                                        href="tel:+1234567890"><span itemprop="telephone">123.456.7890</span></a>
+                                </address>
                             </p>
 
                         </div>

@@ -832,13 +832,6 @@ input[type=number] {
     -moz-appearance:textfield;
 }
 
-.booking form .input-field:hover input[type="button"],
-.booking form .input-field:hover input[type="number"],
-#date:hover,
-#time:hover {
-  border-color: #b38a58;
-}
-
 input::-webkit-inner-spin-button,
 input::-webkit-outer-spin-button {
   -webkit-appearance: none;
