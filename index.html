@@ -1,3 +1,10 @@
+<!--
+ ____   __   __ _  ____  __  ____  __ _
+(  _ \ /  \ (  ( \(  __)/  \(  _ \(  / )
+ ) _ ((  O )/    / ) _)(  O ))   / )  (
+(____/ \__/ \_)__)(__)  \__/(__\_)(__\_)
+
+-->
 <html>
 
 <head>
@@ -19,9 +26,10 @@
     <meta name="twitter:description" content="12 Yonge St., Toronto ON —&amp;nbsp; M5E 1Z9 — 123.456.7890" />
     <meta name="description" content="A demo website for the Bergamo Restaurant Template" />
     <!-- bootstrap stylesheet-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- icons and logo import-->
+    <link rel="dns-prefetch" href="https://use.typekit.net/">
+    <link rel="dns-prefetch" href="https://p.typekit.net">
     <link rel="stylesheet" href="https://use.typekit.net/scl1kzs.css">
     <link rel="apple-touch-icon " sizes="57x57" href="apple-icon-57x57.png ">
     <link rel="apple-touch-icon " sizes="60x60 " href="apple-icon-60x60.png ">
@@ -40,9 +48,288 @@
     <meta name="msapplication-TileColor " content="#ffffff ">
     <meta name="msapplication-TileImage " content="/ms-icon-144x144.png ">
     <meta name="theme-color " content="#ffffff ">
-
     <!-- stylesheet of the web-->
     <link rel="stylesheet" href="css/style.css">
+    <!-- json file -->
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "Restaurant",
+            "image": "favicon.ico",
+            "priceRange": "$",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Toronto",
+              "addressRegion": "ON",
+              "postalCode": "M5E 1Z9",
+              "streetAddress": "12 Yonge St."
+            },
+            "name": "Bergamo Restaurant",
+            "telephone": "123-456-7890",
+            "url": "https://bergamo.bonfork.net",
+            "paymentAccepted": "",
+            "description": "A demo website for the Bergamo Restaurant Template.",
+          
+            "servesCuisine": "",
+            "menu": "https://bergamo.bonfork.net#menu",
+          
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "http://schema.org/Monday",
+                "opens": "10:00:00",
+                "closes": "23:00:00"
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "http://schema.org/Tuesday",
+                "opens": "10:00:00",
+                "closes": "23:00:00"
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "http://schema.org/Wednesday",
+                "opens": "10:00:00",
+                "closes": "23:00:00"
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "http://schema.org/Thursday",
+                "opens": "10:00:00",
+                "closes": "23:00:00"
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "http://schema.org/Friday",
+                "opens": "10:00:00",
+                "closes": "23:00:00"
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "http://schema.org/Saturday",
+                "opens": "11:00:00",
+                "closes": "21:00:00"
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "http://schema.org/Sunday",
+                "opens": "11:00:00",
+                "closes": "21:00:00"
+              }
+            ],
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Menu",
+              "itemListElement": [
+                {
+                  "@type": "OfferCatalog",
+                  "name": "Main Menu",
+                  "itemListElement": [
+                    {
+                      "@type": "OfferCatalog",
+                      "name": "Breakfast",
+                      "itemListElement": [
+                        {
+                          "@type": "Offer",
+                          "priceCurrency": "CAD",
+                          "price": 7.95,
+                          "itemOffered": {
+                            "@type": "MenuItem",
+                            "name": "Crab Cake Sandwich",
+                            "description": "",
+                            "image": [""],
+                            "nutrition": {
+                              "@type": "NutritionInformation",
+                              "calories": ""
+                            }
+                          }
+                        },
+                        {
+                          "@type": "Offer",
+                          "priceCurrency": "CAD",
+                          "price": 9.95,
+                          "itemOffered": {
+                            "@type": "MenuItem",
+                            "name": "Tuscan Grilled Chicken Panini",
+                            "description": "",
+                            "image": [""],
+                            "nutrition": {
+                              "@type": "NutritionInformation",
+                              "calories": ""
+                            }
+                          }
+                        },
+                        {
+                          "@type": "Offer",
+                          "priceCurrency": "CAD",
+                          "price": 9.95,
+                          "itemOffered": {
+                            "@type": "MenuItem",
+                            "name": "Southwest Turkey Club",
+                            "description": "",
+                            "image": [""],
+                            "nutrition": {
+                              "@type": "NutritionInformation",
+                              "calories": ""
+                            }
+                          }
+                        },
+                        {
+                          "@type": "Offer",
+                          "priceCurrency": "CAD",
+                          "price": 9.95,
+                          "itemOffered": {
+                            "@type": "MenuItem",
+                            "name": "Mediterranean Turkey Panini",
+                            "description": "",
+                            "image": [""],
+                            "nutrition": {
+                              "@type": "NutritionInformation",
+                              "calories": ""
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "@type": "OfferCatalog",
+                      "name": "Lunch",
+                      "itemListElement": [
+                        {
+                          "@type": "Offer",
+                          "priceCurrency": "CAD",
+                          "price": 9.95,
+                          "itemOffered": {
+                            "@type": "MenuItem",
+                            "name": "Pulled Pork",
+                            "description": "",
+                            "image": [""],
+                            "nutrition": {
+                              "@type": "NutritionInformation",
+                              "calories": ""
+                            }
+                          }
+                        },
+                        {
+                          "@type": "Offer",
+                          "priceCurrency": "CAD",
+                          "price": 7,
+                          "itemOffered": {
+                            "@type": "MenuItem",
+                            "name": "Lobster Roll",
+                            "description": "",
+                            "image": [""],
+                            "nutrition": {
+                              "@type": "NutritionInformation",
+                              "calories": ""
+                            }
+                          }
+                        },
+                        {
+                          "@type": "Offer",
+                          "priceCurrency": "CAD",
+                          "price": 7.95,
+                          "itemOffered": {
+                            "@type": "MenuItem",
+                            "name": "Tuna Melt",
+                            "description": "",
+                            "image": [""],
+                            "nutrition": {
+                              "@type": "NutritionInformation",
+                              "calories": ""
+                            }
+                          }
+                        },
+                        {
+                          "@type": "Offer",
+                          "priceCurrency": "CAD",
+                          "price": 10.95,
+                          "itemOffered": {
+                            "@type": "MenuItem",
+                            "name": "French Dip",
+                            "description": "",
+                            "image": [""],
+                            "nutrition": {
+                              "@type": "NutritionInformation",
+                              "calories": ""
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "@type": "OfferCatalog",
+                      "name": "Dinner",
+                      "itemListElement": [
+                        {
+                          "@type": "Offer",
+                          "priceCurrency": "CAD",
+                          "price": 7.95,
+                          "itemOffered": {
+                            "@type": "MenuItem",
+                            "name": "Build Your Own",
+                            "description": "",
+                            "image": [""],
+                            "nutrition": {
+                              "@type": "NutritionInformation",
+                              "calories": ""
+                            }
+                          }
+                        },
+                        {
+                          "@type": "Offer",
+                          "priceCurrency": "CAD",
+                          "price": 12.95,
+                          "itemOffered": {
+                            "@type": "MenuItem",
+                            "name": "Black and Blue",
+                            "description": "",
+                            "image": [""],
+                            "nutrition": {
+                              "@type": "NutritionInformation",
+                              "calories": ""
+                            }
+                          }
+                        },
+                        {
+                          "@type": "Offer",
+                          "priceCurrency": "CAD",
+                          "price": 8.95,
+                          "itemOffered": {
+                            "@type": "MenuItem",
+                            "name": "Soup and Sandwich or Salad",
+                            "description": "",
+                            "image": [""],
+                            "nutrition": {
+                              "@type": "NutritionInformation",
+                              "calories": ""
+                            }
+                          }
+                        },
+                        {
+                          "@type": "Offer",
+                          "priceCurrency": "CAD",
+                          "price": 11.95,
+                          "itemOffered": {
+                            "@type": "MenuItem",
+                            "name": "Carribean Jerk",
+                            "description": "",
+                            "image": [""],
+                            "nutrition": {
+                              "@type": "NutritionInformation",
+                              "calories": ""
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+                </script>
+
 </head>
 
 <body>
@@ -74,33 +361,31 @@
                     <div class="flex-container">
                         <div class="left-side-flex the-button">
                             <div class="menu-icon">
-                                <a href="#">
-                                    <span class="navbar-toggler-bar top-bar "></span>
+                                <a href="#" title="Click to open!">
+                                    <span class="navbar-toggler-bar top-bar"></span>
                                     <span class="navbar-toggler-bar middle-bar"></span>
-                                    <span class="navbar-toggler-bar bottom-bar "></span>
+                                    <span class="navbar-toggler-bar bottom-bar"></span>
                                 </a>
                             </div>
-                            <a href="#">
+                            <a href="#" title="Click to open!">
                                 <span class="menu-text">MENU</span>
                                 <span class="menu-text  d-none">CLOSE</span>
-
-
                             </a>
                         </div>
 
-                        <div class="middle-side-flex"><a href="/" title="homepage">Bergamo</a> </div>
+                        <div class="middle-side-flex"><a href="/" title="Home Page">Bergamo</a> </div>
                         <div class="right-side-number-flex">
-                            <a href="tel:+2065557890">
+                            <a href="tel:+2065557890" title="Call Us">
                                 <span class="phone-svg"></span>
 
                             </a>
-                            <a href="tel:+2065557890">
+                            <a href="tel:+2065557890" title="Call Us">
                                 <span class="span-numb">206-555-7890</span>
 
                             </a>
                         </div>
                         <div class="right-side-button-flex">
-                            <a>
+                            <a title="Book a table!">
                                 BOOK NOW
                             </a>
                         </div>
@@ -108,22 +393,22 @@
                     <div class="navbar-collapse" id="navbarResponsive">
                         <ul class="text-center">
                             <li>
-                                <a class="" href="#header">
+                                <a class="" href="#header" title="Home!">
                                     <h2>home</h2>
                                 </a>
                             </li>
                             <li>
-                                <a class="" href="#about">
+                                <a class="" href="#about" title="What about us!">
                                     <h2>about</h2>
                                 </a>
                             </li>
                             <li>
-                                <a class="" href="#menu">
+                                <a class="" href="#menu" title="Check our menu!">
                                     <h2>menu</h2>
                                 </a>
                             </li>
                             <li class=" curly-line">
-                                <a class="" href="#contact">
+                                <a class="" href="#contact" title="Contact us!">
                                     <h2>contact</h2>
                                 </a>
                             </li>
@@ -131,7 +416,7 @@
                         <div class="social-net d-none  pt-5">
                             <ul class="text-center">
                                 <li class="pb-2">
-                                    <a href="">
+                                    <a href="https://www.instagram.com/" title="Follow Us on Instagram!">
                                         <svg class="instagram-icon" width="14px" height="14px" viewBox="0 0 14 14"
                                             version="1.1" xmlns="http://www.w3.org/2000/svg"
                                             xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -154,7 +439,8 @@
                                     </a>
                                 </li>
                                 <li class="pb-2">
-                                    <a><svg width="8px" height="14px" viewBox="0 0 8 14" version="1.1"
+                                    <a href="https://www.facebook.com/" title="Follow Us on Facebook!"><svg width="8px"
+                                            height="14px" viewBox="0 0 8 14" version="1.1"
                                             xmlns:xlink="http://www.w3.org/1999/xlink"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <desc>Created with Lunacy</desc>
@@ -165,7 +451,8 @@
                                     </a>
                                 </li>
                                 <li class="last-icon">
-                                    <a><svg xmlns="http://www.w3.org/2000/svg" width="17" height="13"
+                                    <a title="Follow Us on Twitter!" href="https://twitter.com/"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="17" height="13"
                                             viewBox="0 0 17 13">
                                             <g>
                                                 <g>
@@ -176,7 +463,6 @@
                                                 </g>
                                             </g>
                                         </svg></a>
-
                                 </li>
                             </ul>
                         </div>
@@ -195,7 +481,7 @@
                                     varius nunc in in volutpat dui.
                                 </p>
                             </div>
-                            <a class="btn btn-primary">
+                            <a class="btn btn-primary" title="Book a table!">
                                 BOOK NOW
                             </a>
 
@@ -208,7 +494,7 @@
                             <div class="social-net text-left">
                                 <ul>
                                     <li>
-                                        <a href="">
+                                        <a title="Follow Us on Instagram!" href="https://www.instagram.com/">
                                             <svg class="instagram-icon" width="14px" height="14px" viewBox="0 0 14 14"
                                                 version="1.1" xmlns="http://www.w3.org/2000/svg"
                                                 xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -231,7 +517,8 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a><svg width="8px" height="14px" viewBox="0 0 8 14" version="1.1"
+                                        <a title="Follow Us on Facebook!" href="https://www.facebook.com/"><svg
+                                                width="8px" height="14px" viewBox="0 0 8 14" version="1.1"
                                                 xmlns:xlink="http://www.w3.org/1999/xlink"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <desc>Created with Lunacy</desc>
@@ -242,7 +529,8 @@
                                         </a>
                                     </li>
                                     <li class="last-icon">
-                                        <a><svg xmlns="http://www.w3.org/2000/svg" width="17" height="13"
+                                        <a title="Follow Us on Twitter!" title="https://twitter.com/"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="17" height="13"
                                                 viewBox="0 0 17 13">
                                                 <g>
                                                     <g>
@@ -258,7 +546,7 @@
                                 </ul>
                             </div>
                             <div class="arrow-button-down">
-                                <a href="#first-body-section">
+                                <a title="Slide down!" href="#first-body-section">
                                     <div class="rhombus">
                                         <?xml version="1.0" encoding="utf-8"?>
                                         <svg width="13px" height="25px" viewBox="0 0 13 18" version="1.1"
@@ -346,7 +634,7 @@
             porttitor
             aliquam sapien.
         </div>
-        <a class="btn btn-dark"> <img src="images/close.svg" alt="close-icon"></a>
+        <a class="btn btn-dark" title="Close"> <img src="images/close.svg" alt="close-icon"></a>
     </section>
 
     <section class="reservation-confirmation primary-color ">
@@ -358,11 +646,11 @@
                 porttitor.
             </div>
         </div>
-        <a class="btn btn-dark"> <img src="images/close.svg" alt="close-icon"></a>
+        <a class="btn btn-dark" title="Close"> <img src="images/close.svg" alt="close-icon"></a>
     </section>
 
 
-    <section class="first-body-section " id="first-body-section">
+    <section class="first-body-section" id="first-body-section">
         <div class="container-fluid">
             <div class="row">
                 <div class="col">
@@ -380,7 +668,7 @@
         </div>
     </section>
 
-    <section class="second-body-section   " id="about">
+    <section class="second-body-section" id="about">
         <div class="container-fluid">
             <div class="row  ">
                 <div class="col-md-6 order-2 order-md-1 pl-0 pt-md-0 pt-5   ">
@@ -443,7 +731,7 @@
         </div>
     </section>
 
-    <section class="mask-table   " id="menu">
+    <section class="mask-table" id="menu">
         <div class="menu primary-color  ">
             <div>
                 <div class="menu-header curly-line">MENU</div>
@@ -494,7 +782,7 @@
                                                     <span itemprop="offers" itemscope
                                                         itemtype="http://schema.org/Offer">
                                                         <span itemprop="priceCurrency" content="CAD">$</span><span
-                                                            itemprop="price" content="1000.00">9.95</span>
+                                                            itemprop="price" content="9.95">9.95</span>
                                                     </span>
                                                 </div>
                                             </div>
@@ -510,7 +798,7 @@
                                                     <span itemprop="offers" itemscope
                                                         itemtype="http://schema.org/Offer">
                                                         <span itemprop="priceCurrency" content="CAD">$</span><span
-                                                            itemprop="price" content="1000.00">9.95</span>
+                                                            itemprop="price" content="9.95">9.95</span>
                                                     </span>
                                                 </div>
                                             </div>
@@ -524,7 +812,7 @@
                                                     <span itemprop="offers" itemscope
                                                         itemtype="http://schema.org/Offer">
                                                         <span itemprop="priceCurrency" content="CAD">$</span><span
-                                                            itemprop="price" content="1000.00">9.95</span>
+                                                            itemprop="price" content="9.95">9.95</span>
                                                     </span>
                                                 </div>
                                             </div>
@@ -547,7 +835,7 @@
                                                     <span itemprop="offers" itemscope
                                                         itemtype="http://schema.org/Offer">
                                                         <span itemprop="priceCurrency" content="CAD">$</span><span
-                                                            itemprop="price" content="1000.00">9.95</span>
+                                                            itemprop="price" content="9.95">9.95</span>
                                                     </span>
                                                 </div>
                                             </div>
@@ -561,7 +849,7 @@
                                                     <span itemprop="offers" itemscope
                                                         itemtype="http://schema.org/Offer">
                                                         <span itemprop="priceCurrency" content="CAD">$</span><span
-                                                            itemprop="price" content="1000.00">7</span>
+                                                            itemprop="price" content="7">7</span>
                                                     </span>
                                                 </div>
                                             </div>
@@ -577,7 +865,7 @@
                                                     <span itemprop="offers" itemscope
                                                         itemtype="http://schema.org/Offer">
                                                         <span itemprop="priceCurrency" content="CAD">$</span><span
-                                                            itemprop="price" content="1000.00">7.95</span>
+                                                            itemprop="price" content="7.95">7.95</span>
                                                     </span>
                                                 </div>
                                             </div>
@@ -592,7 +880,7 @@
                                                     <span itemprop="offers" itemscope
                                                         itemtype="http://schema.org/Offer">
                                                         <span itemprop="priceCurrency" content="CAD">$</span><span
-                                                            itemprop="price" content="1000.00">10.95</span>
+                                                            itemprop="price" content="10.95">10.95</span>
                                                     </span>
                                                 </div>
                                             </div>
@@ -615,7 +903,7 @@
                                                     <span itemprop="offers" itemscope
                                                         itemtype="http://schema.org/Offer">
                                                         <span itemprop="priceCurrency" content="CAD">$</span><span
-                                                            itemprop="price" content="1000.00">7.95</span>
+                                                            itemprop="price" content="7.95">7.95</span>
                                                     </span>
                                                 </div>
                                             </div>
@@ -629,7 +917,7 @@
                                                     <span itemprop="offers" itemscope
                                                         itemtype="http://schema.org/Offer">
                                                         <span itemprop="priceCurrency" content="CAD">$</span><span
-                                                            itemprop="price" content="1000.00">12.95</span>
+                                                            itemprop="price" content="12.95">12.95</span>
                                                     </span>
                                                 </div>
                                             </div>
@@ -646,7 +934,7 @@
                                                     <span itemprop="offers" itemscope
                                                         itemtype="http://schema.org/Offer">
                                                         <span itemprop="priceCurrency" content="CAD">$</span><span
-                                                            itemprop="price" content="1000.00">8.95</span>
+                                                            itemprop="price" content="8.95">8.95</span>
                                                     </span>
                                                 </div>
                                             </div>
@@ -660,7 +948,7 @@
                                                     <span itemprop="offers" itemscope
                                                         itemtype="http://schema.org/Offer">
                                                         <span itemprop="priceCurrency" content="CAD">$</span><span
-                                                            itemprop="price" content="1000.00">11.95</span>
+                                                            itemprop="price" content="11.95">11.95</span>
                                                     </span>
                                                 </div>
                                             </div>
@@ -671,14 +959,15 @@
                         </div>
                     </div>
                 </div>
-                <a class="btn btn-secondary last-button mt-4">
+                <a class="btn btn-secondary last-button mt-4" title="Click to download!"
+                    href="https://www.dropbox.com/s/gidt0gas70zossj/menu.pdf?dl=0" target="_blank">
                     DOWNLOAD MENU
                 </a>
             </div>
         </div>
     </section>
 
-    <section class="third-body-section   ">
+    <section class="third-body-section">
         <div class="placeholder  ">
             WINES
         </div>
@@ -719,7 +1008,7 @@
         </div>
     </section>
 
-    <section class="review-social-network   ">
+    <section class="review-social-network">
         <div class="row">
             <div class="col-lg-6 order-2 order-lg-1 primary-color social-network  ">
                 <div class="social-net-title">
@@ -728,8 +1017,8 @@
 
                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner" id="social-net-img">
-                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button"
-                            data-slide="prev">
+                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev"
+                            title="Go back!">
                             <?xml version="1.0" encoding="utf-8"?>
                             <svg width="11px" height="26px" viewBox="0 0 11 26" version="1.1"
                                 xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
@@ -739,8 +1028,8 @@
                                     fill="none" stroke="#FFFFFF" stroke-width="1" />
                             </svg>
                         </a>
-                        <a class="carousel-control-next" href="#carouselExampleControls" role="button"
-                            data-slide="next">
+                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next"
+                            title="Next!">
                             <?xml version="1.0" encoding="utf-8"?>
                             <svg width="11px" height="26px" viewBox="0 0 11 26" version="1.1"
                                 xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
@@ -752,7 +1041,8 @@
                         </a>
                     </div>
                 </div>
-                <a href="#" class="d-flex justify-content-center align-items-center mr-auto ml-auto btn btn-secondary ">
+                <a href="#" title="Follow Us on Instagram!"
+                    class="d-flex justify-content-center align-items-center mr-auto ml-auto btn btn-secondary ">
                     <svg class="instagram-icon" width="12px" height="12px" viewBox="0 0 14 14" version="1.1"
                         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                         <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -850,7 +1140,7 @@
         </div>
     </section>
 
-    <section class="sms-subscription primary-color ">
+    <section class="sms-subscription primary-color">
         <div class="sms ml-auto mr-auto ">
             <h2 class="curly-line">Thank you for
                 subscribing</h2>
@@ -859,9 +1149,10 @@
                 porttitor.
             </div>
         </div>
-        <a class="btn btn-dark"> <img src="images/close.svg" alt="close-icon"></a>
+        <a class="btn btn-dark" title="Close"> <img src="images/close.svg" alt="close-icon"></a>
     </section>
-    <section class="term-privacy-modal primary-color text-center ">
+
+    <section class="term-privacy-modal primary-color text-center">
         <div class="form-container d-inline-block ">
             <h2 class="curly-line">TERMS & PRIVACY </h2>
             <div class="sub-booking px-1 text-justify mb-3 mx-auto ">
@@ -872,7 +1163,7 @@
                 blandit condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </div>
         </div>
-        <a class="btn btn-dark"> <img src="images/close.svg" alt="close-icon"></a>
+        <a class="btn btn-dark" title="Close"> <img src="images/close.svg" alt="close-icon"></a>
     </section>
 
     <footer class="primary-color">
@@ -912,10 +1203,11 @@
                             <p>
                                 <address itemscope itemtype="http://schema.org/PostalAddress">
                                     <span itemprop="streetAddress"> 12 Yonge St.</span><br>
-                                    <span itemprop="addressLocality d-none"> TORONTO ON</span>
+                                    <span itemprop="addressLocality" class="d-none"> TORONTO ON</span>
                                     <span itemprop="addressRegion" class="d-none">CA</span>
                                     <span itemprop="postalCode" class="d-none">M5E 1Z9</span>
-                                    <a href="mailto:hello@bergamorestaurant.com"><span class="email-decorator">
+                                    <a title="Send us an email!" href="mailto:hello@bergamorestaurant.com"><span
+                                            class="email-decorator">
                                             <span class="primary-color">hello@bergamorestaurant.com</span>
                                         </span></a> <br>
                                     <a data-toggle="tooltip" data-placement="top" title="Call Us"
@@ -929,7 +1221,7 @@
                 <ul class=" ">
                     <li>
                         <div class="circular-div">
-                            <a href="">
+                            <a title="Follow Us on Instagram!" href="https://www.instagram.com/">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
                                     <g>
                                         <g>
@@ -954,7 +1246,7 @@
                     </li>
                     <li>
                         <div class="circular-div">
-                            <a href="">
+                            <a title="Follow Us on Facebook!" href="https://www.facebook.com/">
                                 <svg width="8px" height="14px" viewBox="0 0 8 14" version="1.1"
                                     xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
                                     <desc>Created with Lunacy</desc>
@@ -968,7 +1260,7 @@
                     </li>
                     <li>
                         <div class="circular-div">
-                            <a href="">
+                            <a title="Follow Us on Twitter!" href="https://twitter.com/">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="17" height="13" viewBox="0 0 17 13"
                                     class="twitter-svg">
                                     <g>
@@ -1013,15 +1305,21 @@
         </div>
     </footer>
     <!-- jquery framework-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/jquery.min.js"></script>
     <!-- bootstrap js-->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
     <!-- to import photo from instagram-->
     <script src="js/instafeed.js"></script>
     <!-- rellax plugin for parallax animation-->
     <script src="js/rellax.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', '');
+    </script>
     <!--main js of the web page-->
     <script src="js/script.js"></script>
 
