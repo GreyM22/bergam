@@ -42,41 +42,6 @@ $(document).ready(function () {
     $('.term-privacy-modal').fadeToggle('fast');
   })
 
-  /* validation of the resarvation  form */
-  // $('.booking .form-container form').submit(function () {
-
-  //   let date = $("#date").val();
-  //   let month = date.split("/")[0];
-  //   let day = date.split("/")[1];
-  //   let time = $('#time').val();
-
-  //   let currentDate = new Date();
-
-  //   if (parseInt(month) > parseInt(currentDate.getMonth())) {
-  //     $('.reservation-confirmation').fadeToggle('fast');
-  //     $('.booking').fadeToggle('slow');
-  //     $('.booking .form-container form').trigger("reset");
-  //   }
-  //   else if (parseInt(month) == parseInt(currentDate.getMonth()) && parseInt(day) >= parseInt(currentDate.getDate())) {
-  //     if (parseInt(time.split(':')[0]) >= (parseInt(currentDate.getHours()) + 2) && parseInt(time.split(':')[1]) >= parseInt(currentDate.getMinutes())) {
-  //       $('.reservation-confirmation').fadeToggle('fast');
-  //       $('.booking').fadeToggle('slow');
-  //       $('.booking .form-container form').trigger("reset");
-  //     }
-  //     else {
-  //       $('.sub-error').text('*Pleas book two hours in advance');
-  //       $('.sub-error').removeClass('d-none');
-  //       $(".booking").animate({ scrollTop: 0 }, "slow");
-  //     }
-  //   }
-  //   else {
-  //     $('.sub-error').text('*You can not reserve a table in the past. Please change your reservation date.');
-  //     $('.sub-error').removeClass('d-none');
-  //     $(".booking").animate({ scrollTop: 0 }, "slow");
-  //   }
-
-  // });
-
   /* to lower the number of guest in the resarvation form  */
   $(".minus").on("click", function () {
     var oldValue = $('form input[type=number]').val();
