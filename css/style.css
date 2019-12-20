@@ -1323,10 +1323,12 @@ footer ul {
   margin-top: 50px;
 }
 
-footer .term-privacy-btn:hover{
+footer .term-privacy-btn:hover, .term-privacy a:hover {
   cursor: pointer;
   color: rgb(247, 206, 155);
 }
+
+
 
 .menu .content {
   max-width: 500px;

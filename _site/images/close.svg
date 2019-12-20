@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<svg width="31px" height="31px" viewBox="0 0 31 31" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
-  <desc>Created with Lunacy</desc>
-  <g id="Group" transform="matrix(0.7071068 0.7071068 -0.7071068 0.7071068 15.20313 1.060547)">
-    <path d="M0 0.333333L20 0.333333" transform="translate(0 9.664063)" id="Line-11" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" />
-    <path d="M-3.41064e-12 0.5L20 0.5" transform="matrix(-8.42937E-08 0.9999999 -0.9999999 -8.42937E-08 10.49609 0.001953125)" id="Line-11" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" />
-  </g>
-</svg>
