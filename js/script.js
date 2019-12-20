@@ -145,19 +145,8 @@ $(document).ready(function () {
 
     let currentDate = new Date();
 
-    let x = parseInt(month);
-    let y = parseInt(currentDate.getMonth());
-    console.log(currentDate)
-
     if (parseInt(month) > parseInt(currentDate.getMonth()) + 1) {
-      e.preventDefault();
 
-      let request = new XMLHttpRequest();
-
-      request.addEventListener("load", function () {
-        if (request.status === 302) { // CloudCannon redirects on success
-        }
-      });
       request.open(formBooking.method, formBooking.action);
       request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
       request.send(getFormDataString(formBooking));
@@ -166,7 +155,7 @@ $(document).ready(function () {
       $('.booking .form-container form').trigger("reset");
     }
     else if (parseInt(month) == parseInt(currentDate.getMonth() + 1) && parseInt(day) >= parseInt(currentDate.getDate())) {
-      if (parseInt(day) >= parseInt(currentDate.getDate())) {
+      if (parseInt(day) > parseInt(currentDate.getDate())) {
         request.open(formBooking.method, formBooking.action);
         request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         request.send(getFormDataString(formBooking));
@@ -174,7 +163,7 @@ $(document).ready(function () {
         $('.booking').fadeToggle('slow');
         $('.booking .form-container form').trigger("reset");
       }
-      else if (parseInt(time.split(':')[0]) >= (parseInt(currentDate.getHours()) + 2) && parseInt(time.split(':')[1]) >= parseInt(currentDate.getMinutes())) {
+      else if (parseInt(day) == parseInt(currentDate.getDate()) && parseInt(time.split(':')[0]) >= (parseInt(currentDate.getHours()) + 2) && parseInt(time.split(':')[1]) >= parseInt(currentDate.getMinutes())) {
         request.open(formBooking.method, formBooking.action);
         request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         request.send(getFormDataString(formBooking));
