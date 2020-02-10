@@ -1016,6 +1016,10 @@ button.btn.btn-primary:focus {
   outline: 0;
   box-shadow: none !important;
 }
+
+.intl-tel-input {
+  display: block !important;
+}
 /*end of booking-form*/
 
 .align-items-center p {
