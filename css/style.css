@@ -1020,6 +1020,14 @@ button.btn.btn-primary:focus {
 .intl-tel-input {
   display: block !important;
 }
+
+.intl-tel-input.separate-dial-code .selected-dial-code{
+  font-size: 12px;
+}
+
+.intl-tel-input .country-list{
+  background: #202020;
+}
 /*end of booking-form*/
 
 .align-items-center p {
