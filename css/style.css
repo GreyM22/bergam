@@ -1026,7 +1026,7 @@ button.btn.btn-primary:focus {
 }
 
 .intl-tel-input .country-list{
-  background: #202020;
+  background-color: #202020 !important;
 }
 /*end of booking-form*/
 
