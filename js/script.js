@@ -121,69 +121,45 @@ $(document).ready(function () {
 
   var formEmail = document.getElementById("email-form");
 
+  // validating the form
+  var dtToday = new Date();
+
+  var month = dtToday.getMonth() + 1;
+  var day = dtToday.getDate();
+  var year = dtToday.getFullYear();
+  if (month < 10)
+    month = '0' + month.toString();
+  if (day < 10)
+    day = '0' + day.toString();
+
+  var maxDate = year + '-' + month + '-' + day;
+  $('#date').attr('min', maxDate);
   // Override the submit event
-  var formBooking = document.getElementById("reserve-form");
 
-  // Override the submit event
-  formBooking.addEventListener("submit", function (e) {
+  let telInput = $("#phone");
 
-    e.preventDefault();
-
-    let request = new XMLHttpRequest();
-
-    request.addEventListener("load", function () {
-      if (request.status === 302) { // CloudCannon redirects on success
-      }
-    });
-
-    // Validation of the reservation form
-
-    let date = $("#date").val();
-    let month = date.split("/")[0];
-    let day = date.split("/")[1];
-    let time = $('#time').val();
-
-    let currentDate = new Date();
-
-    if (parseInt(month) > parseInt(currentDate.getMonth()) + 1) {
-
-      request.open(formBooking.method, formBooking.action);
-      request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-      request.send(getFormDataString(formBooking));
-      $('.reservation-confirmation').fadeToggle('fast');
-      $('.booking').fadeToggle('slow');
-      $('.booking .form-container form').trigger("reset");
-    }
-    else if (parseInt(month) == parseInt(currentDate.getMonth() + 1) && parseInt(day) >= parseInt(currentDate.getDate())) {
-      if (parseInt(day) > parseInt(currentDate.getDate())) {
-        request.open(formBooking.method, formBooking.action);
-        request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        request.send(getFormDataString(formBooking));
-        $('.reservation-confirmation').fadeToggle('fast');
-        $('.booking').fadeToggle('slow');
-        $('.booking .form-container form').trigger("reset");
-      }
-      else if (parseInt(day) == parseInt(currentDate.getDate()) && parseInt(time.split(':')[0]) >= (parseInt(currentDate.getHours()) + 2) && parseInt(time.split(':')[1]) >= parseInt(currentDate.getMinutes())) {
-        request.open(formBooking.method, formBooking.action);
-        request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        request.send(getFormDataString(formBooking));
-        $('.reservation-confirmation').fadeToggle('fast');
-        $('.booking').fadeToggle('slow');
-        $('.booking .form-container form').trigger("reset");
-      }
-      else {
-        $('.sub-error').text('*Pleas book two hours in advance');
-        $('.sub-error').removeClass('d-none');
-        $(".booking").animate({ scrollTop: 0 }, "slow");
-      }
-    }
-    else {
-      $('.sub-error').text('*You can not reserve a table in the past. Please change your reservation date.');
-      $('.sub-error').removeClass('d-none');
-      $(".booking").animate({ scrollTop: 0 }, "slow");
+  // initialize
+  telInput.intlTelInput({
+    initialCountry: 'auto',
+    separateDialCode: true,
+    preferredCountries: ['us', 'gb', 'br', 'ru', 'cn', 'es', 'it'],
+    autoPlaceholder: 'aggressive',
+    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.6/js/utils.js",
+    geoIpLookup: function (callback) {
+      fetch('https://api.ipdata.co/?api-key=a86af3a7a4a375bfa71f9259b5404149d1eabb74adcc275e4faf9dfe', {
+        cache: 'reload'
+      }).then(response => {
+        if (response.ok) {
+          return response.json()
+        }
+        throw new Error('Failed: ' + response.status)
+      }).then(ipjson => {
+        callback(ipjson.country_code)
+      }).catch(e => {
+        callback('us')
+      })
     }
   });
-
   // Override the submit event
   formEmail.addEventListener("submit", function (e) {
 

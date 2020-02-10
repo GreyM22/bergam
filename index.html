@@ -6,6 +6,7 @@
 
 -->
 <html>
+
 <head>
     <title>Bergamo</title>
     <meta charset="UTF-8">
@@ -23,7 +24,8 @@
     <meta name="twitter:url" content="https://bergamo.bonfork.net" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:description" content="12 Yonge St., Toronto ON —&amp;nbsp; M5E 1Z9 — 123.456.7890" />
-    <meta name="description" content="A demo website for the Bergamo Restaurant Template. Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam id urna egestas ultricies nulla at viverra nibh donec sollicitudin metus sit amet est laoreet gravida donec cursus enim quis."/>
+    <meta name="description"
+        content="A demo website for the Bergamo Restaurant Template. Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam id urna egestas ultricies nulla at viverra nibh donec sollicitudin metus sit amet est laoreet gravida donec cursus enim quis." />
     <!-- bootstrap stylesheet-->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- icons and logo import-->
@@ -49,6 +51,34 @@
     <meta name="theme-color " content="#ffffff ">
     <!-- stylesheet of the web-->
     <link rel="stylesheet" href="css/style.css">
+    <!-- for the reservation form -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.6/css/intlTelInput.css">
+    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet"
+        type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/timepicker@1.13.0/jquery.timepicker.min.css">
+    <script>
+        var ua = navigator.userAgent.toLowerCase();
+        if (ua.indexOf('safari') != -1 || ua.indexOf('firefox') != -1 || ua.indexOf('edge') != -1) {
+            if (ua.indexOf('chrome') > -1) {
+                console.log('chrome');
+            } else {
+                if (ua.match(/iPad/i) || ua.match(/iPhone/i)) {
+                    console.log('ios safari');
+                }
+                else {
+                    jQuery(function ($) { //on document.ready
+                        $('#date').datepicker({ dateFormat: 'yy-mm-dd', minDate: 0 });
+                    });
+
+                    $(function () {
+                        $('#time').timepicker().val('7:30pm');
+                    });
+                }
+            }
+        }
+    </script>
     <!-- json file -->
     <script type="application/ld+json">
         {
@@ -330,6 +360,7 @@
           }
     </script>
 </head>
+
 <body>
 
     <header class="mask primary-color" id="header">
@@ -611,15 +642,15 @@
                     </div>
                 </div>
                 <div class="form-group my-3 w-100 mx-4">
-                    <input type="text" class="form-control w-100" id="name" placeholder="name" required
-                        name="Name">
+                    <input type="text" class="form-control w-100" id="name" placeholder="name" required name="Name">
                 </div>
                 <div class="form-group my-3 w-100 mx-4 text-left">
                     <input type="email" class="form-control w-100" id="email-booking" placeholder="email" required
                         name="Email">
                 </div>
                 <div class="form-group my-3 w-100 mx-4 text-left">
-                    <input type="tel" name="Phone Number" class="form-control w-100" placeholder="Phone Number" id="tel" required>
+                    <input type="tel" name="Phone" class="form-control w-100" placeholder="Phone Number" id="phone"
+                        required>
                 </div>
                 <input type="hidden" name="_to" value="grei@aledia.ca">
                 <input type="text" name="_gotcha" style="display: none;">
@@ -1219,7 +1250,8 @@
                 </a>
             </div>
             <div class="term-privacy mt-4  py-5  px-2  ">
-                Restaurant Website by <a title="Check us out!" href="https://bonfork.com/"> Bonfork </a> • 2019 Bergamo •
+                Restaurant Website by <a title="Check us out!" href="https://bonfork.com/"> Bonfork </a> • 2019 Bergamo
+                •
                 <span class="term-privacy-btn" title="Click to open!">TERMS & PRIVACY</span>
             </div>
 
@@ -1241,7 +1273,28 @@
         gtag('js', new Date());
         gtag('config', '');
     </script>
+    <!-- tel input and time keeper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.6/js/intlTelInput.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timepicker@1.13.0/jquery.timepicker.min.js"></script>
     <!--main js of the web page-->
     <script src="js/script.js"></script>
+    <script>
+        var ua = navigator.userAgent.toLowerCase();
+        if (ua.indexOf('safari') != -1) {
+            if (ua.indexOf('safari') != -1) {
+                document.getElementById('date').type = 'date';
+                document.getElementById('time').type = 'time';
+            } else {
+                if (ua.match(/iPad/i) || ua.match(/iPhone/i)) {
+                    document.getElementById('time').type = 'time';
+                }
+                else {
+                    console.log('safari');
+                }
+            }
+        }
+    </script>
 </body>
+
 </html>
