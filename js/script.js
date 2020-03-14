@@ -84,13 +84,24 @@ $(document).ready(function () {
   }
 
   /* changing the snack bar each time img slides*/
-  $(".mask .carousel").on('slid.bs.carousel', function () {
-    $('.mask .carousel-inner').children('.carousel-item').each(function () {
-      if ($(this).hasClass('active')) {
-        let widthScrollBar = 40 / nrImgHeader * ($(this).index() + 1);
-        $('.fill').css('width', widthScrollBar + 'px');
-      }
-    });
+  // $(".mask .carousel").on('slid.bs.carousel', function () {
+  //   console.log("slid.bs.carousel working ");
+  //   $('.mask .carousel-inner').children('.carousel-item').each(function () {
+  //     console.log('.carousel-item');
+  //     if ($(this).hasClass('active')) {
+  //       console.log("nrImgHeader: " + nrImgHeader);
+  //       console.log("$(this).index() + 1 ==  " + ($(this).index() + 1));
+  //       let widthScrollBar = 40 / nrImgHeader * ($(this).index() + 1);
+  //       $('.fill').css('width', widthScrollBar + 'px');
+  //     }
+  //   });
+  // });
+  $('#carousel-header').bind('slide.bs.carousel', function (e) {
+    console.log('slide event!');
+  });
+
+  $('#carousel-header').bind('slid.bs.carousel', function (e) {
+    console.log("slid event!");
   });
 
   /***************** end of the carusel  ********************** */
@@ -117,7 +128,6 @@ $(document).ready(function () {
     return data.join("&");
   }
 
-  var formBooking = document.getElementById("reserve-form");
 
   var formEmail = document.getElementById("email-form");
 
@@ -179,9 +189,8 @@ $(document).ready(function () {
     request.send(getFormDataString(formEmail));
     $('.sms-subscription').fadeToggle('fast');
     $('#email-form').trigger("reset");
+
   });
-
-
 });
 
 
