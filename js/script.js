@@ -84,9 +84,9 @@ $(document).ready(function () {
   }
 
   /* changing the snack bar each time img slides*/
-  // $(".mask .carousel").on('slid.bs.carousel', function () {
+  // $("#carousel-header").on('slid.bs.carousel', function () {
   //   console.log("slid.bs.carousel working ");
-  //   $('.mask .carousel-inner').children('.carousel-item').each(function () {
+  //   $('#carousel-header .carousel-inner').children('.carousel-item').each(function () {
   //     console.log('.carousel-item');
   //     if ($(this).hasClass('active')) {
   //       console.log("nrImgHeader: " + nrImgHeader);
@@ -96,12 +96,15 @@ $(document).ready(function () {
   //     }
   //   });
   // });
+
   $('#carousel-header').bind('slide.bs.carousel', function (e) {
-    console.log('slide event!');
+    alert('slide event!');
+    console.log("worked!");
   });
 
   $('#carousel-header').bind('slid.bs.carousel', function (e) {
-    console.log("slid event!");
+    alert("slid event!");    console.log("worked!");
+
   });
 
   /***************** end of the carusel  ********************** */
