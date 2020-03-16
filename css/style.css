@@ -622,7 +622,29 @@ footer .btn-primary::after,
   position: absolute;
   top: 50%;
   right: 20px;
+  line-height: 10px!important;
 }
+
+.footer-social-icon li:first-child .circular-div a::after{
+  content: url(../images/instagram.svg);
+  display: block;
+    line-height: 11px;
+}
+
+.footer-social-icon li:first-child + li .circular-div a::after{
+  content: url(../images/facebook.svg);
+  display: block;
+  line-height: 11px;
+
+}
+
+.footer-social-icon li:last-child .circular-div a::after{
+  content: url(../images/twitter.svg);
+  display: block;
+  line-height: 11px;
+
+}
+
 
 .mask .btn-primary {
   margin: 50px auto;
@@ -645,12 +667,58 @@ footer .btn-primary::after,
 /* end of button styles*/
 
 /* instagram icon */
-.instagram-icon:hover path#shape,.instagram-icon:hover #Oval{
+header .social-net li{
+  height: 32px;
+}
+header .social-net li:first-child a::after{
+  content: url(../images/instagram.svg);
+}
+
+header .social-net li:first-child a:hover::after{
+  content: url(../images/instagram-hover.svg);
+}
+
+header .social-net li:first-child + li a::after{
+  content: url(../images/facebook.svg);
+}
+
+header .social-net li:first-child + li a:hover::after{
+  content: url(../images/facebook-hover.svg);
+}
+
+header .social-net li:last-child a::after{
+  content: url(../images/twitter.svg);
+}
+
+header .social-net li:last-child a:hover::after{
+  content: url(../images/twitter-hover.svg);
+}
+
+.instagram-icon:hover path#Shape2-instagram,.instagram-icon:hover path#Shape2-instagram, .instagram-icon:hover #Oval{
   fill:rgb(247, 206, 155);
 }
 
-.social-network .btn-secondary:hover .instagram-icon path#shape, 
-.social-network .btn-secondary:hover .instagram-icon path#shape, .social-network .btn-secondary:hover .instagram-icon #Oval{
+.instagram-button::before{
+  content: url(../images/instagram-button.svg);
+  display: inline-block;
+  height: 24px;
+  width: 17px;
+  line-height: 27px!important;
+  margin-left:0px;
+}
+
+.instagram-button:hover::before{
+  content: url(../images/instagram-button-hover.svg);
+  display: inline-block;
+  height: 24px;
+  width: 17px;
+  line-height: 27px!important;
+  margin-left:0px;
+}
+
+
+.social-network .btn-secondary:hover .instagram-icon path#Shape, 
+.social-network .btn-secondary:hover .instagram-icon path#Shape, .social-network .btn-secondary:hover .instagram-icon #Oval{
   fill: #000000;
 }
 .social-network .btn-secondary .instagram-icon{
@@ -658,7 +726,8 @@ footer .btn-primary::after,
 }
 
 .social-network .btn-secondary{
-  line-height: 23!important;
+  line-height: 55px!important;
+  height: auto!important;
 }
 /*  end of instagram icon*/
 
